@@ -1,0 +1,91 @@
+
+State Machine - |lab8|GameStateMachine:game|State
+Name State.Lose State.New_Block State.Clear_Array State.Check_Array State.Load_Block State.Falling_Block State.Start_Game 
+State.Start_Game 0 0 0 0 0 0 0 
+State.Falling_Block 0 0 0 0 0 1 1 
+State.Load_Block 0 0 0 0 1 0 1 
+State.Check_Array 0 0 0 1 0 0 1 
+State.Clear_Array 0 0 1 0 0 0 1 
+State.New_Block 0 1 0 0 0 0 1 
+State.Lose 1 0 0 0 0 0 1 
+
+State Machine - |lab8|blockshape:blkshape|State
+Name State.T_Left State.T_Upsidedown State.T_Right State.T_Upright State.S_Vertical State.S_Horizontal State.Z_Vertical State.Z_Horizontal State.J_Left State.J_Upsidedown State.J_Right State.J_Upright State.L_Left State.L_Upsidedown State.L_Right State.L_Upright State.Square State.I_Horizontal State.I_Vertical State.Hold 
+State.Hold 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+State.I_Vertical 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+State.I_Horizontal 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+State.Square 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+State.L_Upright 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+State.L_Right 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+State.L_Upsidedown 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+State.L_Left 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+State.J_Upright 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+State.J_Right 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+State.J_Upsidedown 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+State.J_Left 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+State.Z_Horizontal 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+State.Z_Vertical 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+State.S_Horizontal 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+State.S_Vertical 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+State.T_Upright 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+State.T_Right 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+State.T_Upsidedown 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+State.T_Left 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |lab8|keypress_state_machine:kpsm|State
+Name State.R_hold State.R_press State.W_hold State.W_press State.S_hold State.S_press State.D_hold State.D_press State.A_hold State.A_press State.Hold 
+State.Hold 0 0 0 0 0 0 0 0 0 0 0 
+State.A_press 0 0 0 0 0 0 0 0 0 1 1 
+State.A_hold 0 0 0 0 0 0 0 0 1 0 1 
+State.D_press 0 0 0 0 0 0 0 1 0 0 1 
+State.D_hold 0 0 0 0 0 0 1 0 0 0 1 
+State.S_press 0 0 0 0 0 1 0 0 0 0 1 
+State.S_hold 0 0 0 0 1 0 0 0 0 0 1 
+State.W_press 0 0 0 1 0 0 0 0 0 0 1 
+State.W_hold 0 0 1 0 0 0 0 0 0 0 1 
+State.R_press 0 1 0 0 0 0 0 0 0 0 1 
+State.R_hold 1 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |lab8|lab8_soc:m_lab8_soc|lab8_soc_sdram:sdram|m_next
+Name m_next.010000000 m_next.000010000 m_next.000001000 m_next.000000001 
+m_next.000000001 0 0 0 0 
+m_next.000001000 0 0 1 1 
+m_next.000010000 0 1 0 1 
+m_next.010000000 1 0 0 1 
+
+State Machine - |lab8|lab8_soc:m_lab8_soc|lab8_soc_sdram:sdram|m_state
+Name m_state.100000000 m_state.010000000 m_state.001000000 m_state.000100000 m_state.000010000 m_state.000001000 m_state.000000100 m_state.000000010 m_state.000000001 
+m_state.000000001 0 0 0 0 0 0 0 0 0 
+m_state.000000010 0 0 0 0 0 0 0 1 1 
+m_state.000000100 0 0 0 0 0 0 1 0 1 
+m_state.000001000 0 0 0 0 0 1 0 0 1 
+m_state.000010000 0 0 0 0 1 0 0 0 1 
+m_state.000100000 0 0 0 1 0 0 0 0 1 
+m_state.001000000 0 0 1 0 0 0 0 0 1 
+m_state.010000000 0 1 0 0 0 0 0 0 1 
+m_state.100000000 1 0 0 0 0 0 0 0 1 
+
+State Machine - |lab8|lab8_soc:m_lab8_soc|lab8_soc_sdram:sdram|i_next
+Name i_next.111 i_next.101 i_next.010 i_next.000 
+i_next.000 0 0 0 0 
+i_next.010 0 0 1 1 
+i_next.101 0 1 0 1 
+i_next.111 1 0 0 1 
+
+State Machine - |lab8|lab8_soc:m_lab8_soc|lab8_soc_sdram:sdram|i_state
+Name i_state.111 i_state.101 i_state.011 i_state.010 i_state.001 i_state.000 
+i_state.000 0 0 0 0 0 0 
+i_state.001 0 0 0 0 1 1 
+i_state.010 0 0 0 1 0 1 
+i_state.011 0 0 1 0 0 1 
+i_state.101 0 1 0 0 0 1 
+i_state.111 1 0 0 0 0 1 
+
+State Machine - |lab8|lab8_soc:m_lab8_soc|lab8_soc_nios2_gen2_0:nios2_gen2_0|lab8_soc_nios2_gen2_0_cpu:cpu|lab8_soc_nios2_gen2_0_cpu_nios2_oci:the_lab8_soc_nios2_gen2_0_cpu_nios2_oci|lab8_soc_nios2_gen2_0_cpu_debug_slave_wrapper:the_lab8_soc_nios2_gen2_0_cpu_debug_slave_wrapper|lab8_soc_nios2_gen2_0_cpu_debug_slave_tck:the_lab8_soc_nios2_gen2_0_cpu_debug_slave_tck|DRsize
+Name DRsize.101 DRsize.100 DRsize.011 DRsize.010 DRsize.001 DRsize.000 
+DRsize.000 0 0 0 0 0 0 
+DRsize.001 0 0 0 0 1 1 
+DRsize.010 0 0 0 1 0 1 
+DRsize.011 0 0 1 0 0 1 
+DRsize.100 0 1 0 0 0 1 
+DRsize.101 1 0 0 0 0 1 
