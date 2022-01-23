@@ -1,3 +1,5 @@
+ATTENTION: IMPORTANT WORKABLE CODE LEFT OUT DUE TO DIFFICULTY OF MIGRATION. PERSONAL WORK, HOWEVER, IS INTACT.
+
 This template is starting point for creating a project based on your custom C code.
 It will provide you a default project to which you can add your software files. To
 add files to a project, manually copy the file into the application directory (e.g. 
