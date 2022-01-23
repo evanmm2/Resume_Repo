@@ -1,0 +1,1376 @@
+Analysis & Synthesis report for mp4
+Tue Dec  1 10:58:19 2020
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. State Machine - |mp4|cacheline_adaptor:cacheline_adaptor_mod|state
+ 10. State Machine - |mp4|arbiter:arbiter_mod|state
+ 11. State Machine - |mp4|cache:cache_d_mod|cache_control:control|state
+ 12. State Machine - |mp4|cache:cache_if_mod|cache_control:control|state
+ 13. Registers Removed During Synthesis
+ 14. General Register Statistics
+ 15. Inverted Register Statistics
+ 16. Registers Added for RAM Pass-Through Logic
+ 17. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 18. Source assignments for cache:cache_d_mod|cache_datapath:datapath|array:tag|altsyncram:data_rtl_0|altsyncram_c3o1:auto_generated
+ 19. Source assignments for cache:cache_if_mod|cache_datapath:datapath|array:tag|altsyncram:data_rtl_0|altsyncram_5km1:auto_generated
+ 20. Parameter Settings for User Entity Instance: cache:cache_if_mod|cache_datapath:datapath|array:tag
+ 21. Parameter Settings for User Entity Instance: cache:cache_if_mod|cache_datapath:datapath|array:valid
+ 22. Parameter Settings for User Entity Instance: cache:cache_if_mod|cache_datapath:datapath|array:dirty
+ 23. Parameter Settings for User Entity Instance: cache:cache_d_mod|cache_datapath:datapath|array:tag
+ 24. Parameter Settings for User Entity Instance: cache:cache_d_mod|cache_datapath:datapath|array:valid
+ 25. Parameter Settings for User Entity Instance: cache:cache_d_mod|cache_datapath:datapath|array:dirty
+ 26. Parameter Settings for Inferred Entity Instance: cache:cache_d_mod|cache_datapath:datapath|array:tag|altsyncram:data_rtl_0
+ 27. Parameter Settings for Inferred Entity Instance: cache:cache_if_mod|cache_datapath:datapath|array:tag|altsyncram:data_rtl_0
+ 28. altsyncram Parameter Settings by Entity Instance
+ 29. Port Connectivity Checks: "cache:cache_if_mod|cache_datapath:datapath|array:valid"
+ 30. Port Connectivity Checks: "cache:cache_if_mod"
+ 31. Port Connectivity Checks: "datapath:datapath_mod|MEM_WB:mem_write_back_stage"
+ 32. Post-Synthesis Netlist Statistics for Top Partition
+ 33. Elapsed Time Per Partition
+ 34. Analysis & Synthesis Messages
+ 35. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                        ;
++-----------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status       ; Successful - Tue Dec  1 10:58:18 2020           ;
+; Quartus Prime Version             ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
+; Revision Name                     ; mp4                                             ;
+; Top-level Entity Name             ; mp4                                             ;
+; Family                            ; Arria II GX                                     ;
+; Logic utilization                 ; N/A                                             ;
+;     Combinational ALUTs           ; 4,747                                           ;
+;     Memory ALUTs                  ; 0                                               ;
+;     Dedicated logic registers     ; 6,338                                           ;
+; Total registers                   ; 6338                                            ;
+; Total pins                        ; 165                                             ;
+; Total virtual pins                ; 0                                               ;
+; Total block memory bits           ; 384                                             ;
+; DSP block 18-bit elements         ; 0                                               ;
+; Total GXB Receiver Channel PCS    ; 0                                               ;
+; Total GXB Receiver Channel PMA    ; 0                                               ;
+; Total GXB Transmitter Channel PCS ; 0                                               ;
+; Total GXB Transmitter Channel PMA ; 0                                               ;
+; Total PLLs                        ; 0                                               ;
+; Total DLLs                        ; 0                                               ;
++-----------------------------------+-------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; EP2AGX45DF25I3     ;                    ;
+; Top-level entity name                                                           ; mp4                ; mp4                ;
+; Family name                                                                     ; Arria II GX        ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                        ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                               ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 12          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 12          ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
+;     Processor 5            ;   0.0%      ;
+;     Processor 6            ;   0.0%      ;
+;     Processor 7            ;   0.0%      ;
+;     Processor 8            ;   0.0%      ;
+;     Processors 9-12        ;   0.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                      ;
++--------------------------------------+-----------------+-------------------------------------------------------+----------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path     ; Used in Netlist ; File Type                                             ; File Name with Absolute Path                                                     ; Library ;
++--------------------------------------+-----------------+-------------------------------------------------------+----------------------------------------------------------------------------------+---------+
+; hdl/types.sv                         ; yes             ; User SystemVerilog HDL File                           ; /home/evanmm2/ECE_411/RTDC/mp4/hdl/types.sv                                      ;         ;
+; hdl/given_cache/cacheline_adaptor.sv ; yes             ; User SystemVerilog HDL File                           ; /home/evanmm2/ECE_411/RTDC/mp4/hdl/given_cache/cacheline_adaptor.sv              ;         ;
+; hdl/given_cache/line_adapter.sv      ; yes             ; User SystemVerilog HDL File                           ; /home/evanmm2/ECE_411/RTDC/mp4/hdl/given_cache/line_adapter.sv                   ;         ;
+; hdl/given_cache/data_array.sv        ; yes             ; User SystemVerilog HDL File                           ; /home/evanmm2/ECE_411/RTDC/mp4/hdl/given_cache/data_array.sv                     ;         ;
+; hdl/given_cache/cache_datapath.sv    ; yes             ; User SystemVerilog HDL File                           ; /home/evanmm2/ECE_411/RTDC/mp4/hdl/given_cache/cache_datapath.sv                 ;         ;
+; hdl/given_cache/cache_control.sv     ; yes             ; User SystemVerilog HDL File                           ; /home/evanmm2/ECE_411/RTDC/mp4/hdl/given_cache/cache_control.sv                  ;         ;
+; hdl/given_cache/cache.sv             ; yes             ; User SystemVerilog HDL File                           ; /home/evanmm2/ECE_411/RTDC/mp4/hdl/given_cache/cache.sv                          ;         ;
+; hdl/given_cache/array.sv             ; yes             ; User SystemVerilog HDL File                           ; /home/evanmm2/ECE_411/RTDC/mp4/hdl/given_cache/array.sv                          ;         ;
+; hdl/forwarding_unit.sv               ; yes             ; User SystemVerilog HDL File                           ; /home/evanmm2/ECE_411/RTDC/mp4/hdl/forwarding_unit.sv                            ;         ;
+; hdl/arbiter.sv                       ; yes             ; User SystemVerilog HDL File                           ; /home/evanmm2/ECE_411/RTDC/mp4/hdl/arbiter.sv                                    ;         ;
+; hdl/ctrl_truncator.sv                ; yes             ; User SystemVerilog HDL File                           ; /home/evanmm2/ECE_411/RTDC/mp4/hdl/ctrl_truncator.sv                             ;         ;
+; hdl/regfile.sv                       ; yes             ; User SystemVerilog HDL File                           ; /home/evanmm2/ECE_411/RTDC/mp4/hdl/regfile.sv                                    ;         ;
+; hdl/alu.sv                           ; yes             ; User SystemVerilog HDL File                           ; /home/evanmm2/ECE_411/RTDC/mp4/hdl/alu.sv                                        ;         ;
+; hdl/cmp.sv                           ; yes             ; User SystemVerilog HDL File                           ; /home/evanmm2/ECE_411/RTDC/mp4/hdl/cmp.sv                                        ;         ;
+; hdl/IF.sv                            ; yes             ; User SystemVerilog HDL File                           ; /home/evanmm2/ECE_411/RTDC/mp4/hdl/IF.sv                                         ;         ;
+; hdl/mp4.sv                           ; yes             ; User SystemVerilog HDL File                           ; /home/evanmm2/ECE_411/RTDC/mp4/hdl/mp4.sv                                        ;         ;
+; hdl/datapath.sv                      ; yes             ; User SystemVerilog HDL File                           ; /home/evanmm2/ECE_411/RTDC/mp4/hdl/datapath.sv                                   ;         ;
+; hdl/ID.sv                            ; yes             ; User SystemVerilog HDL File                           ; /home/evanmm2/ECE_411/RTDC/mp4/hdl/ID.sv                                         ;         ;
+; hdl/EXE.sv                           ; yes             ; User SystemVerilog HDL File                           ; /home/evanmm2/ECE_411/RTDC/mp4/hdl/EXE.sv                                        ;         ;
+; hdl/MEM.sv                           ; yes             ; User SystemVerilog HDL File                           ; /home/evanmm2/ECE_411/RTDC/mp4/hdl/MEM.sv                                        ;         ;
+; hdl/MEM_WB.sv                        ; yes             ; User SystemVerilog HDL File                           ; /home/evanmm2/ECE_411/RTDC/mp4/hdl/MEM_WB.sv                                     ;         ;
+; hdl/inst_taylor.sv                   ; yes             ; User SystemVerilog HDL File                           ; /home/evanmm2/ECE_411/RTDC/mp4/hdl/inst_taylor.sv                                ;         ;
+; altsyncram.tdf                       ; yes             ; Megafunction                                          ; /software/quartus-std-18.1/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
+; stratix_ram_block.inc                ; yes             ; Megafunction                                          ; /software/quartus-std-18.1/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
+; lpm_mux.inc                          ; yes             ; Megafunction                                          ; /software/quartus-std-18.1/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
+; lpm_decode.inc                       ; yes             ; Megafunction                                          ; /software/quartus-std-18.1/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
+; aglobal181.inc                       ; yes             ; Megafunction                                          ; /software/quartus-std-18.1/quartus/libraries/megafunctions/aglobal181.inc        ;         ;
+; a_rdenreg.inc                        ; yes             ; Megafunction                                          ; /software/quartus-std-18.1/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
+; altrom.inc                           ; yes             ; Megafunction                                          ; /software/quartus-std-18.1/quartus/libraries/megafunctions/altrom.inc            ;         ;
+; altram.inc                           ; yes             ; Megafunction                                          ; /software/quartus-std-18.1/quartus/libraries/megafunctions/altram.inc            ;         ;
+; altdpram.inc                         ; yes             ; Megafunction                                          ; /software/quartus-std-18.1/quartus/libraries/megafunctions/altdpram.inc          ;         ;
+; db/altsyncram_c3o1.tdf               ; yes             ; Auto-Generated Megafunction                           ; /home/evanmm2/ECE_411/RTDC/mp4/db/altsyncram_c3o1.tdf                            ;         ;
+; db/mp4.ram0_array_32a7bb4d.hdl.mif   ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; /home/evanmm2/ECE_411/RTDC/mp4/db/mp4.ram0_array_32a7bb4d.hdl.mif                ;         ;
+; db/altsyncram_5km1.tdf               ; yes             ; Auto-Generated Megafunction                           ; /home/evanmm2/ECE_411/RTDC/mp4/db/altsyncram_5km1.tdf                            ;         ;
++--------------------------------------+-----------------+-------------------------------------------------------+----------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++-----------------------------------------------+-----------+
+; Resource                                      ; Usage     ;
++-----------------------------------------------+-----------+
+; Estimated ALUTs Used                          ; 4747      ;
+;     -- Combinational ALUTs                    ; 4747      ;
+;     -- Memory ALUTs                           ; 0         ;
+;     -- LUT_REGs                               ; 0         ;
+; Dedicated logic registers                     ; 6338      ;
+;                                               ;           ;
+; Estimated ALUTs Unavailable                   ; 35        ;
+;     -- Due to unpartnered combinational logic ; 35        ;
+;     -- Due to Memory ALUTs                    ; 0         ;
+;                                               ;           ;
+; Total combinational functions                 ; 4747      ;
+; Combinational ALUT usage by number of inputs  ;           ;
+;     -- 7 input functions                      ; 35        ;
+;     -- 6 input functions                      ; 3286      ;
+;     -- 5 input functions                      ; 826       ;
+;     -- 4 input functions                      ; 290       ;
+;     -- <=3 input functions                    ; 310       ;
+;                                               ;           ;
+; Combinational ALUTs by mode                   ;           ;
+;     -- normal mode                            ; 4620      ;
+;     -- extended LUT mode                      ; 35        ;
+;     -- arithmetic mode                        ; 92        ;
+;     -- shared arithmetic mode                 ; 0         ;
+;                                               ;           ;
+; Estimated ALUT/register pairs used            ; 9894      ;
+;                                               ;           ;
+; Total registers                               ; 6338      ;
+;     -- Dedicated logic registers              ; 6338      ;
+;     -- I/O registers                          ; 0         ;
+;     -- LUT_REGs                               ; 0         ;
+;                                               ;           ;
+;                                               ;           ;
+; I/O pins                                      ; 165       ;
+; Total MLAB memory bits                        ; 0         ;
+; Total block memory bits                       ; 384       ;
+;                                               ;           ;
+; DSP block 18-bit elements                     ; 0         ;
+;                                               ;           ;
+; Maximum fan-out node                          ; clk~input ;
+; Maximum fan-out                               ; 6386      ;
+; Total fan-out                                 ; 47214     ;
+; Average fan-out                               ; 4.12      ;
++-----------------------------------------------+-----------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                          ;
++-------------------------------------------------+---------------------+---------------------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------+-------------------+--------------+
+; Compilation Hierarchy Node                      ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 12x12 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                            ; Entity Name       ; Library Name ;
++-------------------------------------------------+---------------------+---------------------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------+-------------------+--------------+
+; |mp4                                            ; 4747 (1)            ; 6338 (0)                  ; 384               ; 0            ; 0       ; 0         ; 0         ; 0         ; 165  ; 0            ; |mp4                                                                                                           ; mp4               ; work         ;
+;    |arbiter:arbiter_mod|                        ; 40 (40)             ; 261 (261)                 ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|arbiter:arbiter_mod                                                                                       ; arbiter           ; work         ;
+;    |cache:cache_d_mod|                          ; 1690 (0)            ; 2120 (0)                  ; 192               ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cache:cache_d_mod                                                                                         ; cache             ; work         ;
+;       |cache_control:control|                   ; 5 (5)               ; 1 (1)                     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cache:cache_d_mod|cache_control:control                                                                   ; cache_control     ; work         ;
+;       |cache_datapath:datapath|                 ; 1587 (42)           ; 2119 (0)                  ; 192               ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cache:cache_d_mod|cache_datapath:datapath                                                                 ; cache_datapath    ; work         ;
+;          |array:dirty|                          ; 11 (11)             ; 8 (8)                     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cache:cache_d_mod|cache_datapath:datapath|array:dirty                                                     ; array             ; work         ;
+;          |array:tag|                            ; 51 (51)             ; 55 (55)                   ; 192               ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cache:cache_d_mod|cache_datapath:datapath|array:tag                                                       ; array             ; work         ;
+;             |altsyncram:data_rtl_0|             ; 0 (0)               ; 0 (0)                     ; 192               ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cache:cache_d_mod|cache_datapath:datapath|array:tag|altsyncram:data_rtl_0                                 ; altsyncram        ; work         ;
+;                |altsyncram_c3o1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 192               ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cache:cache_d_mod|cache_datapath:datapath|array:tag|altsyncram:data_rtl_0|altsyncram_c3o1:auto_generated  ; altsyncram_c3o1   ; work         ;
+;          |array:valid|                          ; 18 (18)             ; 8 (8)                     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cache:cache_d_mod|cache_datapath:datapath|array:valid                                                     ; array             ; work         ;
+;          |data_array:DM_cache|                  ; 1465 (1465)         ; 2048 (2048)               ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cache:cache_d_mod|cache_datapath:datapath|data_array:DM_cache                                             ; data_array        ; work         ;
+;       |line_adapter:bus|                        ; 98 (98)             ; 0 (0)                     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cache:cache_d_mod|line_adapter:bus                                                                        ; line_adapter      ; work         ;
+;    |cache:cache_if_mod|                         ; 829 (0)             ; 2112 (0)                  ; 192               ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cache:cache_if_mod                                                                                        ; cache             ; work         ;
+;       |cache_control:control|                   ; 4 (4)               ; 1 (1)                     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cache:cache_if_mod|cache_control:control                                                                  ; cache_control     ; work         ;
+;       |cache_datapath:datapath|                 ; 825 (14)            ; 2111 (0)                  ; 192               ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cache:cache_if_mod|cache_datapath:datapath                                                                ; cache_datapath    ; work         ;
+;          |array:dirty|                          ; 8 (8)               ; 0 (0)                     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cache:cache_if_mod|cache_datapath:datapath|array:dirty                                                    ; array             ; work         ;
+;          |array:tag|                            ; 25 (25)             ; 55 (55)                   ; 192               ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cache:cache_if_mod|cache_datapath:datapath|array:tag                                                      ; array             ; work         ;
+;             |altsyncram:data_rtl_0|             ; 0 (0)               ; 0 (0)                     ; 192               ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cache:cache_if_mod|cache_datapath:datapath|array:tag|altsyncram:data_rtl_0                                ; altsyncram        ; work         ;
+;                |altsyncram_5km1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 192               ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cache:cache_if_mod|cache_datapath:datapath|array:tag|altsyncram:data_rtl_0|altsyncram_5km1:auto_generated ; altsyncram_5km1   ; work         ;
+;          |array:valid|                          ; 10 (10)             ; 8 (8)                     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cache:cache_if_mod|cache_datapath:datapath|array:valid                                                    ; array             ; work         ;
+;          |data_array:DM_cache|                  ; 768 (768)           ; 2048 (2048)               ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cache:cache_if_mod|cache_datapath:datapath|data_array:DM_cache                                            ; data_array        ; work         ;
+;    |cacheline_adaptor:cacheline_adaptor_mod|    ; 334 (334)           ; 267 (267)                 ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cacheline_adaptor:cacheline_adaptor_mod                                                                   ; cacheline_adaptor ; work         ;
+;    |datapath:datapath_mod|                      ; 1853 (0)            ; 1578 (0)                  ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|datapath:datapath_mod                                                                                     ; datapath          ; work         ;
+;       |EXE:execution_state|                     ; 615 (394)           ; 142 (142)                 ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|datapath:datapath_mod|EXE:execution_state                                                                 ; EXE               ; work         ;
+;          |alu:ALU|                              ; 164 (164)           ; 0 (0)                     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|datapath:datapath_mod|EXE:execution_state|alu:ALU                                                         ; alu               ; work         ;
+;          |cmp:CMP|                              ; 57 (57)             ; 0 (0)                     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|datapath:datapath_mod|EXE:execution_state|cmp:CMP                                                         ; cmp               ; work         ;
+;       |ID:instruction_decode|                   ; 810 (785)           ; 244 (244)                 ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|datapath:datapath_mod|ID:instruction_decode                                                               ; ID                ; work         ;
+;          |CTRL_TRUNCATOR:control_trucator|      ; 25 (25)             ; 0 (0)                     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|datapath:datapath_mod|ID:instruction_decode|CTRL_TRUNCATOR:control_trucator                               ; CTRL_TRUNCATOR    ; work         ;
+;       |IF:instruction_fetch|                    ; 148 (148)           ; 129 (129)                 ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|datapath:datapath_mod|IF:instruction_fetch                                                                ; IF                ; work         ;
+;       |MEM:memory_io_stage|                     ; 217 (211)           ; 71 (71)                   ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|datapath:datapath_mod|MEM:memory_io_stage                                                                 ; MEM               ; work         ;
+;          |MBE_DECODER:mbe_decoder|              ; 6 (6)               ; 0 (0)                     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|datapath:datapath_mod|MEM:memory_io_stage|MBE_DECODER:mbe_decoder                                         ; MBE_DECODER       ; work         ;
+;       |forwarding_unit:forward_mod|             ; 20 (20)             ; 0 (0)                     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|datapath:datapath_mod|forwarding_unit:forward_mod                                                         ; forwarding_unit   ; work         ;
+;       |regfile:regfile_mod|                     ; 43 (43)             ; 992 (992)                 ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|datapath:datapath_mod|regfile:regfile_mod                                                                 ; regfile           ; work         ;
++-------------------------------------------------+---------------------+---------------------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------+-------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                                                       ;
++----------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------------------------------------+
+; Name                                                                                                                 ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF                                ;
++----------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------------------------------------+
+; cache:cache_d_mod|cache_datapath:datapath|array:tag|altsyncram:data_rtl_0|altsyncram_c3o1:auto_generated|ALTSYNCRAM  ; AUTO ; Simple Dual Port ; 8            ; 24           ; 8            ; 24           ; 192  ; db/mp4.ram0_array_32a7bb4d.hdl.mif ;
+; cache:cache_if_mod|cache_datapath:datapath|array:tag|altsyncram:data_rtl_0|altsyncram_5km1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 8            ; 24           ; 8            ; 24           ; 192  ; db/mp4.ram0_array_32a7bb4d.hdl.mif ;
++----------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------------------------------------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |mp4|cacheline_adaptor:cacheline_adaptor_mod|state                                                                                                                                 ;
++-------------------+------------------+--------------+--------------+--------------+-------------------+-----------------+-------------+-------------+-------------+------------------+-------------+
+; Name              ; state.write_done ; state.write3 ; state.write2 ; state.write1 ; state.write_fetch ; state.read_done ; state.read3 ; state.read2 ; state.read1 ; state.read_fetch ; state.start ;
++-------------------+------------------+--------------+--------------+--------------+-------------------+-----------------+-------------+-------------+-------------+------------------+-------------+
+; state.start       ; 0                ; 0            ; 0            ; 0            ; 0                 ; 0               ; 0           ; 0           ; 0           ; 0                ; 0           ;
+; state.read_fetch  ; 0                ; 0            ; 0            ; 0            ; 0                 ; 0               ; 0           ; 0           ; 0           ; 1                ; 1           ;
+; state.read1       ; 0                ; 0            ; 0            ; 0            ; 0                 ; 0               ; 0           ; 0           ; 1           ; 0                ; 1           ;
+; state.read2       ; 0                ; 0            ; 0            ; 0            ; 0                 ; 0               ; 0           ; 1           ; 0           ; 0                ; 1           ;
+; state.read3       ; 0                ; 0            ; 0            ; 0            ; 0                 ; 0               ; 1           ; 0           ; 0           ; 0                ; 1           ;
+; state.read_done   ; 0                ; 0            ; 0            ; 0            ; 0                 ; 1               ; 0           ; 0           ; 0           ; 0                ; 1           ;
+; state.write_fetch ; 0                ; 0            ; 0            ; 0            ; 1                 ; 0               ; 0           ; 0           ; 0           ; 0                ; 1           ;
+; state.write1      ; 0                ; 0            ; 0            ; 1            ; 0                 ; 0               ; 0           ; 0           ; 0           ; 0                ; 1           ;
+; state.write2      ; 0                ; 0            ; 1            ; 0            ; 0                 ; 0               ; 0           ; 0           ; 0           ; 0                ; 1           ;
+; state.write3      ; 0                ; 1            ; 0            ; 0            ; 0                 ; 0               ; 0           ; 0           ; 0           ; 0                ; 1           ;
+; state.write_done  ; 1                ; 0            ; 0            ; 0            ; 0                 ; 0               ; 0           ; 0           ; 0           ; 0                ; 1           ;
++-------------------+------------------+--------------+--------------+--------------+-------------------+-----------------+-------------+-------------+-------------+------------------+-------------+
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------------+
+; State Machine - |mp4|arbiter:arbiter_mod|state                                                      ;
++------------------+---------------+---------------+----------------+------------------+--------------+
+; Name             ; state.if_done ; state.d_state ; state.if_state ; state.wait_state ; state.d_done ;
++------------------+---------------+---------------+----------------+------------------+--------------+
+; state.wait_state ; 0             ; 0             ; 0              ; 0                ; 0            ;
+; state.if_state   ; 0             ; 0             ; 1              ; 1                ; 0            ;
+; state.d_state    ; 0             ; 1             ; 0              ; 1                ; 0            ;
+; state.if_done    ; 1             ; 0             ; 0              ; 1                ; 0            ;
+; state.d_done     ; 0             ; 0             ; 0              ; 1                ; 1            ;
++------------------+---------------+---------------+----------------+------------------+--------------+
+
+
+Encoding Type:  One-Hot
++--------------------------------------------------------------------+
+; State Machine - |mp4|cache:cache_d_mod|cache_control:control|state ;
++-----------------+--------------------------------------------------+
+; Name            ; state.read_mem                                   ;
++-----------------+--------------------------------------------------+
+; state.check_hit ; 0                                                ;
+; state.read_mem  ; 1                                                ;
++-----------------+--------------------------------------------------+
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------+
+; State Machine - |mp4|cache:cache_if_mod|cache_control:control|state ;
++-----------------+---------------------------------------------------+
+; Name            ; state.read_mem                                    ;
++-----------------+---------------------------------------------------+
+; state.check_hit ; 0                                                 ;
+; state.read_mem  ; 1                                                 ;
++-----------------+---------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                          ;
++-----------------------------------------------------------------+---------------------------------------------------------------------------+
+; Register name                                                   ; Reason for Removal                                                        ;
++-----------------------------------------------------------------+---------------------------------------------------------------------------+
+; datapath:datapath_mod|ID:instruction_decode|U_IMM_EXE[0..11]    ; Stuck at GND due to stuck port data_in                                    ;
+; datapath:datapath_mod|ID:instruction_decode|PC_PLUS_FOUR_EN_EXE ; Stuck at VCC due to stuck port data_in                                    ;
+; datapath:datapath_mod|ID:instruction_decode|CMP_OP_EXE[0]       ; Merged with datapath:datapath_mod|ID:instruction_decode|U_IMM_EXE[12]     ;
+; datapath:datapath_mod|ID:instruction_decode|CMP_OP_EXE[1]       ; Merged with datapath:datapath_mod|ID:instruction_decode|U_IMM_EXE[13]     ;
+; datapath:datapath_mod|ID:instruction_decode|CMP_OP_EXE[2]       ; Merged with datapath:datapath_mod|ID:instruction_decode|U_IMM_EXE[14]     ;
+; datapath:datapath_mod|ID:instruction_decode|CMP1_USING_REG      ; Merged with datapath:datapath_mod|EXE:execution_state|PC_PLUS_FOUR_EN_MEM ;
+; datapath:datapath_mod|regfile:regfile_mod|data[0][0]            ; Stuck at GND due to stuck port data_in                                    ;
+; datapath:datapath_mod|regfile:regfile_mod|data[0][1]            ; Stuck at GND due to stuck port data_in                                    ;
+; datapath:datapath_mod|regfile:regfile_mod|data[0][2]            ; Stuck at GND due to stuck port data_in                                    ;
+; datapath:datapath_mod|regfile:regfile_mod|data[0][3]            ; Stuck at GND due to stuck port data_in                                    ;
+; datapath:datapath_mod|regfile:regfile_mod|data[0][4]            ; Stuck at GND due to stuck port data_in                                    ;
+; datapath:datapath_mod|regfile:regfile_mod|data[0][5]            ; Stuck at GND due to stuck port data_in                                    ;
+; datapath:datapath_mod|regfile:regfile_mod|data[0][6]            ; Stuck at GND due to stuck port data_in                                    ;
+; datapath:datapath_mod|regfile:regfile_mod|data[0][7]            ; Stuck at GND due to stuck port data_in                                    ;
+; datapath:datapath_mod|regfile:regfile_mod|data[0][8]            ; Stuck at GND due to stuck port data_in                                    ;
+; datapath:datapath_mod|regfile:regfile_mod|data[0][9]            ; Stuck at GND due to stuck port data_in                                    ;
+; datapath:datapath_mod|regfile:regfile_mod|data[0][10]           ; Stuck at GND due to stuck port data_in                                    ;
+; datapath:datapath_mod|regfile:regfile_mod|data[0][11]           ; Stuck at GND due to stuck port data_in                                    ;
+; datapath:datapath_mod|regfile:regfile_mod|data[0][12]           ; Stuck at GND due to stuck port data_in                                    ;
+; datapath:datapath_mod|regfile:regfile_mod|data[0][13]           ; Stuck at GND due to stuck port data_in                                    ;
+; datapath:datapath_mod|regfile:regfile_mod|data[0][14]           ; Stuck at GND due to stuck port data_in                                    ;
+; datapath:datapath_mod|regfile:regfile_mod|data[0][15]           ; Stuck at GND due to stuck port data_in                                    ;
+; datapath:datapath_mod|regfile:regfile_mod|data[0][16]           ; Stuck at GND due to stuck port data_in                                    ;
+; datapath:datapath_mod|regfile:regfile_mod|data[0][17]           ; Stuck at GND due to stuck port data_in                                    ;
+; datapath:datapath_mod|regfile:regfile_mod|data[0][18]           ; Stuck at GND due to stuck port data_in                                    ;
+; datapath:datapath_mod|regfile:regfile_mod|data[0][19]           ; Stuck at GND due to stuck port data_in                                    ;
+; datapath:datapath_mod|regfile:regfile_mod|data[0][20]           ; Stuck at GND due to stuck port data_in                                    ;
+; datapath:datapath_mod|regfile:regfile_mod|data[0][21]           ; Stuck at GND due to stuck port data_in                                    ;
+; datapath:datapath_mod|regfile:regfile_mod|data[0][22]           ; Stuck at GND due to stuck port data_in                                    ;
+; datapath:datapath_mod|regfile:regfile_mod|data[0][23]           ; Stuck at GND due to stuck port data_in                                    ;
+; datapath:datapath_mod|regfile:regfile_mod|data[0][24]           ; Stuck at GND due to stuck port data_in                                    ;
+; datapath:datapath_mod|regfile:regfile_mod|data[0][25]           ; Stuck at GND due to stuck port data_in                                    ;
+; datapath:datapath_mod|regfile:regfile_mod|data[0][26]           ; Stuck at GND due to stuck port data_in                                    ;
+; datapath:datapath_mod|regfile:regfile_mod|data[0][27]           ; Stuck at GND due to stuck port data_in                                    ;
+; datapath:datapath_mod|regfile:regfile_mod|data[0][28]           ; Stuck at GND due to stuck port data_in                                    ;
+; datapath:datapath_mod|regfile:regfile_mod|data[0][29]           ; Stuck at GND due to stuck port data_in                                    ;
+; datapath:datapath_mod|regfile:regfile_mod|data[0][30]           ; Stuck at GND due to stuck port data_in                                    ;
+; datapath:datapath_mod|regfile:regfile_mod|data[0][31]           ; Stuck at GND due to stuck port data_in                                    ;
+; cacheline_adaptor:cacheline_adaptor_mod|state~4                 ; Lost fanout                                                               ;
+; cacheline_adaptor:cacheline_adaptor_mod|state~5                 ; Lost fanout                                                               ;
+; cacheline_adaptor:cacheline_adaptor_mod|state~6                 ; Lost fanout                                                               ;
+; cacheline_adaptor:cacheline_adaptor_mod|state~7                 ; Lost fanout                                                               ;
+; cacheline_adaptor:cacheline_adaptor_mod|state~8                 ; Lost fanout                                                               ;
+; cacheline_adaptor:cacheline_adaptor_mod|state~9                 ; Lost fanout                                                               ;
+; cacheline_adaptor:cacheline_adaptor_mod|state~10                ; Lost fanout                                                               ;
+; cacheline_adaptor:cacheline_adaptor_mod|state~11                ; Lost fanout                                                               ;
+; cacheline_adaptor:cacheline_adaptor_mod|state~12                ; Lost fanout                                                               ;
+; cacheline_adaptor:cacheline_adaptor_mod|state~13                ; Lost fanout                                                               ;
+; cacheline_adaptor:cacheline_adaptor_mod|state~14                ; Lost fanout                                                               ;
+; cacheline_adaptor:cacheline_adaptor_mod|state~15                ; Lost fanout                                                               ;
+; cacheline_adaptor:cacheline_adaptor_mod|state~16                ; Lost fanout                                                               ;
+; cacheline_adaptor:cacheline_adaptor_mod|state~17                ; Lost fanout                                                               ;
+; cacheline_adaptor:cacheline_adaptor_mod|state~18                ; Lost fanout                                                               ;
+; cacheline_adaptor:cacheline_adaptor_mod|state~19                ; Lost fanout                                                               ;
+; cacheline_adaptor:cacheline_adaptor_mod|state~20                ; Lost fanout                                                               ;
+; cacheline_adaptor:cacheline_adaptor_mod|state~21                ; Lost fanout                                                               ;
+; cacheline_adaptor:cacheline_adaptor_mod|state~22                ; Lost fanout                                                               ;
+; cacheline_adaptor:cacheline_adaptor_mod|state~23                ; Lost fanout                                                               ;
+; cacheline_adaptor:cacheline_adaptor_mod|state~24                ; Lost fanout                                                               ;
+; cacheline_adaptor:cacheline_adaptor_mod|state~25                ; Lost fanout                                                               ;
+; cacheline_adaptor:cacheline_adaptor_mod|state~26                ; Lost fanout                                                               ;
+; cacheline_adaptor:cacheline_adaptor_mod|state~27                ; Lost fanout                                                               ;
+; cacheline_adaptor:cacheline_adaptor_mod|state~28                ; Lost fanout                                                               ;
+; cacheline_adaptor:cacheline_adaptor_mod|state~29                ; Lost fanout                                                               ;
+; cacheline_adaptor:cacheline_adaptor_mod|state~30                ; Lost fanout                                                               ;
+; cacheline_adaptor:cacheline_adaptor_mod|state~31                ; Lost fanout                                                               ;
+; cacheline_adaptor:cacheline_adaptor_mod|state~32                ; Lost fanout                                                               ;
+; cacheline_adaptor:cacheline_adaptor_mod|state~33                ; Lost fanout                                                               ;
+; cacheline_adaptor:cacheline_adaptor_mod|state~34                ; Lost fanout                                                               ;
+; cacheline_adaptor:cacheline_adaptor_mod|state~35                ; Lost fanout                                                               ;
+; arbiter:arbiter_mod|state~4                                     ; Lost fanout                                                               ;
+; arbiter:arbiter_mod|state~5                                     ; Lost fanout                                                               ;
+; arbiter:arbiter_mod|state~7                                     ; Lost fanout                                                               ;
+; arbiter:arbiter_mod|state~8                                     ; Lost fanout                                                               ;
+; arbiter:arbiter_mod|state~9                                     ; Lost fanout                                                               ;
+; arbiter:arbiter_mod|state~10                                    ; Lost fanout                                                               ;
+; arbiter:arbiter_mod|state~11                                    ; Lost fanout                                                               ;
+; arbiter:arbiter_mod|state~12                                    ; Lost fanout                                                               ;
+; arbiter:arbiter_mod|state~13                                    ; Lost fanout                                                               ;
+; arbiter:arbiter_mod|state~14                                    ; Lost fanout                                                               ;
+; arbiter:arbiter_mod|state~15                                    ; Lost fanout                                                               ;
+; arbiter:arbiter_mod|state~16                                    ; Lost fanout                                                               ;
+; arbiter:arbiter_mod|state~17                                    ; Lost fanout                                                               ;
+; arbiter:arbiter_mod|state~18                                    ; Lost fanout                                                               ;
+; arbiter:arbiter_mod|state~19                                    ; Lost fanout                                                               ;
+; arbiter:arbiter_mod|state~20                                    ; Lost fanout                                                               ;
+; arbiter:arbiter_mod|state~21                                    ; Lost fanout                                                               ;
+; arbiter:arbiter_mod|state~22                                    ; Lost fanout                                                               ;
+; arbiter:arbiter_mod|state~23                                    ; Lost fanout                                                               ;
+; arbiter:arbiter_mod|state~24                                    ; Lost fanout                                                               ;
+; arbiter:arbiter_mod|state~25                                    ; Lost fanout                                                               ;
+; arbiter:arbiter_mod|state~26                                    ; Lost fanout                                                               ;
+; arbiter:arbiter_mod|state~27                                    ; Lost fanout                                                               ;
+; arbiter:arbiter_mod|state~28                                    ; Lost fanout                                                               ;
+; arbiter:arbiter_mod|state~29                                    ; Lost fanout                                                               ;
+; arbiter:arbiter_mod|state~30                                    ; Lost fanout                                                               ;
+; arbiter:arbiter_mod|state~31                                    ; Lost fanout                                                               ;
+; arbiter:arbiter_mod|state~32                                    ; Lost fanout                                                               ;
+; arbiter:arbiter_mod|state~33                                    ; Lost fanout                                                               ;
+; arbiter:arbiter_mod|state~34                                    ; Lost fanout                                                               ;
+; arbiter:arbiter_mod|state~35                                    ; Lost fanout                                                               ;
+; cache:cache_d_mod|cache_control:control|state~3                 ; Lost fanout                                                               ;
+; cache:cache_d_mod|cache_control:control|state~4                 ; Lost fanout                                                               ;
+; cache:cache_d_mod|cache_control:control|state~5                 ; Lost fanout                                                               ;
+; cache:cache_d_mod|cache_control:control|state~6                 ; Lost fanout                                                               ;
+; cache:cache_d_mod|cache_control:control|state~7                 ; Lost fanout                                                               ;
+; cache:cache_d_mod|cache_control:control|state~8                 ; Lost fanout                                                               ;
+; cache:cache_d_mod|cache_control:control|state~9                 ; Lost fanout                                                               ;
+; cache:cache_d_mod|cache_control:control|state~10                ; Lost fanout                                                               ;
+; cache:cache_d_mod|cache_control:control|state~11                ; Lost fanout                                                               ;
+; cache:cache_d_mod|cache_control:control|state~12                ; Lost fanout                                                               ;
+; cache:cache_d_mod|cache_control:control|state~13                ; Lost fanout                                                               ;
+; cache:cache_d_mod|cache_control:control|state~14                ; Lost fanout                                                               ;
+; cache:cache_d_mod|cache_control:control|state~15                ; Lost fanout                                                               ;
+; cache:cache_d_mod|cache_control:control|state~16                ; Lost fanout                                                               ;
+; cache:cache_d_mod|cache_control:control|state~17                ; Lost fanout                                                               ;
+; cache:cache_d_mod|cache_control:control|state~18                ; Lost fanout                                                               ;
+; cache:cache_d_mod|cache_control:control|state~19                ; Lost fanout                                                               ;
+; cache:cache_d_mod|cache_control:control|state~20                ; Lost fanout                                                               ;
+; cache:cache_d_mod|cache_control:control|state~21                ; Lost fanout                                                               ;
+; cache:cache_d_mod|cache_control:control|state~22                ; Lost fanout                                                               ;
+; cache:cache_d_mod|cache_control:control|state~23                ; Lost fanout                                                               ;
+; cache:cache_d_mod|cache_control:control|state~24                ; Lost fanout                                                               ;
+; cache:cache_d_mod|cache_control:control|state~25                ; Lost fanout                                                               ;
+; cache:cache_d_mod|cache_control:control|state~26                ; Lost fanout                                                               ;
+; cache:cache_d_mod|cache_control:control|state~27                ; Lost fanout                                                               ;
+; cache:cache_d_mod|cache_control:control|state~28                ; Lost fanout                                                               ;
+; cache:cache_d_mod|cache_control:control|state~29                ; Lost fanout                                                               ;
+; cache:cache_d_mod|cache_control:control|state~30                ; Lost fanout                                                               ;
+; cache:cache_d_mod|cache_control:control|state~31                ; Lost fanout                                                               ;
+; cache:cache_d_mod|cache_control:control|state~32                ; Lost fanout                                                               ;
+; cache:cache_d_mod|cache_control:control|state~33                ; Lost fanout                                                               ;
+; cache:cache_if_mod|cache_control:control|state~3                ; Lost fanout                                                               ;
+; cache:cache_if_mod|cache_control:control|state~4                ; Lost fanout                                                               ;
+; cache:cache_if_mod|cache_control:control|state~5                ; Lost fanout                                                               ;
+; cache:cache_if_mod|cache_control:control|state~6                ; Lost fanout                                                               ;
+; cache:cache_if_mod|cache_control:control|state~7                ; Lost fanout                                                               ;
+; cache:cache_if_mod|cache_control:control|state~8                ; Lost fanout                                                               ;
+; cache:cache_if_mod|cache_control:control|state~9                ; Lost fanout                                                               ;
+; cache:cache_if_mod|cache_control:control|state~10               ; Lost fanout                                                               ;
+; cache:cache_if_mod|cache_control:control|state~11               ; Lost fanout                                                               ;
+; cache:cache_if_mod|cache_control:control|state~12               ; Lost fanout                                                               ;
+; cache:cache_if_mod|cache_control:control|state~13               ; Lost fanout                                                               ;
+; cache:cache_if_mod|cache_control:control|state~14               ; Lost fanout                                                               ;
+; cache:cache_if_mod|cache_control:control|state~15               ; Lost fanout                                                               ;
+; cache:cache_if_mod|cache_control:control|state~16               ; Lost fanout                                                               ;
+; cache:cache_if_mod|cache_control:control|state~17               ; Lost fanout                                                               ;
+; cache:cache_if_mod|cache_control:control|state~18               ; Lost fanout                                                               ;
+; cache:cache_if_mod|cache_control:control|state~19               ; Lost fanout                                                               ;
+; cache:cache_if_mod|cache_control:control|state~20               ; Lost fanout                                                               ;
+; cache:cache_if_mod|cache_control:control|state~21               ; Lost fanout                                                               ;
+; cache:cache_if_mod|cache_control:control|state~22               ; Lost fanout                                                               ;
+; cache:cache_if_mod|cache_control:control|state~23               ; Lost fanout                                                               ;
+; cache:cache_if_mod|cache_control:control|state~24               ; Lost fanout                                                               ;
+; cache:cache_if_mod|cache_control:control|state~25               ; Lost fanout                                                               ;
+; cache:cache_if_mod|cache_control:control|state~26               ; Lost fanout                                                               ;
+; cache:cache_if_mod|cache_control:control|state~27               ; Lost fanout                                                               ;
+; cache:cache_if_mod|cache_control:control|state~28               ; Lost fanout                                                               ;
+; cache:cache_if_mod|cache_control:control|state~29               ; Lost fanout                                                               ;
+; cache:cache_if_mod|cache_control:control|state~30               ; Lost fanout                                                               ;
+; cache:cache_if_mod|cache_control:control|state~31               ; Lost fanout                                                               ;
+; cache:cache_if_mod|cache_control:control|state~32               ; Lost fanout                                                               ;
+; cache:cache_if_mod|cache_control:control|state~33               ; Lost fanout                                                               ;
+; cache:cache_if_mod|cache_datapath:datapath|array:dirty|data~0   ; Stuck at GND due to stuck port data_in                                    ;
+; cache:cache_if_mod|cache_datapath:datapath|array:dirty|data~1   ; Stuck at GND due to stuck port data_in                                    ;
+; cache:cache_if_mod|cache_datapath:datapath|array:dirty|data~2   ; Stuck at GND due to stuck port data_in                                    ;
+; cache:cache_if_mod|cache_datapath:datapath|array:dirty|data~3   ; Stuck at GND due to stuck port data_in                                    ;
+; cache:cache_if_mod|cache_datapath:datapath|array:dirty|data~4   ; Stuck at GND due to stuck port data_in                                    ;
+; cache:cache_if_mod|cache_datapath:datapath|array:dirty|data~5   ; Stuck at GND due to stuck port data_in                                    ;
+; cache:cache_if_mod|cache_datapath:datapath|array:dirty|data~6   ; Stuck at GND due to stuck port data_in                                    ;
+; cache:cache_if_mod|cache_datapath:datapath|array:dirty|data~7   ; Stuck at GND due to stuck port data_in                                    ;
+; Total Number of Removed Registers = 182                         ;                                                                           ;
++-----------------------------------------------------------------+---------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 6338  ;
+; Number of registers using Synchronous Clear  ; 1431  ;
+; Number of registers using Synchronous Load   ; 124   ;
+; Number of registers using Asynchronous Clear ; 272   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 5860  ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------------+
+; Inverted Register Statistics                                                         ;
++----------------------------------------------------------------------------+---------+
+; Inverted Register                                                          ; Fan out ;
++----------------------------------------------------------------------------+---------+
+; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[28]  ; 3       ;
+; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[54]  ; 3       ;
+; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[42]  ; 3       ;
+; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[44]  ; 3       ;
+; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[46]  ; 3       ;
+; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[48]  ; 3       ;
+; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[50]  ; 3       ;
+; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[52]  ; 3       ;
+; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[30]  ; 3       ;
+; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[32]  ; 3       ;
+; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[34]  ; 3       ;
+; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[36]  ; 3       ;
+; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[38]  ; 3       ;
+; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[40]  ; 3       ;
+; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[8]   ; 3       ;
+; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[10]  ; 3       ;
+; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[12]  ; 3       ;
+; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[14]  ; 3       ;
+; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[16]  ; 3       ;
+; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[18]  ; 3       ;
+; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[20]  ; 2       ;
+; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[22]  ; 3       ;
+; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[24]  ; 3       ;
+; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[26]  ; 3       ;
+; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[28] ; 1       ;
+; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[30] ; 1       ;
+; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[24] ; 1       ;
+; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[26] ; 1       ;
+; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[20] ; 1       ;
+; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[22] ; 1       ;
+; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[16] ; 1       ;
+; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[18] ; 1       ;
+; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[8]  ; 1       ;
+; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[10] ; 1       ;
+; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[12] ; 1       ;
+; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[14] ; 1       ;
+; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[52] ; 1       ;
+; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[54] ; 1       ;
+; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[48] ; 1       ;
+; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[50] ; 1       ;
+; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[44] ; 1       ;
+; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[46] ; 1       ;
+; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[40] ; 1       ;
+; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[42] ; 1       ;
+; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[32] ; 1       ;
+; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[34] ; 1       ;
+; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[36] ; 1       ;
+; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[38] ; 1       ;
+; Total number of inverted registers = 48                                    ;         ;
++----------------------------------------------------------------------------+---------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Added for RAM Pass-Through Logic                                                                                                   ;
++----------------------------------------------------------------------------+-----------------------------------------------------------------+
+; Register Name                                                              ; RAM Name                                                        ;
++----------------------------------------------------------------------------+-----------------------------------------------------------------+
+; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[0]   ; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0  ;
+; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[1]   ; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0  ;
+; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[2]   ; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0  ;
+; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[3]   ; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0  ;
+; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[4]   ; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0  ;
+; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[5]   ; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0  ;
+; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[6]   ; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0  ;
+; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[7]   ; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0  ;
+; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[8]   ; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0  ;
+; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[9]   ; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0  ;
+; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[10]  ; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0  ;
+; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[11]  ; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0  ;
+; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[12]  ; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0  ;
+; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[13]  ; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0  ;
+; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[14]  ; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0  ;
+; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[15]  ; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0  ;
+; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[16]  ; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0  ;
+; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[17]  ; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0  ;
+; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[18]  ; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0  ;
+; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[19]  ; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0  ;
+; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[20]  ; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0  ;
+; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[21]  ; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0  ;
+; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[22]  ; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0  ;
+; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[23]  ; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0  ;
+; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[24]  ; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0  ;
+; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[25]  ; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0  ;
+; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[26]  ; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0  ;
+; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[27]  ; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0  ;
+; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[28]  ; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0  ;
+; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[29]  ; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0  ;
+; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[30]  ; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0  ;
+; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[31]  ; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0  ;
+; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[32]  ; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0  ;
+; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[33]  ; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0  ;
+; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[34]  ; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0  ;
+; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[35]  ; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0  ;
+; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[36]  ; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0  ;
+; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[37]  ; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0  ;
+; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[38]  ; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0  ;
+; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[39]  ; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0  ;
+; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[40]  ; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0  ;
+; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[41]  ; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0  ;
+; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[42]  ; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0  ;
+; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[43]  ; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0  ;
+; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[44]  ; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0  ;
+; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[45]  ; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0  ;
+; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[46]  ; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0  ;
+; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[47]  ; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0  ;
+; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[48]  ; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0  ;
+; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[49]  ; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0  ;
+; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[50]  ; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0  ;
+; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[51]  ; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0  ;
+; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[52]  ; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0  ;
+; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[53]  ; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0  ;
+; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[54]  ; cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0  ;
+; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[0]  ; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0 ;
+; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[1]  ; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0 ;
+; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[2]  ; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0 ;
+; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[3]  ; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0 ;
+; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[4]  ; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0 ;
+; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[5]  ; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0 ;
+; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[6]  ; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0 ;
+; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[7]  ; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0 ;
+; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[8]  ; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0 ;
+; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[9]  ; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0 ;
+; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[10] ; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0 ;
+; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[11] ; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0 ;
+; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[12] ; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0 ;
+; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[13] ; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0 ;
+; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[14] ; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0 ;
+; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[15] ; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0 ;
+; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[16] ; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0 ;
+; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[17] ; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0 ;
+; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[18] ; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0 ;
+; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[19] ; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0 ;
+; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[20] ; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0 ;
+; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[21] ; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0 ;
+; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[22] ; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0 ;
+; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[23] ; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0 ;
+; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[24] ; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0 ;
+; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[25] ; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0 ;
+; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[26] ; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0 ;
+; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[27] ; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0 ;
+; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[28] ; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0 ;
+; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[29] ; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0 ;
+; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[30] ; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0 ;
+; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[31] ; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0 ;
+; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[32] ; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0 ;
+; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[33] ; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0 ;
+; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[34] ; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0 ;
+; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[35] ; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0 ;
+; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[36] ; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0 ;
+; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[37] ; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0 ;
+; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[38] ; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0 ;
+; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[39] ; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0 ;
+; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[40] ; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0 ;
+; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[41] ; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0 ;
+; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[42] ; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0 ;
+; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[43] ; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0 ;
+; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[44] ; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0 ;
+; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[45] ; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0 ;
+; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[46] ; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0 ;
+; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[47] ; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0 ;
+; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[48] ; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0 ;
+; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[49] ; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0 ;
+; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[50] ; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0 ;
+; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[51] ; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0 ;
+; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[52] ; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0 ;
+; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[53] ; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0 ;
+; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0_bypass[54] ; cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0 ;
++----------------------------------------------------------------------------+-----------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------+
+; 3:1                ; 256 bits  ; 512 ALUTs     ; 0 ALUTs              ; 512 ALUTs              ; Yes        ; |mp4|arbiter:arbiter_mod|ADAPTOR_REG[142]                                        ;
+; 3:1                ; 26 bits   ; 52 ALUTs      ; 0 ALUTs              ; 52 ALUTs               ; Yes        ; |mp4|datapath:datapath_mod|ID:instruction_decode|RS1_EXE[4]                      ;
+; 3:1                ; 2 bits    ; 4 ALUTs       ; 2 ALUTs              ; 2 ALUTs                ; Yes        ; |mp4|datapath:datapath_mod|IF:instruction_fetch|PC_IF[1]                         ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|datapath:datapath_mod|regfile:regfile_mod|data[16][28]                      ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|datapath:datapath_mod|regfile:regfile_mod|data[8][5]                        ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|datapath:datapath_mod|regfile:regfile_mod|data[24][23]                      ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|datapath:datapath_mod|regfile:regfile_mod|data[4][15]                       ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|datapath:datapath_mod|regfile:regfile_mod|data[20][3]                       ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|datapath:datapath_mod|regfile:regfile_mod|data[12][19]                      ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|datapath:datapath_mod|regfile:regfile_mod|data[28][20]                      ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|datapath:datapath_mod|regfile:regfile_mod|data[2][22]                       ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|datapath:datapath_mod|regfile:regfile_mod|data[18][29]                      ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|datapath:datapath_mod|regfile:regfile_mod|data[10][23]                      ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|datapath:datapath_mod|regfile:regfile_mod|data[26][6]                       ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|datapath:datapath_mod|regfile:regfile_mod|data[6][2]                        ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|datapath:datapath_mod|regfile:regfile_mod|data[22][22]                      ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|datapath:datapath_mod|regfile:regfile_mod|data[14][17]                      ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|datapath:datapath_mod|regfile:regfile_mod|data[30][15]                      ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|datapath:datapath_mod|regfile:regfile_mod|data[1][11]                       ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|datapath:datapath_mod|regfile:regfile_mod|data[17][9]                       ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|datapath:datapath_mod|regfile:regfile_mod|data[9][25]                       ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|datapath:datapath_mod|regfile:regfile_mod|data[25][21]                      ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|datapath:datapath_mod|regfile:regfile_mod|data[5][7]                        ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|datapath:datapath_mod|regfile:regfile_mod|data[21][10]                      ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|datapath:datapath_mod|regfile:regfile_mod|data[13][1]                       ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|datapath:datapath_mod|regfile:regfile_mod|data[29][20]                      ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|datapath:datapath_mod|regfile:regfile_mod|data[3][8]                        ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|datapath:datapath_mod|regfile:regfile_mod|data[19][12]                      ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|datapath:datapath_mod|regfile:regfile_mod|data[11][0]                       ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|datapath:datapath_mod|regfile:regfile_mod|data[27][27]                      ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|datapath:datapath_mod|regfile:regfile_mod|data[7][24]                       ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|datapath:datapath_mod|regfile:regfile_mod|data[23][14]                      ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|datapath:datapath_mod|regfile:regfile_mod|data[15][16]                      ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|datapath:datapath_mod|regfile:regfile_mod|data[31][27]                      ;
+; 4:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|datapath:datapath_mod|IF:instruction_fetch|IR_IF[22]                        ;
+; 4:1                ; 64 bits   ; 128 ALUTs     ; 0 ALUTs              ; 128 ALUTs              ; Yes        ; |mp4|datapath:datapath_mod|IF:instruction_fetch|PC_ID[9]                         ;
+; 4:1                ; 27 bits   ; 54 ALUTs      ; 0 ALUTs              ; 54 ALUTs               ; Yes        ; |mp4|datapath:datapath_mod|IF:instruction_fetch|PC_IF[21]                        ;
+; 5:1                ; 32 bits   ; 96 ALUTs      ; 0 ALUTs              ; 96 ALUTs               ; Yes        ; |mp4|datapath:datapath_mod|MEM:memory_io_stage|RDATA_REG[20]                     ;
+; 6:1                ; 6 bits    ; 24 ALUTs      ; 12 ALUTs             ; 12 ALUTs               ; Yes        ; |mp4|datapath:datapath_mod|ID:instruction_decode|ALU_IN2_EXE[9]                  ;
+; 6:1                ; 4 bits    ; 16 ALUTs      ; 8 ALUTs              ; 8 ALUTs                ; Yes        ; |mp4|datapath:datapath_mod|ID:instruction_decode|ALU_IN2_EXE[3]                  ;
+; 6:1                ; 11 bits   ; 44 ALUTs      ; 22 ALUTs             ; 22 ALUTs               ; Yes        ; |mp4|datapath:datapath_mod|ID:instruction_decode|ALU_IN2_EXE[21]                 ;
+; 6:1                ; 8 bits    ; 32 ALUTs      ; 16 ALUTs             ; 16 ALUTs               ; Yes        ; |mp4|datapath:datapath_mod|ID:instruction_decode|ALU_IN2_EXE[14]                 ;
+; 144:1              ; 2 bits    ; 192 ALUTs     ; 34 ALUTs             ; 158 ALUTs              ; Yes        ; |mp4|datapath:datapath_mod|ID:instruction_decode|MEM_BYTE_EN_BASE_EXE[0]         ;
+; 4:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp4|datapath:datapath_mod|MEM:memory_io_stage|ShiftLeft0                        ;
+; 4:1                ; 9 bits    ; 18 ALUTs      ; 18 ALUTs             ; 0 ALUTs                ; No         ; |mp4|datapath:datapath_mod|MEM:memory_io_stage|ShiftLeft0                        ;
+; 4:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp4|datapath:datapath_mod|MEM:memory_io_stage|ShiftLeft0                        ;
+; 4:1                ; 2 bits    ; 4 ALUTs       ; 4 ALUTs              ; 0 ALUTs                ; No         ; |mp4|datapath:datapath_mod|EXE:execution_state|alu:ALU|ShiftRight1               ;
+; 4:1                ; 49 bits   ; 98 ALUTs      ; 98 ALUTs             ; 0 ALUTs                ; No         ; |mp4|datapath:datapath_mod|EXE:execution_state|alu:ALU|ShiftRight1               ;
+; 4:1                ; 4 bits    ; 8 ALUTs       ; 8 ALUTs              ; 0 ALUTs                ; No         ; |mp4|datapath:datapath_mod|EXE:execution_state|alu:ALU|ShiftRight1               ;
+; 4:1                ; 4 bits    ; 8 ALUTs       ; 8 ALUTs              ; 0 ALUTs                ; No         ; |mp4|datapath:datapath_mod|EXE:execution_state|alu:ALU|ShiftRight0               ;
+; 4:1                ; 4 bits    ; 8 ALUTs       ; 8 ALUTs              ; 0 ALUTs                ; No         ; |mp4|datapath:datapath_mod|EXE:execution_state|alu:ALU|ShiftLeft0                ;
+; 4:1                ; 4 bits    ; 8 ALUTs       ; 8 ALUTs              ; 0 ALUTs                ; No         ; |mp4|datapath:datapath_mod|EXE:execution_state|alu:ALU|ShiftLeft0                ;
+; 4:1                ; 4 bits    ; 8 ALUTs       ; 8 ALUTs              ; 0 ALUTs                ; No         ; |mp4|datapath:datapath_mod|EXE:execution_state|alu:ALU|ShiftLeft0                ;
+; 8:1                ; 24 bits   ; 120 ALUTs     ; 120 ALUTs            ; 0 ALUTs                ; No         ; |mp4|cache:cache_d_mod|line_adapter:bus|Mux8                                     ;
+; 4:1                ; 24 bits   ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|arbiter:arbiter_mod|ADDRESS_PMEM[12]                                        ;
+; 4:1                ; 2 bits    ; 4 ALUTs       ; 4 ALUTs              ; 0 ALUTs                ; No         ; |mp4|datapath:datapath_mod|IF:instruction_fetch|PC_IF                            ;
+; 5:1                ; 2 bits    ; 6 ALUTs       ; 4 ALUTs              ; 2 ALUTs                ; No         ; |mp4|cache:cache_if_mod|cache_control:control|next_state.read_mem                ;
+; 5:1                ; 2 bits    ; 6 ALUTs       ; 4 ALUTs              ; 2 ALUTs                ; No         ; |mp4|cache:cache_d_mod|cache_control:control|next_state.check_hit                ;
+; 5:1                ; 32 bits   ; 96 ALUTs      ; 96 ALUTs             ; 0 ALUTs                ; No         ; |mp4|datapath:datapath_mod|MEM:memory_io_stage|REGFILE_IN_MEM[29]                ;
+; 9:1                ; 32 bits   ; 192 ALUTs     ; 192 ALUTs            ; 0 ALUTs                ; No         ; |mp4|datapath:datapath_mod|IF:instruction_fetch|IR_ID                            ;
+; 5:1                ; 32 bits   ; 96 ALUTs      ; 64 ALUTs             ; 32 ALUTs               ; No         ; |mp4|datapath:datapath_mod|EXE:execution_state|Mux124                            ;
+; 5:1                ; 32 bits   ; 96 ALUTs      ; 64 ALUTs             ; 32 ALUTs               ; No         ; |mp4|datapath:datapath_mod|EXE:execution_state|Mux32                             ;
+; 5:1                ; 32 bits   ; 96 ALUTs      ; 64 ALUTs             ; 32 ALUTs               ; No         ; |mp4|datapath:datapath_mod|EXE:execution_state|Mux92                             ;
+; 5:1                ; 32 bits   ; 96 ALUTs      ; 64 ALUTs             ; 32 ALUTs               ; No         ; |mp4|datapath:datapath_mod|EXE:execution_state|Mux132                            ;
+; 11:1               ; 8 bits    ; 56 ALUTs      ; 56 ALUTs             ; 0 ALUTs                ; No         ; |mp4|datapath:datapath_mod|MEM:memory_io_stage|ShiftRight0                       ;
+; 10:1               ; 256 bits  ; 1536 ALUTs    ; 1536 ALUTs           ; 0 ALUTs                ; No         ; |mp4|cache:cache_if_mod|cache_datapath:datapath|data_array:DM_cache|dataout[144] ;
+; 11:1               ; 8 bits    ; 56 ALUTs      ; 56 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:cache_d_mod|cache_datapath:datapath|data_array:DM_cache|dataout[195]  ;
+; 11:1               ; 8 bits    ; 56 ALUTs      ; 56 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:cache_d_mod|cache_datapath:datapath|data_array:DM_cache|dataout[131]  ;
+; 11:1               ; 8 bits    ; 56 ALUTs      ; 56 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:cache_d_mod|cache_datapath:datapath|data_array:DM_cache|dataout[66]   ;
+; 11:1               ; 8 bits    ; 56 ALUTs      ; 56 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:cache_d_mod|cache_datapath:datapath|data_array:DM_cache|dataout[0]    ;
+; 11:1               ; 8 bits    ; 56 ALUTs      ; 56 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:cache_d_mod|cache_datapath:datapath|data_array:DM_cache|dataout[200]  ;
+; 11:1               ; 8 bits    ; 56 ALUTs      ; 56 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:cache_d_mod|cache_datapath:datapath|data_array:DM_cache|dataout[140]  ;
+; 11:1               ; 8 bits    ; 56 ALUTs      ; 56 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:cache_d_mod|cache_datapath:datapath|data_array:DM_cache|dataout[73]   ;
+; 11:1               ; 8 bits    ; 56 ALUTs      ; 56 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:cache_d_mod|cache_datapath:datapath|data_array:DM_cache|dataout[15]   ;
+; 11:1               ; 8 bits    ; 56 ALUTs      ; 56 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:cache_d_mod|cache_datapath:datapath|data_array:DM_cache|dataout[212]  ;
+; 11:1               ; 8 bits    ; 56 ALUTs      ; 56 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:cache_d_mod|cache_datapath:datapath|data_array:DM_cache|dataout[145]  ;
+; 11:1               ; 8 bits    ; 56 ALUTs      ; 56 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:cache_d_mod|cache_datapath:datapath|data_array:DM_cache|dataout[83]   ;
+; 11:1               ; 8 bits    ; 56 ALUTs      ; 56 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:cache_d_mod|cache_datapath:datapath|data_array:DM_cache|dataout[21]   ;
+; 11:1               ; 8 bits    ; 56 ALUTs      ; 56 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:cache_d_mod|cache_datapath:datapath|data_array:DM_cache|dataout[222]  ;
+; 11:1               ; 8 bits    ; 56 ALUTs      ; 56 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:cache_d_mod|cache_datapath:datapath|data_array:DM_cache|dataout[158]  ;
+; 11:1               ; 8 bits    ; 56 ALUTs      ; 56 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:cache_d_mod|cache_datapath:datapath|data_array:DM_cache|dataout[93]   ;
+; 11:1               ; 8 bits    ; 56 ALUTs      ; 56 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:cache_d_mod|cache_datapath:datapath|data_array:DM_cache|dataout[28]   ;
+; 11:1               ; 8 bits    ; 56 ALUTs      ; 56 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:cache_d_mod|cache_datapath:datapath|data_array:DM_cache|dataout[224]  ;
+; 11:1               ; 8 bits    ; 56 ALUTs      ; 56 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:cache_d_mod|cache_datapath:datapath|data_array:DM_cache|dataout[167]  ;
+; 11:1               ; 8 bits    ; 56 ALUTs      ; 56 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:cache_d_mod|cache_datapath:datapath|data_array:DM_cache|dataout[96]   ;
+; 11:1               ; 8 bits    ; 56 ALUTs      ; 56 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:cache_d_mod|cache_datapath:datapath|data_array:DM_cache|dataout[37]   ;
+; 11:1               ; 8 bits    ; 56 ALUTs      ; 56 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:cache_d_mod|cache_datapath:datapath|data_array:DM_cache|dataout[234]  ;
+; 11:1               ; 8 bits    ; 56 ALUTs      ; 56 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:cache_d_mod|cache_datapath:datapath|data_array:DM_cache|dataout[175]  ;
+; 11:1               ; 8 bits    ; 56 ALUTs      ; 56 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:cache_d_mod|cache_datapath:datapath|data_array:DM_cache|dataout[106]  ;
+; 11:1               ; 8 bits    ; 56 ALUTs      ; 56 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:cache_d_mod|cache_datapath:datapath|data_array:DM_cache|dataout[46]   ;
+; 11:1               ; 8 bits    ; 56 ALUTs      ; 56 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:cache_d_mod|cache_datapath:datapath|data_array:DM_cache|dataout[243]  ;
+; 11:1               ; 8 bits    ; 56 ALUTs      ; 56 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:cache_d_mod|cache_datapath:datapath|data_array:DM_cache|dataout[177]  ;
+; 11:1               ; 8 bits    ; 56 ALUTs      ; 56 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:cache_d_mod|cache_datapath:datapath|data_array:DM_cache|dataout[116]  ;
+; 11:1               ; 8 bits    ; 56 ALUTs      ; 56 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:cache_d_mod|cache_datapath:datapath|data_array:DM_cache|dataout[55]   ;
+; 11:1               ; 8 bits    ; 56 ALUTs      ; 56 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:cache_d_mod|cache_datapath:datapath|data_array:DM_cache|dataout[251]  ;
+; 11:1               ; 8 bits    ; 56 ALUTs      ; 56 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:cache_d_mod|cache_datapath:datapath|data_array:DM_cache|dataout[186]  ;
+; 11:1               ; 8 bits    ; 56 ALUTs      ; 56 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:cache_d_mod|cache_datapath:datapath|data_array:DM_cache|dataout[126]  ;
+; 11:1               ; 8 bits    ; 56 ALUTs      ; 56 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:cache_d_mod|cache_datapath:datapath|data_array:DM_cache|dataout[57]   ;
+; 34:1               ; 32 bits   ; 704 ALUTs     ; 704 ALUTs            ; 0 ALUTs                ; No         ; |mp4|datapath:datapath_mod|ID:instruction_decode|CMP_IN1[26]                     ;
+; 34:1               ; 32 bits   ; 704 ALUTs     ; 704 ALUTs            ; 0 ALUTs                ; No         ; |mp4|datapath:datapath_mod|ID:instruction_decode|MEM_WDATA_ID[3]                 ;
+; 6:1                ; 8 bits    ; 32 ALUTs      ; 32 ALUTs             ; 0 ALUTs                ; No         ; |mp4|datapath:datapath_mod|MEM:memory_io_stage|Selector7                         ;
+; 6:1                ; 7 bits    ; 28 ALUTs      ; 28 ALUTs             ; 0 ALUTs                ; No         ; |mp4|datapath:datapath_mod|MEM:memory_io_stage|Selector18                        ;
+; 8:1                ; 8 bits    ; 40 ALUTs      ; 32 ALUTs             ; 8 ALUTs                ; No         ; |mp4|datapath:datapath_mod|MEM:memory_io_stage|Selector15                        ;
+; 9:1                ; 64 bits   ; 384 ALUTs     ; 384 ALUTs            ; 0 ALUTs                ; No         ; |mp4|cacheline_adaptor:cacheline_adaptor_mod|Selector63                          ;
+; 14:1               ; 5 bits    ; 45 ALUTs      ; 40 ALUTs             ; 5 ALUTs                ; No         ; |mp4|datapath:datapath_mod|EXE:execution_state|Mux27                             ;
+; 17:1               ; 8 bits    ; 88 ALUTs      ; 80 ALUTs             ; 8 ALUTs                ; No         ; |mp4|datapath:datapath_mod|EXE:execution_state|Mux12                             ;
+; 16:1               ; 2 bits    ; 20 ALUTs      ; 18 ALUTs             ; 2 ALUTs                ; No         ; |mp4|datapath:datapath_mod|EXE:execution_state|Mux22                             ;
+; 17:1               ; 3 bits    ; 33 ALUTs      ; 30 ALUTs             ; 3 ALUTs                ; No         ; |mp4|datapath:datapath_mod|EXE:execution_state|Mux28                             ;
+; 16:1               ; 3 bits    ; 30 ALUTs      ; 27 ALUTs             ; 3 ALUTs                ; No         ; |mp4|datapath:datapath_mod|EXE:execution_state|Mux17                             ;
+; 20:1               ; 3 bits    ; 39 ALUTs      ; 36 ALUTs             ; 3 ALUTs                ; No         ; |mp4|datapath:datapath_mod|EXE:execution_state|Mux1                              ;
+; 19:1               ; 2 bits    ; 24 ALUTs      ; 20 ALUTs             ; 4 ALUTs                ; No         ; |mp4|datapath:datapath_mod|EXE:execution_state|Mux5                              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for cache:cache_d_mod|cache_datapath:datapath|array:tag|altsyncram:data_rtl_0|altsyncram_c3o1:auto_generated ;
++---------------------------------+--------------------+------+-------------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                                ;
++---------------------------------+--------------------+------+-------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                 ;
++---------------------------------+--------------------+------+-------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for cache:cache_if_mod|cache_datapath:datapath|array:tag|altsyncram:data_rtl_0|altsyncram_5km1:auto_generated ;
++---------------------------------+--------------------+------+--------------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                                 ;
++---------------------------------+--------------------+------+--------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                  ;
++---------------------------------+--------------------+------+--------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cache:cache_if_mod|cache_datapath:datapath|array:tag ;
++----------------+-------+--------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                     ;
++----------------+-------+--------------------------------------------------------------------------+
+; width          ; 24    ; Signed Integer                                                           ;
++----------------+-------+--------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cache:cache_if_mod|cache_datapath:datapath|array:valid ;
++----------------+-------+----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                       ;
++----------------+-------+----------------------------------------------------------------------------+
+; width          ; 1     ; Signed Integer                                                             ;
++----------------+-------+----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cache:cache_if_mod|cache_datapath:datapath|array:dirty ;
++----------------+-------+----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                       ;
++----------------+-------+----------------------------------------------------------------------------+
+; width          ; 1     ; Signed Integer                                                             ;
++----------------+-------+----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cache:cache_d_mod|cache_datapath:datapath|array:tag ;
++----------------+-------+-------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                    ;
++----------------+-------+-------------------------------------------------------------------------+
+; width          ; 24    ; Signed Integer                                                          ;
++----------------+-------+-------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cache:cache_d_mod|cache_datapath:datapath|array:valid ;
++----------------+-------+---------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                      ;
++----------------+-------+---------------------------------------------------------------------------+
+; width          ; 1     ; Signed Integer                                                            ;
++----------------+-------+---------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cache:cache_d_mod|cache_datapath:datapath|array:dirty ;
++----------------+-------+---------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                      ;
++----------------+-------+---------------------------------------------------------------------------+
+; width          ; 1     ; Signed Integer                                                            ;
++----------------+-------+---------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: cache:cache_d_mod|cache_datapath:datapath|array:tag|altsyncram:data_rtl_0 ;
++------------------------------------+------------------------------------+--------------------------------------------------+
+; Parameter Name                     ; Value                              ; Type                                             ;
++------------------------------------+------------------------------------+--------------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                                  ; Untyped                                          ;
+; AUTO_CARRY_CHAINS                  ; ON                                 ; AUTO_CARRY                                       ;
+; IGNORE_CARRY_BUFFERS               ; OFF                                ; IGNORE_CARRY                                     ;
+; AUTO_CASCADE_CHAINS                ; ON                                 ; AUTO_CASCADE                                     ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                                ; IGNORE_CASCADE                                   ;
+; WIDTH_BYTEENA                      ; 1                                  ; Untyped                                          ;
+; OPERATION_MODE                     ; DUAL_PORT                          ; Untyped                                          ;
+; WIDTH_A                            ; 24                                 ; Untyped                                          ;
+; WIDTHAD_A                          ; 3                                  ; Untyped                                          ;
+; NUMWORDS_A                         ; 8                                  ; Untyped                                          ;
+; OUTDATA_REG_A                      ; UNREGISTERED                       ; Untyped                                          ;
+; ADDRESS_ACLR_A                     ; NONE                               ; Untyped                                          ;
+; OUTDATA_ACLR_A                     ; NONE                               ; Untyped                                          ;
+; WRCONTROL_ACLR_A                   ; NONE                               ; Untyped                                          ;
+; INDATA_ACLR_A                      ; NONE                               ; Untyped                                          ;
+; BYTEENA_ACLR_A                     ; NONE                               ; Untyped                                          ;
+; WIDTH_B                            ; 24                                 ; Untyped                                          ;
+; WIDTHAD_B                          ; 3                                  ; Untyped                                          ;
+; NUMWORDS_B                         ; 8                                  ; Untyped                                          ;
+; INDATA_REG_B                       ; CLOCK1                             ; Untyped                                          ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                             ; Untyped                                          ;
+; RDCONTROL_REG_B                    ; CLOCK1                             ; Untyped                                          ;
+; ADDRESS_REG_B                      ; CLOCK0                             ; Untyped                                          ;
+; OUTDATA_REG_B                      ; UNREGISTERED                       ; Untyped                                          ;
+; BYTEENA_REG_B                      ; CLOCK1                             ; Untyped                                          ;
+; INDATA_ACLR_B                      ; NONE                               ; Untyped                                          ;
+; WRCONTROL_ACLR_B                   ; NONE                               ; Untyped                                          ;
+; ADDRESS_ACLR_B                     ; NONE                               ; Untyped                                          ;
+; OUTDATA_ACLR_B                     ; NONE                               ; Untyped                                          ;
+; RDCONTROL_ACLR_B                   ; NONE                               ; Untyped                                          ;
+; BYTEENA_ACLR_B                     ; NONE                               ; Untyped                                          ;
+; WIDTH_BYTEENA_A                    ; 1                                  ; Untyped                                          ;
+; WIDTH_BYTEENA_B                    ; 1                                  ; Untyped                                          ;
+; RAM_BLOCK_TYPE                     ; AUTO                               ; Untyped                                          ;
+; BYTE_SIZE                          ; 8                                  ; Untyped                                          ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                          ; Untyped                                          ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ               ; Untyped                                          ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ               ; Untyped                                          ;
+; INIT_FILE                          ; db/mp4.ram0_array_32a7bb4d.hdl.mif ; Untyped                                          ;
+; INIT_FILE_LAYOUT                   ; PORT_A                             ; Untyped                                          ;
+; MAXIMUM_DEPTH                      ; 0                                  ; Untyped                                          ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL                             ; Untyped                                          ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL                             ; Untyped                                          ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL                             ; Untyped                                          ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL                             ; Untyped                                          ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN                    ; Untyped                                          ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN                    ; Untyped                                          ;
+; ENABLE_ECC                         ; FALSE                              ; Untyped                                          ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                              ; Untyped                                          ;
+; WIDTH_ECCSTATUS                    ; 3                                  ; Untyped                                          ;
+; DEVICE_FAMILY                      ; Arria II GX                        ; Untyped                                          ;
+; CBXI_PARAMETER                     ; altsyncram_c3o1                    ; Untyped                                          ;
++------------------------------------+------------------------------------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: cache:cache_if_mod|cache_datapath:datapath|array:tag|altsyncram:data_rtl_0 ;
++------------------------------------+------------------------------------+---------------------------------------------------+
+; Parameter Name                     ; Value                              ; Type                                              ;
++------------------------------------+------------------------------------+---------------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                                  ; Untyped                                           ;
+; AUTO_CARRY_CHAINS                  ; ON                                 ; AUTO_CARRY                                        ;
+; IGNORE_CARRY_BUFFERS               ; OFF                                ; IGNORE_CARRY                                      ;
+; AUTO_CASCADE_CHAINS                ; ON                                 ; AUTO_CASCADE                                      ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                                ; IGNORE_CASCADE                                    ;
+; WIDTH_BYTEENA                      ; 1                                  ; Untyped                                           ;
+; OPERATION_MODE                     ; DUAL_PORT                          ; Untyped                                           ;
+; WIDTH_A                            ; 24                                 ; Untyped                                           ;
+; WIDTHAD_A                          ; 3                                  ; Untyped                                           ;
+; NUMWORDS_A                         ; 8                                  ; Untyped                                           ;
+; OUTDATA_REG_A                      ; UNREGISTERED                       ; Untyped                                           ;
+; ADDRESS_ACLR_A                     ; NONE                               ; Untyped                                           ;
+; OUTDATA_ACLR_A                     ; NONE                               ; Untyped                                           ;
+; WRCONTROL_ACLR_A                   ; NONE                               ; Untyped                                           ;
+; INDATA_ACLR_A                      ; NONE                               ; Untyped                                           ;
+; BYTEENA_ACLR_A                     ; NONE                               ; Untyped                                           ;
+; WIDTH_B                            ; 24                                 ; Untyped                                           ;
+; WIDTHAD_B                          ; 3                                  ; Untyped                                           ;
+; NUMWORDS_B                         ; 8                                  ; Untyped                                           ;
+; INDATA_REG_B                       ; CLOCK1                             ; Untyped                                           ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                             ; Untyped                                           ;
+; RDCONTROL_REG_B                    ; CLOCK1                             ; Untyped                                           ;
+; ADDRESS_REG_B                      ; CLOCK0                             ; Untyped                                           ;
+; OUTDATA_REG_B                      ; UNREGISTERED                       ; Untyped                                           ;
+; BYTEENA_REG_B                      ; CLOCK1                             ; Untyped                                           ;
+; INDATA_ACLR_B                      ; NONE                               ; Untyped                                           ;
+; WRCONTROL_ACLR_B                   ; NONE                               ; Untyped                                           ;
+; ADDRESS_ACLR_B                     ; NONE                               ; Untyped                                           ;
+; OUTDATA_ACLR_B                     ; NONE                               ; Untyped                                           ;
+; RDCONTROL_ACLR_B                   ; NONE                               ; Untyped                                           ;
+; BYTEENA_ACLR_B                     ; NONE                               ; Untyped                                           ;
+; WIDTH_BYTEENA_A                    ; 1                                  ; Untyped                                           ;
+; WIDTH_BYTEENA_B                    ; 1                                  ; Untyped                                           ;
+; RAM_BLOCK_TYPE                     ; AUTO                               ; Untyped                                           ;
+; BYTE_SIZE                          ; 8                                  ; Untyped                                           ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                          ; Untyped                                           ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ               ; Untyped                                           ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ               ; Untyped                                           ;
+; INIT_FILE                          ; db/mp4.ram0_array_32a7bb4d.hdl.mif ; Untyped                                           ;
+; INIT_FILE_LAYOUT                   ; PORT_A                             ; Untyped                                           ;
+; MAXIMUM_DEPTH                      ; 0                                  ; Untyped                                           ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL                             ; Untyped                                           ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL                             ; Untyped                                           ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL                             ; Untyped                                           ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL                             ; Untyped                                           ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN                    ; Untyped                                           ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN                    ; Untyped                                           ;
+; ENABLE_ECC                         ; FALSE                              ; Untyped                                           ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                              ; Untyped                                           ;
+; WIDTH_ECCSTATUS                    ; 3                                  ; Untyped                                           ;
+; DEVICE_FAMILY                      ; Arria II GX                        ; Untyped                                           ;
+; CBXI_PARAMETER                     ; altsyncram_5km1                    ; Untyped                                           ;
++------------------------------------+------------------------------------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                                                       ;
++-------------------------------------------+----------------------------------------------------------------------------+
+; Name                                      ; Value                                                                      ;
++-------------------------------------------+----------------------------------------------------------------------------+
+; Number of entity instances                ; 2                                                                          ;
+; Entity Instance                           ; cache:cache_d_mod|cache_datapath:datapath|array:tag|altsyncram:data_rtl_0  ;
+;     -- OPERATION_MODE                     ; DUAL_PORT                                                                  ;
+;     -- WIDTH_A                            ; 24                                                                         ;
+;     -- NUMWORDS_A                         ; 8                                                                          ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                               ;
+;     -- WIDTH_B                            ; 24                                                                         ;
+;     -- NUMWORDS_B                         ; 8                                                                          ;
+;     -- ADDRESS_REG_B                      ; CLOCK0                                                                     ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                               ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                                       ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                                  ;
+; Entity Instance                           ; cache:cache_if_mod|cache_datapath:datapath|array:tag|altsyncram:data_rtl_0 ;
+;     -- OPERATION_MODE                     ; DUAL_PORT                                                                  ;
+;     -- WIDTH_A                            ; 24                                                                         ;
+;     -- NUMWORDS_A                         ; 8                                                                          ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                               ;
+;     -- WIDTH_B                            ; 24                                                                         ;
+;     -- NUMWORDS_B                         ; 8                                                                          ;
+;     -- ADDRESS_REG_B                      ; CLOCK0                                                                     ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                               ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                                       ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                                  ;
++-------------------------------------------+----------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "cache:cache_if_mod|cache_datapath:datapath|array:valid" ;
++--------+-------+----------+--------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                ;
++--------+-------+----------+--------------------------------------------------------+
+; datain ; Input ; Info     ; Stuck at VCC                                           ;
++--------+-------+----------+--------------------------------------------------------+
+
+
++---------------------------------------------------------+
+; Port Connectivity Checks: "cache:cache_if_mod"          ;
++------------+--------+----------+------------------------+
+; Port       ; Type   ; Severity ; Details                ;
++------------+--------+----------+------------------------+
+; pmem_wdata ; Output ; Info     ; Explicitly unconnected ;
+; pmem_write ; Output ; Info     ; Explicitly unconnected ;
++------------+--------+----------+------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "datapath:datapath_mod|MEM_WB:mem_write_back_stage"                                                           ;
++-------------------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port                          ; Type   ; Severity ; Details                                                                             ;
++-------------------------------+--------+----------+-------------------------------------------------------------------------------------+
+; REGFILE_DATA_MEM_WB_REGISTER2 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriaii_ff            ; 6338                        ;
+;     CLR               ; 16                          ;
+;     CLR SCLR          ; 256                         ;
+;     ENA               ; 4655                        ;
+;     ENA SCLR          ; 1082                        ;
+;     ENA SCLR SLD      ; 59                          ;
+;     ENA SLD           ; 64                          ;
+;     SCLR              ; 33                          ;
+;     SCLR SLD          ; 1                           ;
+;     plain             ; 172                         ;
+; boundary_port         ; 165                         ;
+; stratixiv_lcell_comb  ; 4747                        ;
+;     arith             ; 92                          ;
+;         1 data inputs ; 59                          ;
+;         2 data inputs ; 1                           ;
+;         5 data inputs ; 32                          ;
+;     extend            ; 35                          ;
+;         7 data inputs ; 35                          ;
+;     normal            ; 4620                        ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 90                          ;
+;         3 data inputs ; 158                         ;
+;         4 data inputs ; 290                         ;
+;         5 data inputs ; 794                         ;
+;         6 data inputs ; 3286                        ;
+; stratixiv_ram_block   ; 48                          ;
+;                       ;                             ;
+; Max LUT depth         ; 18.00                       ;
+; Average LUT depth     ; 8.75                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:26     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+    Info: Processing started: Tue Dec  1 10:57:34 2020
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off mp4 -c mp4
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info (12021): Found 1 design units, including 0 entities, in source file hdl/types.sv
+    Info (12022): Found design unit 1: mux_types (SystemVerilog) File: /home/evanmm2/ECE_411/RTDC/mp4/hdl/types.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file hdl/given_cache/cacheline_adaptor.sv
+    Info (12023): Found entity 1: cacheline_adaptor File: /home/evanmm2/ECE_411/RTDC/mp4/hdl/given_cache/cacheline_adaptor.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file hdl/given_cache/line_adapter.sv
+    Info (12023): Found entity 1: line_adapter File: /home/evanmm2/ECE_411/RTDC/mp4/hdl/given_cache/line_adapter.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file hdl/given_cache/data_array.sv
+    Info (12023): Found entity 1: data_array File: /home/evanmm2/ECE_411/RTDC/mp4/hdl/given_cache/data_array.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file hdl/given_cache/cache_datapath.sv
+    Info (12023): Found entity 1: cache_datapath File: /home/evanmm2/ECE_411/RTDC/mp4/hdl/given_cache/cache_datapath.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file hdl/given_cache/cache_control.sv
+    Info (12023): Found entity 1: cache_control File: /home/evanmm2/ECE_411/RTDC/mp4/hdl/given_cache/cache_control.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file hdl/given_cache/cache.sv
+    Info (12023): Found entity 1: cache File: /home/evanmm2/ECE_411/RTDC/mp4/hdl/given_cache/cache.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file hdl/given_cache/array.sv
+    Info (12023): Found entity 1: array File: /home/evanmm2/ECE_411/RTDC/mp4/hdl/given_cache/array.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file hdl/forwarding_unit.sv
+    Info (12023): Found entity 1: forwarding_unit File: /home/evanmm2/ECE_411/RTDC/mp4/hdl/forwarding_unit.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file hdl/arbiter.sv
+    Info (12023): Found entity 1: arbiter File: /home/evanmm2/ECE_411/RTDC/mp4/hdl/arbiter.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file hdl/ctrl_truncator.sv
+    Info (12023): Found entity 1: CTRL_TRUNCATOR File: /home/evanmm2/ECE_411/RTDC/mp4/hdl/ctrl_truncator.sv Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file hdl/regfile.sv
+    Info (12023): Found entity 1: regfile File: /home/evanmm2/ECE_411/RTDC/mp4/hdl/regfile.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file hdl/alu.sv
+    Info (12023): Found entity 1: alu File: /home/evanmm2/ECE_411/RTDC/mp4/hdl/alu.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file hdl/cmp.sv
+    Info (12023): Found entity 1: cmp File: /home/evanmm2/ECE_411/RTDC/mp4/hdl/cmp.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file hdl/IF.sv
+    Info (12023): Found entity 1: IF File: /home/evanmm2/ECE_411/RTDC/mp4/hdl/IF.sv Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file hdl/mp4.sv
+    Info (12023): Found entity 1: mp4 File: /home/evanmm2/ECE_411/RTDC/mp4/hdl/mp4.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file hdl/datapath.sv
+    Info (12023): Found entity 1: datapath File: /home/evanmm2/ECE_411/RTDC/mp4/hdl/datapath.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file hdl/ID.sv
+    Info (12023): Found entity 1: ID File: /home/evanmm2/ECE_411/RTDC/mp4/hdl/ID.sv Line: 13
+Info (12021): Found 1 design units, including 1 entities, in source file hdl/EXE.sv
+    Info (12023): Found entity 1: EXE File: /home/evanmm2/ECE_411/RTDC/mp4/hdl/EXE.sv Line: 1
+Info (12021): Found 2 design units, including 2 entities, in source file hdl/MEM.sv
+    Info (12023): Found entity 1: MBE_DECODER File: /home/evanmm2/ECE_411/RTDC/mp4/hdl/MEM.sv Line: 3
+    Info (12023): Found entity 2: MEM File: /home/evanmm2/ECE_411/RTDC/mp4/hdl/MEM.sv Line: 52
+Info (12021): Found 1 design units, including 1 entities, in source file hdl/MEM_WB.sv
+    Info (12023): Found entity 1: MEM_WB File: /home/evanmm2/ECE_411/RTDC/mp4/hdl/MEM_WB.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file hdl/inst_taylor.sv
+    Info (12023): Found entity 1: INST_TAYLOR File: /home/evanmm2/ECE_411/RTDC/mp4/hdl/inst_taylor.sv Line: 1
+Info (12127): Elaborating entity "mp4" for the top level hierarchy
+Info (12128): Elaborating entity "datapath" for hierarchy "datapath:datapath_mod" File: /home/evanmm2/ECE_411/RTDC/mp4/hdl/mp4.sv Line: 58
+Info (12128): Elaborating entity "IF" for hierarchy "datapath:datapath_mod|IF:instruction_fetch" File: /home/evanmm2/ECE_411/RTDC/mp4/hdl/datapath.sv Line: 89
+Info (12128): Elaborating entity "ID" for hierarchy "datapath:datapath_mod|ID:instruction_decode" File: /home/evanmm2/ECE_411/RTDC/mp4/hdl/datapath.sv Line: 90
+Info (12128): Elaborating entity "INST_TAYLOR" for hierarchy "datapath:datapath_mod|ID:instruction_decode|INST_TAYLOR:instruction_taylor" File: /home/evanmm2/ECE_411/RTDC/mp4/hdl/ID.sv Line: 126
+Info (12128): Elaborating entity "CTRL_TRUNCATOR" for hierarchy "datapath:datapath_mod|ID:instruction_decode|CTRL_TRUNCATOR:control_trucator" File: /home/evanmm2/ECE_411/RTDC/mp4/hdl/ID.sv Line: 127
+Info (12128): Elaborating entity "EXE" for hierarchy "datapath:datapath_mod|EXE:execution_state" File: /home/evanmm2/ECE_411/RTDC/mp4/hdl/datapath.sv Line: 91
+Info (12128): Elaborating entity "alu" for hierarchy "datapath:datapath_mod|EXE:execution_state|alu:ALU" File: /home/evanmm2/ECE_411/RTDC/mp4/hdl/EXE.sv Line: 79
+Info (12128): Elaborating entity "cmp" for hierarchy "datapath:datapath_mod|EXE:execution_state|cmp:CMP" File: /home/evanmm2/ECE_411/RTDC/mp4/hdl/EXE.sv Line: 86
+Info (12128): Elaborating entity "MEM" for hierarchy "datapath:datapath_mod|MEM:memory_io_stage" File: /home/evanmm2/ECE_411/RTDC/mp4/hdl/datapath.sv Line: 92
+Info (12128): Elaborating entity "MBE_DECODER" for hierarchy "datapath:datapath_mod|MEM:memory_io_stage|MBE_DECODER:mbe_decoder" File: /home/evanmm2/ECE_411/RTDC/mp4/hdl/MEM.sv Line: 97
+Info (12128): Elaborating entity "MEM_WB" for hierarchy "datapath:datapath_mod|MEM_WB:mem_write_back_stage" File: /home/evanmm2/ECE_411/RTDC/mp4/hdl/datapath.sv Line: 93
+Info (12128): Elaborating entity "regfile" for hierarchy "datapath:datapath_mod|regfile:regfile_mod" File: /home/evanmm2/ECE_411/RTDC/mp4/hdl/datapath.sv Line: 99
+Info (12128): Elaborating entity "forwarding_unit" for hierarchy "datapath:datapath_mod|forwarding_unit:forward_mod" File: /home/evanmm2/ECE_411/RTDC/mp4/hdl/datapath.sv Line: 103
+Info (12128): Elaborating entity "cache" for hierarchy "cache:cache_if_mod" File: /home/evanmm2/ECE_411/RTDC/mp4/hdl/mp4.sv Line: 75
+Info (12128): Elaborating entity "cache_control" for hierarchy "cache:cache_if_mod|cache_control:control" File: /home/evanmm2/ECE_411/RTDC/mp4/hdl/given_cache/cache.sv Line: 35
+Info (12128): Elaborating entity "cache_datapath" for hierarchy "cache:cache_if_mod|cache_datapath:datapath" File: /home/evanmm2/ECE_411/RTDC/mp4/hdl/given_cache/cache.sv Line: 36
+Info (12128): Elaborating entity "data_array" for hierarchy "cache:cache_if_mod|cache_datapath:datapath|data_array:DM_cache" File: /home/evanmm2/ECE_411/RTDC/mp4/hdl/given_cache/cache_datapath.sv Line: 56
+Info (12128): Elaborating entity "array" for hierarchy "cache:cache_if_mod|cache_datapath:datapath|array:tag" File: /home/evanmm2/ECE_411/RTDC/mp4/hdl/given_cache/cache_datapath.sv Line: 57
+Info (12128): Elaborating entity "array" for hierarchy "cache:cache_if_mod|cache_datapath:datapath|array:valid" File: /home/evanmm2/ECE_411/RTDC/mp4/hdl/given_cache/cache_datapath.sv Line: 58
+Info (12128): Elaborating entity "line_adapter" for hierarchy "cache:cache_if_mod|line_adapter:bus" File: /home/evanmm2/ECE_411/RTDC/mp4/hdl/given_cache/cache.sv Line: 46
+Info (12128): Elaborating entity "arbiter" for hierarchy "arbiter:arbiter_mod" File: /home/evanmm2/ECE_411/RTDC/mp4/hdl/mp4.sv Line: 112
+Info (12128): Elaborating entity "cacheline_adaptor" for hierarchy "cacheline_adaptor:cacheline_adaptor_mod" File: /home/evanmm2/ECE_411/RTDC/mp4/hdl/mp4.sv Line: 128
+Warning (276020): Inferred RAM node "cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
+Warning (276020): Inferred RAM node "cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
+Info (276014): Found 4 instances of uninferred RAM logic
+    Info (276004): RAM logic "cache:cache_d_mod|cache_datapath:datapath|array:valid|data" is uninferred due to inappropriate RAM size File: /home/evanmm2/ECE_411/RTDC/mp4/hdl/given_cache/array.sv Line: 13
+    Info (276004): RAM logic "cache:cache_if_mod|cache_datapath:datapath|array:dirty|data" is uninferred due to inappropriate RAM size File: /home/evanmm2/ECE_411/RTDC/mp4/hdl/given_cache/array.sv Line: 13
+    Info (276004): RAM logic "cache:cache_d_mod|cache_datapath:datapath|array:dirty|data" is uninferred due to inappropriate RAM size File: /home/evanmm2/ECE_411/RTDC/mp4/hdl/given_cache/array.sv Line: 13
+    Info (276004): RAM logic "cache:cache_if_mod|cache_datapath:datapath|array:valid|data" is uninferred due to inappropriate RAM size File: /home/evanmm2/ECE_411/RTDC/mp4/hdl/given_cache/array.sv Line: 13
+Info (19000): Inferred 2 megafunctions from design logic
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "cache:cache_d_mod|cache_datapath:datapath|array:tag|data_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 24
+        Info (286033): Parameter WIDTHAD_A set to 3
+        Info (286033): Parameter NUMWORDS_A set to 8
+        Info (286033): Parameter WIDTH_B set to 24
+        Info (286033): Parameter WIDTHAD_B set to 3
+        Info (286033): Parameter NUMWORDS_B set to 8
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK0
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+        Info (286033): Parameter INIT_FILE set to db/mp4.ram0_array_32a7bb4d.hdl.mif
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "cache:cache_if_mod|cache_datapath:datapath|array:tag|data_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 24
+        Info (286033): Parameter WIDTHAD_A set to 3
+        Info (286033): Parameter NUMWORDS_A set to 8
+        Info (286033): Parameter WIDTH_B set to 24
+        Info (286033): Parameter WIDTHAD_B set to 3
+        Info (286033): Parameter NUMWORDS_B set to 8
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK0
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+        Info (286033): Parameter INIT_FILE set to db/mp4.ram0_array_32a7bb4d.hdl.mif
+Info (12130): Elaborated megafunction instantiation "cache:cache_d_mod|cache_datapath:datapath|array:tag|altsyncram:data_rtl_0"
+Info (12133): Instantiated megafunction "cache:cache_d_mod|cache_datapath:datapath|array:tag|altsyncram:data_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
+    Info (12134): Parameter "WIDTH_A" = "24"
+    Info (12134): Parameter "WIDTHAD_A" = "3"
+    Info (12134): Parameter "NUMWORDS_A" = "8"
+    Info (12134): Parameter "WIDTH_B" = "24"
+    Info (12134): Parameter "WIDTHAD_B" = "3"
+    Info (12134): Parameter "NUMWORDS_B" = "8"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_B" = "NONE"
+    Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK0"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+    Info (12134): Parameter "INIT_FILE" = "db/mp4.ram0_array_32a7bb4d.hdl.mif"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_c3o1.tdf
+    Info (12023): Found entity 1: altsyncram_c3o1 File: /home/evanmm2/ECE_411/RTDC/mp4/db/altsyncram_c3o1.tdf Line: 27
+Info (12130): Elaborated megafunction instantiation "cache:cache_if_mod|cache_datapath:datapath|array:tag|altsyncram:data_rtl_0"
+Info (12133): Instantiated megafunction "cache:cache_if_mod|cache_datapath:datapath|array:tag|altsyncram:data_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
+    Info (12134): Parameter "WIDTH_A" = "24"
+    Info (12134): Parameter "WIDTHAD_A" = "3"
+    Info (12134): Parameter "NUMWORDS_A" = "8"
+    Info (12134): Parameter "WIDTH_B" = "24"
+    Info (12134): Parameter "WIDTHAD_B" = "3"
+    Info (12134): Parameter "NUMWORDS_B" = "8"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_B" = "NONE"
+    Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK0"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+    Info (12134): Parameter "INIT_FILE" = "db/mp4.ram0_array_32a7bb4d.hdl.mif"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_5km1.tdf
+    Info (12023): Found entity 1: altsyncram_5km1 File: /home/evanmm2/ECE_411/RTDC/mp4/db/altsyncram_5km1.tdf Line: 27
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 125 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file /home/evanmm2/ECE_411/RTDC/mp4/output_files/mp4.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 11120 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 67 input pins
+    Info (21059): Implemented 98 output pins
+    Info (21061): Implemented 10907 logic cells
+    Info (21064): Implemented 48 RAM segments
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 1282 megabytes
+    Info: Processing ended: Tue Dec  1 10:58:19 2020
+    Info: Elapsed time: 00:00:45
+    Info: Total CPU time (on all processors): 00:00:55
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in /home/evanmm2/ECE_411/RTDC/mp4/output_files/mp4.map.smsg.
+
+
