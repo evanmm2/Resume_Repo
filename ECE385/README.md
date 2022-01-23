@@ -1,4 +1,4 @@
-ECE 385 is the Digitial Systems Laboratory class. It had hands on projects for simple memory demonstrations on breadboads. 
+ECE 385 is the Digital Systems Laboratory class. It had hands on projects for simple memory demonstrations on breadboads. 
 The final project was up to our own choosing and done with a partner. We chose to make a fully functional VGA System Verilog Tetris.
 
 Class Description:
