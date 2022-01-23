@@ -1,0 +1,144 @@
+Quartus Prime Archive log --	D:/Quartus_Files/Final_Project/FinalProject_tmp_archive.qarlog
+
+Archive:	D:/Quartus_Files/Final_Project/FinalProject_tmp_archive.qar
+Date:		Tue Apr 30 12:05:11 2019
+Quartus Prime		18.0.0 Build 614 04/24/2018 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/Users/Evan Miller/Downloads/ActiveGameStateMachine.sv
+C:/Users/Evan Miller/Downloads/ArrayMux.sv
+C:/Users/Evan Miller/Downloads/Arraycheck.sv
+C:/Users/Evan Miller/Downloads/Clearline.sv
+C:/Users/Evan Miller/Downloads/LoadArray.sv
+C:/Users/Evan Miller/Downloads/lab7.sdc
+C:/Users/Evan Miller/Downloads/score.sv
+D:/Quartus_Files/Final_Project/Color_Mapper.sv
+D:/Quartus_Files/Final_Project/ECE385-HelperTools-master/PNG-To-Hex/On-Chip-Memory/ram.sv
+D:/Quartus_Files/Final_Project/EndScreenDone.txt
+D:/Quartus_Files/Final_Project/FinalProject.qpf
+D:/Quartus_Files/Final_Project/HexDriver.sv
+D:/Quartus_Files/Final_Project/Lab8_soc/lab8_soc.cmp
+D:/Quartus_Files/Final_Project/Lab8_soc/synthesis/lab8_soc.debuginfo
+D:/Quartus_Files/Final_Project/Lab8_soc/synthesis/lab8_soc.qip
+D:/Quartus_Files/Final_Project/Lab8_soc/synthesis/lab8_soc.regmap
+D:/Quartus_Files/Final_Project/Lab8_soc/synthesis/lab8_soc.v
+D:/Quartus_Files/Final_Project/Lab8_soc/synthesis/submodules/altera_avalon_sc_fifo.v
+D:/Quartus_Files/Final_Project/Lab8_soc/synthesis/submodules/altera_avalon_st_clock_crosser.v
+D:/Quartus_Files/Final_Project/Lab8_soc/synthesis/submodules/altera_avalon_st_handshake_clock_crosser.sdc
+D:/Quartus_Files/Final_Project/Lab8_soc/synthesis/submodules/altera_avalon_st_handshake_clock_crosser.v
+D:/Quartus_Files/Final_Project/Lab8_soc/synthesis/submodules/altera_avalon_st_pipeline_base.v
+D:/Quartus_Files/Final_Project/Lab8_soc/synthesis/submodules/altera_merlin_arbitrator.sv
+D:/Quartus_Files/Final_Project/Lab8_soc/synthesis/submodules/altera_merlin_burst_uncompressor.sv
+D:/Quartus_Files/Final_Project/Lab8_soc/synthesis/submodules/altera_merlin_master_agent.sv
+D:/Quartus_Files/Final_Project/Lab8_soc/synthesis/submodules/altera_merlin_master_translator.sv
+D:/Quartus_Files/Final_Project/Lab8_soc/synthesis/submodules/altera_merlin_slave_agent.sv
+D:/Quartus_Files/Final_Project/Lab8_soc/synthesis/submodules/altera_merlin_slave_translator.sv
+D:/Quartus_Files/Final_Project/Lab8_soc/synthesis/submodules/altera_reset_controller.sdc
+D:/Quartus_Files/Final_Project/Lab8_soc/synthesis/submodules/altera_reset_controller.v
+D:/Quartus_Files/Final_Project/Lab8_soc/synthesis/submodules/altera_reset_synchronizer.v
+D:/Quartus_Files/Final_Project/Lab8_soc/synthesis/submodules/altera_std_synchronizer_nocut.v
+D:/Quartus_Files/Final_Project/Lab8_soc/synthesis/submodules/lab7_soc_nios2_gen2_0_cpu.sdc
+D:/Quartus_Files/Final_Project/Lab8_soc/synthesis/submodules/lab8_soc_irq_mapper.sv
+D:/Quartus_Files/Final_Project/Lab8_soc/synthesis/submodules/lab8_soc_jtag_uart_0.v
+D:/Quartus_Files/Final_Project/Lab8_soc/synthesis/submodules/lab8_soc_keycode.v
+D:/Quartus_Files/Final_Project/Lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0.v
+D:/Quartus_Files/Final_Project/Lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0_avalon_st_adapter.v
+D:/Quartus_Files/Final_Project/Lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv
+D:/Quartus_Files/Final_Project/Lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0_cmd_demux.sv
+D:/Quartus_Files/Final_Project/Lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0_cmd_demux_001.sv
+D:/Quartus_Files/Final_Project/Lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0_cmd_mux.sv
+D:/Quartus_Files/Final_Project/Lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0_cmd_mux_001.sv
+D:/Quartus_Files/Final_Project/Lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0_router.sv
+D:/Quartus_Files/Final_Project/Lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0_router_001.sv
+D:/Quartus_Files/Final_Project/Lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0_router_002.sv
+D:/Quartus_Files/Final_Project/Lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0_router_003.sv
+D:/Quartus_Files/Final_Project/Lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0_rsp_demux.sv
+D:/Quartus_Files/Final_Project/Lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0_rsp_demux_001.sv
+D:/Quartus_Files/Final_Project/Lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0_rsp_mux.sv
+D:/Quartus_Files/Final_Project/Lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0_rsp_mux_001.sv
+D:/Quartus_Files/Final_Project/Lab8_soc/synthesis/submodules/lab8_soc_nios2_gen2_0.v
+D:/Quartus_Files/Final_Project/Lab8_soc/synthesis/submodules/lab8_soc_nios2_gen2_0_cpu.sdc
+D:/Quartus_Files/Final_Project/Lab8_soc/synthesis/submodules/lab8_soc_nios2_gen2_0_cpu.v
+D:/Quartus_Files/Final_Project/Lab8_soc/synthesis/submodules/lab8_soc_nios2_gen2_0_cpu_debug_slave_sysclk.v
+D:/Quartus_Files/Final_Project/Lab8_soc/synthesis/submodules/lab8_soc_nios2_gen2_0_cpu_debug_slave_tck.v
+D:/Quartus_Files/Final_Project/Lab8_soc/synthesis/submodules/lab8_soc_nios2_gen2_0_cpu_debug_slave_wrapper.v
+D:/Quartus_Files/Final_Project/Lab8_soc/synthesis/submodules/lab8_soc_nios2_gen2_0_cpu_ociram_default_contents.mif
+D:/Quartus_Files/Final_Project/Lab8_soc/synthesis/submodules/lab8_soc_nios2_gen2_0_cpu_rf_ram_a.mif
+D:/Quartus_Files/Final_Project/Lab8_soc/synthesis/submodules/lab8_soc_nios2_gen2_0_cpu_rf_ram_b.mif
+D:/Quartus_Files/Final_Project/Lab8_soc/synthesis/submodules/lab8_soc_nios2_gen2_0_cpu_test_bench.v
+D:/Quartus_Files/Final_Project/Lab8_soc/synthesis/submodules/lab8_soc_onchip_memory2_0.hex
+D:/Quartus_Files/Final_Project/Lab8_soc/synthesis/submodules/lab8_soc_onchip_memory2_0.v
+D:/Quartus_Files/Final_Project/Lab8_soc/synthesis/submodules/lab8_soc_otg_hpi_address.v
+D:/Quartus_Files/Final_Project/Lab8_soc/synthesis/submodules/lab8_soc_otg_hpi_cs.v
+D:/Quartus_Files/Final_Project/Lab8_soc/synthesis/submodules/lab8_soc_otg_hpi_data.v
+D:/Quartus_Files/Final_Project/Lab8_soc/synthesis/submodules/lab8_soc_sdram.v
+D:/Quartus_Files/Final_Project/Lab8_soc/synthesis/submodules/lab8_soc_sdram_pll.v
+D:/Quartus_Files/Final_Project/Lab8_soc/synthesis/submodules/lab8_soc_sysid_qsys_0.v
+D:/Quartus_Files/Final_Project/Number0Done.txt
+D:/Quartus_Files/Final_Project/Number1Done.txt
+D:/Quartus_Files/Final_Project/Number2Done.txt
+D:/Quartus_Files/Final_Project/Number3Done.txt
+D:/Quartus_Files/Final_Project/Number4Done.txt
+D:/Quartus_Files/Final_Project/Number5Done.txt
+D:/Quartus_Files/Final_Project/Number6Done.txt
+D:/Quartus_Files/Final_Project/Number7Done.txt
+D:/Quartus_Files/Final_Project/Number8Done.txt
+D:/Quartus_Files/Final_Project/Number9Done.txt
+D:/Quartus_Files/Final_Project/PLLJ_PLLSPE_INFO.txt
+D:/Quartus_Files/Final_Project/ScoreMapper.sv
+D:/Quartus_Files/Final_Project/StartScreenDone.txt
+D:/Quartus_Files/Final_Project/VGA_controller.sv
+D:/Quartus_Files/Final_Project/__lab7_usb.auto.qarlog
+D:/Quartus_Files/Final_Project/ball.sv
+D:/Quartus_Files/Final_Project/blockshape.sv
+D:/Quartus_Files/Final_Project/ece385-helpertools-master/png-to-hex/on-chip-memory/sprite_bytes/background.txt
+D:/Quartus_Files/Final_Project/ece385-helpertools-master/png-to-hex/on-chip-memory/sprite_bytes/blueblock.txt
+D:/Quartus_Files/Final_Project/ece385-helpertools-master/png-to-hex/on-chip-memory/sprite_bytes/cyanblock.txt
+D:/Quartus_Files/Final_Project/ece385-helpertools-master/png-to-hex/on-chip-memory/sprite_bytes/limeblock.txt
+D:/Quartus_Files/Final_Project/ece385-helpertools-master/png-to-hex/on-chip-memory/sprite_bytes/orangeblockdone.txt
+D:/Quartus_Files/Final_Project/ece385-helpertools-master/png-to-hex/on-chip-memory/sprite_bytes/purpleblock.txt
+D:/Quartus_Files/Final_Project/ece385-helpertools-master/png-to-hex/on-chip-memory/sprite_bytes/redblock.txt
+D:/Quartus_Files/Final_Project/ece385-helpertools-master/png-to-hex/on-chip-memory/sprite_bytes/yellowblock.txt
+D:/Quartus_Files/Final_Project/endRAM.v
+D:/Quartus_Files/Final_Project/endRam.sv
+D:/Quartus_Files/Final_Project/endscreendone.txt
+D:/Quartus_Files/Final_Project/hpi_io_intf.sv
+D:/Quartus_Files/Final_Project/keypress_state_machine.sv
+D:/Quartus_Files/Final_Project/lab.txt.txt
+D:/Quartus_Files/Final_Project/lab7_usb.qsf
+D:/Quartus_Files/Final_Project/lab8.qsf
+D:/Quartus_Files/Final_Project/lab8.sv
+D:/Quartus_Files/Final_Project/lab8.txt
+D:/Quartus_Files/Final_Project/lab8_assignment_defaults.qdf
+D:/Quartus_Files/Final_Project/lab8_soc.qsys
+D:/Quartus_Files/Final_Project/lab8_soc.sopcinfo
+D:/Quartus_Files/Final_Project/lab8_tmp_archive.qarlog
+D:/Quartus_Files/Final_Project/number0done.txt
+D:/Quartus_Files/Final_Project/number1done.txt
+D:/Quartus_Files/Final_Project/number2done.txt
+D:/Quartus_Files/Final_Project/number3done.txt
+D:/Quartus_Files/Final_Project/number4done.txt
+D:/Quartus_Files/Final_Project/number5done.txt
+D:/Quartus_Files/Final_Project/number6done.txt
+D:/Quartus_Files/Final_Project/number7done.txt
+D:/Quartus_Files/Final_Project/number8done.txt
+D:/Quartus_Files/Final_Project/number9done.txt
+D:/Quartus_Files/Final_Project/ramBack.sv
+D:/Quartus_Files/Final_Project/randomizer.sv
+D:/Quartus_Files/Final_Project/simpleblock.sv
+D:/Quartus_Files/Final_Project/slowClock.sv
+D:/Quartus_Files/Final_Project/startscreendone.txt
+D:/Quartus_Files/Final_Project/vga_clk.ppf
+D:/Quartus_Files/Final_Project/vga_clk.qip
+D:/Quartus_Files/Final_Project/vga_clk.v
+d:/double/quartus/bin64/assignment_defaults.qdf
+	======= Total: 127 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
+
+
+******* Archived project restoration attempt on Tue Apr 30 12:05:19 2019
+Source archive file:	D:/Quartus_Files/Final_Project/FinalProject_tmp_archive.qar
+Archive was extracted into	E:/evanmm2_sc21/
+		 - successfully.

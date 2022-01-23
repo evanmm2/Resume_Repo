@@ -1,0 +1,66 @@
+/*
+ * ECE385-HelperTools/PNG-To-Txt
+ * Author: Rishi Thakkar
+ *
+ */
+
+module  frameRAM
+(
+		
+		input [9:0] read_address,
+		input Clk,
+		input [4:0] Shape,
+		input [7:0]index,
+		output logic [23:0] data_Out, data_Out2
+);
+
+// mem has width of 3 bits and a total of 400 addresses
+logic [23:0] One [0:255];
+logic [23:0] Two [0:255];
+logic [23:0] Three [0:255];
+logic [23:0] Four [0:255];
+logic [23:0] Five [0:255];
+logic [23:0] Six [0:255];
+logic [23:0] Seven [0:255];
+logic [23:0] Eight [0:255];
+logic [23:0] Nine [0:255];
+logic [23:0] Zero [0:255];
+
+
+
+initial
+begin
+	 $readmemh("sprite_bytes/CyanBlock.txt", IPiece);
+	 $readmemh("sprite_bytes/OrangeBlockDone.txt", SquarePiece);
+	 $readmemh("sprite_bytes/BlueBlock.txt", LPiece);
+	 $readmemh("sprite_bytes/YellowBlock.txt", JPiece);
+	 $readmemh("sprite_bytes/RedBlock.txt", ZPiece);
+	 $readmemh("sprite_bytes/LimeBlock.txt", SPiece);
+	 $readmemh("sprite_bytes/PurpleBlock.txt", TPiece);
+	 $readmemh("sprite_bytes/Background.txt", Background);
+end
+
+
+always_ff @ (posedge Clk) begin
+	data_Out2<= Background[index];
+
+	if(Shape == 1 || Shape == 2)
+	data_Out<= IPiece[read_address];
+	else if(Shape == 3)
+	data_Out<= SquarePiece[read_address];
+	else if(Shape == 4 || Shape == 5 || Shape == 6 || Shape == 7)
+	data_Out<= LPiece[read_address];
+	else if(Shape == 8 || Shape == 9 || Shape == 10 || Shape == 11)
+	data_Out<= JPiece[read_address];
+	else if(Shape == 12 || Shape == 13)
+	data_Out<= ZPiece[read_address];
+	else if(Shape == 13 || Shape == 14)
+	data_Out<= SPiece[read_address];
+	else if(Shape == 14 || Shape == 15 || Shape == 16 || Shape == 17)
+	data_Out<= TPiece[read_address];
+	else 
+	data_Out<= IPiece[read_address];
+
+end
+
+endmodule

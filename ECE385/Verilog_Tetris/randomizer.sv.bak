@@ -1,0 +1,24 @@
+module randomizer (
+input Clk, Reset,
+output [3:0] Next_Shape
+
+);
+
+logic [3:0] count, count_in;
+always_ff @(posedge Clk)
+begin
+    if (Reset)
+        count = 4'd0;
+    else
+        count = count_in;
+end
+
+always_comb
+begin
+    count_in = count + 1'd1;
+    Next_Shape = count;
+end
+
+endmodule
+
+

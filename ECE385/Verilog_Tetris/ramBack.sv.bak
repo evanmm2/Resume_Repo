@@ -1,0 +1,41 @@
+/*
+ * ECE385-HelperTools/PNG-To-Txt
+ * Author: Rishi Thakkar
+ *
+ */
+
+module  frameRAM
+(
+		
+		input [9:0] read_address,
+		input Clk,
+		input [4:0] Shape,
+		output logic [23:0] data_Out
+);
+
+// mem has width of 3 bits and a total of 400 addresses
+logic [23:0] IPiece [0:255];
+logic [23:0] SquarePiece [0:255];
+logic [23:0] LPiece [0:255];
+logic [23:0] JPiece [0:255];
+logic [23:0] ZPiece [0:255];
+logic [23:0] SPiece [0:255];
+logic [23:0] TPiece [0:255];
+
+
+
+
+initial
+begin
+	 $readmemh("sprite_bytes/CyanBlock.txt", IPiece);
+
+
+end
+
+
+always_ff @ (posedge Clk) begin
+	data_Out<= IPiece[read_address];
+	
+end
+
+endmodule

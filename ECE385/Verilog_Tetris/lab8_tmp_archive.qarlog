@@ -1,0 +1,93 @@
+Quartus Prime Archive log --	D:/Quartus_Files/Lab8_provided/lab8_tmp_archive.qarlog
+
+Archive:	D:/Quartus_Files/Lab8_provided/lab8_tmp_archive.qar
+Date:		Tue Mar 12 11:44:20 2019
+Quartus Prime		18.0.0 Build 614 04/24/2018 SJ Lite Edition
+
+	=========== Files Selected: ===========
+D:/Quartus_Files/Lab8_provided/Color_Mapper.sv
+D:/Quartus_Files/Lab8_provided/HexDriver.sv
+D:/Quartus_Files/Lab8_provided/Lab8_soc/lab8_soc.cmp
+D:/Quartus_Files/Lab8_provided/Lab8_soc/synthesis/lab8_soc.debuginfo
+D:/Quartus_Files/Lab8_provided/Lab8_soc/synthesis/lab8_soc.qip
+D:/Quartus_Files/Lab8_provided/Lab8_soc/synthesis/lab8_soc.regmap
+D:/Quartus_Files/Lab8_provided/Lab8_soc/synthesis/lab8_soc.v
+D:/Quartus_Files/Lab8_provided/Lab8_soc/synthesis/submodules/altera_avalon_sc_fifo.v
+D:/Quartus_Files/Lab8_provided/Lab8_soc/synthesis/submodules/altera_avalon_st_clock_crosser.v
+D:/Quartus_Files/Lab8_provided/Lab8_soc/synthesis/submodules/altera_avalon_st_handshake_clock_crosser.sdc
+D:/Quartus_Files/Lab8_provided/Lab8_soc/synthesis/submodules/altera_avalon_st_handshake_clock_crosser.v
+D:/Quartus_Files/Lab8_provided/Lab8_soc/synthesis/submodules/altera_avalon_st_pipeline_base.v
+D:/Quartus_Files/Lab8_provided/Lab8_soc/synthesis/submodules/altera_merlin_arbitrator.sv
+D:/Quartus_Files/Lab8_provided/Lab8_soc/synthesis/submodules/altera_merlin_burst_uncompressor.sv
+D:/Quartus_Files/Lab8_provided/Lab8_soc/synthesis/submodules/altera_merlin_master_agent.sv
+D:/Quartus_Files/Lab8_provided/Lab8_soc/synthesis/submodules/altera_merlin_master_translator.sv
+D:/Quartus_Files/Lab8_provided/Lab8_soc/synthesis/submodules/altera_merlin_slave_agent.sv
+D:/Quartus_Files/Lab8_provided/Lab8_soc/synthesis/submodules/altera_merlin_slave_translator.sv
+D:/Quartus_Files/Lab8_provided/Lab8_soc/synthesis/submodules/altera_reset_controller.sdc
+D:/Quartus_Files/Lab8_provided/Lab8_soc/synthesis/submodules/altera_reset_controller.v
+D:/Quartus_Files/Lab8_provided/Lab8_soc/synthesis/submodules/altera_reset_synchronizer.v
+D:/Quartus_Files/Lab8_provided/Lab8_soc/synthesis/submodules/altera_std_synchronizer_nocut.v
+D:/Quartus_Files/Lab8_provided/Lab8_soc/synthesis/submodules/lab7_soc_nios2_gen2_0_cpu.sdc
+D:/Quartus_Files/Lab8_provided/Lab8_soc/synthesis/submodules/lab8_soc_irq_mapper.sv
+D:/Quartus_Files/Lab8_provided/Lab8_soc/synthesis/submodules/lab8_soc_jtag_uart_0.v
+D:/Quartus_Files/Lab8_provided/Lab8_soc/synthesis/submodules/lab8_soc_keycode.v
+D:/Quartus_Files/Lab8_provided/Lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0.v
+D:/Quartus_Files/Lab8_provided/Lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0_avalon_st_adapter.v
+D:/Quartus_Files/Lab8_provided/Lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv
+D:/Quartus_Files/Lab8_provided/Lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0_cmd_demux.sv
+D:/Quartus_Files/Lab8_provided/Lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0_cmd_demux_001.sv
+D:/Quartus_Files/Lab8_provided/Lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0_cmd_mux.sv
+D:/Quartus_Files/Lab8_provided/Lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0_cmd_mux_001.sv
+D:/Quartus_Files/Lab8_provided/Lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0_router.sv
+D:/Quartus_Files/Lab8_provided/Lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0_router_001.sv
+D:/Quartus_Files/Lab8_provided/Lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0_router_002.sv
+D:/Quartus_Files/Lab8_provided/Lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0_router_003.sv
+D:/Quartus_Files/Lab8_provided/Lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0_rsp_demux.sv
+D:/Quartus_Files/Lab8_provided/Lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0_rsp_demux_001.sv
+D:/Quartus_Files/Lab8_provided/Lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0_rsp_mux.sv
+D:/Quartus_Files/Lab8_provided/Lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0_rsp_mux_001.sv
+D:/Quartus_Files/Lab8_provided/Lab8_soc/synthesis/submodules/lab8_soc_nios2_gen2_0.v
+D:/Quartus_Files/Lab8_provided/Lab8_soc/synthesis/submodules/lab8_soc_nios2_gen2_0_cpu.sdc
+D:/Quartus_Files/Lab8_provided/Lab8_soc/synthesis/submodules/lab8_soc_nios2_gen2_0_cpu.v
+D:/Quartus_Files/Lab8_provided/Lab8_soc/synthesis/submodules/lab8_soc_nios2_gen2_0_cpu_debug_slave_sysclk.v
+D:/Quartus_Files/Lab8_provided/Lab8_soc/synthesis/submodules/lab8_soc_nios2_gen2_0_cpu_debug_slave_tck.v
+D:/Quartus_Files/Lab8_provided/Lab8_soc/synthesis/submodules/lab8_soc_nios2_gen2_0_cpu_debug_slave_wrapper.v
+D:/Quartus_Files/Lab8_provided/Lab8_soc/synthesis/submodules/lab8_soc_nios2_gen2_0_cpu_ociram_default_contents.mif
+D:/Quartus_Files/Lab8_provided/Lab8_soc/synthesis/submodules/lab8_soc_nios2_gen2_0_cpu_rf_ram_a.mif
+D:/Quartus_Files/Lab8_provided/Lab8_soc/synthesis/submodules/lab8_soc_nios2_gen2_0_cpu_rf_ram_b.mif
+D:/Quartus_Files/Lab8_provided/Lab8_soc/synthesis/submodules/lab8_soc_nios2_gen2_0_cpu_test_bench.v
+D:/Quartus_Files/Lab8_provided/Lab8_soc/synthesis/submodules/lab8_soc_onchip_memory2_0.hex
+D:/Quartus_Files/Lab8_provided/Lab8_soc/synthesis/submodules/lab8_soc_onchip_memory2_0.v
+D:/Quartus_Files/Lab8_provided/Lab8_soc/synthesis/submodules/lab8_soc_otg_hpi_address.v
+D:/Quartus_Files/Lab8_provided/Lab8_soc/synthesis/submodules/lab8_soc_otg_hpi_cs.v
+D:/Quartus_Files/Lab8_provided/Lab8_soc/synthesis/submodules/lab8_soc_otg_hpi_data.v
+D:/Quartus_Files/Lab8_provided/Lab8_soc/synthesis/submodules/lab8_soc_sdram.v
+D:/Quartus_Files/Lab8_provided/Lab8_soc/synthesis/submodules/lab8_soc_sdram_pll.v
+D:/Quartus_Files/Lab8_provided/Lab8_soc/synthesis/submodules/lab8_soc_sysid_qsys_0.v
+D:/Quartus_Files/Lab8_provided/PLLJ_PLLSPE_INFO.txt
+D:/Quartus_Files/Lab8_provided/VGA_controller.sv
+D:/Quartus_Files/Lab8_provided/ball.sv
+D:/Quartus_Files/Lab8_provided/hpi_io_intf.sv
+D:/Quartus_Files/Lab8_provided/lab.txt.txt
+D:/Quartus_Files/Lab8_provided/lab7_usb.qsf
+D:/Quartus_Files/Lab8_provided/lab8.qpf
+D:/Quartus_Files/Lab8_provided/lab8.qsf
+D:/Quartus_Files/Lab8_provided/lab8.sv
+D:/Quartus_Files/Lab8_provided/lab8.txt
+D:/Quartus_Files/Lab8_provided/lab8_assignment_defaults.qdf
+D:/Quartus_Files/Lab8_provided/lab8_soc.qsys
+D:/Quartus_Files/Lab8_provided/lab8_soc.sopcinfo
+D:/Quartus_Files/Lab8_provided/vga_clk.ppf
+D:/Quartus_Files/Lab8_provided/vga_clk.qip
+D:/Quartus_Files/Lab8_provided/vga_clk.v
+d:/double/quartus/bin64/assignment_defaults.qdf
+	======= Total: 76 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
+
+
+******* Archived project restoration attempt on Tue Mar 12 11:44:28 2019
+Source archive file:	D:/Quartus_Files/Lab8_provided/lab8_tmp_archive.qar
+Archive was extracted into	E:/385ABC/evanmm2_sc21/
+		 - successfully.
