@@ -1,0 +1,28 @@
+Quartus Prime Archive log --	C:/Users/BEN/Desktop/Quartus/8 Bit multiplier/8bitmult_tmp_archive.qarlog
+
+Archive:	C:/Users/BEN/Desktop/Quartus/8 Bit multiplier/8bitmult_tmp_archive.qar
+Date:		Mon Feb 18 23:30:03 2019
+Quartus Prime		18.0.0 Build 614 04/24/2018 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/Users/BEN/Desktop/Quartus/8 Bit multiplier/8bitmult.qpf
+C:/Users/BEN/Desktop/Quartus/8 Bit multiplier/Carry_Ripple.qsf
+C:/Users/BEN/Desktop/Quartus/8 Bit multiplier/Control.sv
+C:/Users/BEN/Desktop/Quartus/8 Bit multiplier/HexDriver.sv
+C:/Users/BEN/Desktop/Quartus/8 Bit multiplier/Processor.sv
+C:/Users/BEN/Desktop/Quartus/8 Bit multiplier/Reg_4.sv
+C:/Users/BEN/Desktop/Quartus/8 Bit multiplier/Register_unit.sv
+C:/Users/BEN/Desktop/Quartus/8 Bit multiplier/Synchronizers.sv
+C:/Users/BEN/Desktop/Quartus/8 Bit multiplier/assignment_defaults.qdf
+C:/Users/BEN/Desktop/Quartus/8 Bit multiplier/ripple_adder.sv
+C:/Users/BEN/Desktop/Quartus/8 Bit multiplier/testbench.sv
+	======= Total: 11 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
+
+
+******* Archived project restoration attempt on Mon Feb 18 23:30:05 2019
+Source archive file:	C:/Users/BEN/Desktop/Quartus/8 Bit multiplier/8bitmult_tmp_archive.qar
+Archive was extracted into	E:/Quartus/8 bit mult/
+		 - successfully.
