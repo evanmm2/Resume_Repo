@@ -1,0 +1,99 @@
+module MEM(
+	input logic clk,
+
+	input logic [31:0] MEM_ADDRESS,
+	input logic [31:0] DATA_MEM, //NEW SIGNAL FROM EXECUTE FOR WHAT IS BEING STORED
+	input logic READ_MEM,
+	input logic WRITE_MEM,
+	input logic [3:0] RD_MEM,
+	input logic WRITE_REG_MEM,
+	input logic [3:0] MEM_BYTE_EN_MEM,
+	input logic [1:0] OFFSET_MEM,
+	input logic [2:0] FUNCT3,
+	
+	output logic [3:0] RD_MEM_WB,
+	output logic WRITE_REG_MEM_WB,
+	output logic [31:0] RD_DATA_IN_WB,
+	
+	output logic WRITE_TO_CACHE_D,
+	output logic READ_FROM_CACHE_D,
+	output logic [31:0] MEM_WDATA,
+	output logic [3:0] MEM_BYTE_EN,
+	output logic [31:0] ADDRESS_D,
+	input logic [31:0] MEM_RDATA,
+	input logic CACHE_RESP_D
+);
+
+logic [31:0] RDATA_SHIFTED;
+logic [31:0] BYTE_ZEROS_EXTENDER;
+logic [31:0] BYTE_ONES_EXTENDER;
+logic [31:0] HALFWORD_ZEROS_EXTENDER;
+logic [31:0] HALFWORD_ONES_EXTENDER;
+logic [31:0] WB_DATA;
+
+assign BYTE_ZEROS_EXTENDER = 32'h000000ff;
+assign BYTE_ONES_EXTENDER = 32'hffffff00;
+assign HALFWORD_ZEROS_EXTENDER = 32'h0000ffff;
+assign HALFWORD_ONES_EXTENDER = 32'hffff0000;
+
+//To the data cache
+assign ADDRESS_D = MEM_ADDRESS;
+assign WRITE_TO_CACHE_D = WRITE_MEM;
+assign READ_FROM_CACHE_D = READ_MEM;
+assign MEM_BYTE_EN = MEM_BYTE_EN_MEM;
+
+always_comb begin
+	//shift wdata based on the offset from address
+	unique case(OFFSET_MEM)
+		2'b00: MEM_WDATA = DATA_MEM;
+		2'b01: MEM_WDATA = DATA_MEM << 8;
+		2'b10: MEM_WDATA = DATA_MEM << 16;
+		2'b11: MEM_WDATA = DATA_MEM << 24;
+	endcase
+	
+	//shift rdata based on the offset from address
+	unique case(OFFSET_MEM)
+		2'b00: RDATA_SHIFTED = MEM_RDATA;
+		2'b01: RDATA_SHIFTED = MEM_RDATA >> 8;
+		2'b10: RDATA_SHIFTED = MEM_RDATA >> 16;
+		2'b11: RDATA_SHIFTED = MEM_RDATA >> 24;
+	endcase
+	
+	//Assign RD_DATA_IN_WB
+	if(READ_MEM) begin
+		//If read, assign rd_data_in_wb from memory and extend based on funct3
+		unique case(FUNCT3)
+			//LB
+			3'b000: begin
+				if(RDATA_SHIFTED[7])
+						WB_DATA = RDATA_SHIFTED | BYTE_ONES_EXTENDER;
+				else 
+						WB_DATA = RDATA_SHIFTED & BYTE_ZEROS_EXTENDER;
+			end
+			//LH
+			3'b001: begin
+				if(RDATA_SHIFTED[15])
+						WB_DATA = RDATA_SHIFTED | HALFWORD_ONES_EXTENDER;
+				else 
+						WB_DATA = RDATA_SHIFTED & HALFWORD_ZEROS_EXTENDER;
+			end
+			//LW
+			3'b010: WB_DATA = MEM_RDATA;
+			//LBU
+			3'b100: WB_DATA = RDATA_SHIFTED & BYTE_ZEROS_EXTENDER;
+			//LHU
+			3'b101: WB_DATA = RDATA_SHIFTED & HALFWORD_ZEROS_EXTENDER;
+		endcase
+	end else 
+		WB_DATA = DATA_MEM;
+end 
+
+always_ff @(posedge clk) begin
+	//control ROM signals
+	RD_MEM_WB <= RD_MEM;
+	WRITE_REG_MEM_WB <= WRITE_REG_MEM;
+	RD_DATA_IN_WB <= WB_DATA;
+end
+
+
+endmodule : MEM

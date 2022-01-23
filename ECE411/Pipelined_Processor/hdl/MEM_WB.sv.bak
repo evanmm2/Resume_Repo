@@ -1,0 +1,42 @@
+module MEM_WB(
+input logic clk,
+input logic  [4:0] memwb_rd_i,
+input logic memwb_write_reg_rd_i,
+input logic [1:0] memwb_regfile_sel_i,
+input logic [31:0] memwb_imm_i, memwb_arith_i, memwb_cmp_i, memwb_mem_i,
+output logic [4:0] rd_memwb_o,
+output logic regfile_we_o,
+output logic [31:0] regfile_datain_o
+
+);
+
+logic [4:0] rd;
+logic write_to_regfile;
+logic [1:0] regfile_sel;
+logic [31:0] imm, arith, cmp, mem;
+
+always_ff @(posedge clk) begin
+	rd = memwb_rd_i;
+	write_to_regfile = mem_write_reg_rd_i;
+	regfile_sel = memwb_regfile_sel_i;
+	imm = memwb_imm_i;
+	arith = memwb_arith_i;
+	cmp = memwb_cmp_i;
+	mem = memwb_mem_i;
+end
+	
+
+
+always_comb begin
+	case (regfile_sel) begin
+		2'b00: regfile_datain_o = arith;
+		2'b01: regfile_datain_o = imm;
+		2'b10: regfile_datain_o = mem;
+		2'b11: regfile_datain_o = cmp;
+	endcase
+	regfile_we_o = write_to_regfile;
+	rd_memwb_o = rd;
+	
+end
+
+endmodule : MEM_WB

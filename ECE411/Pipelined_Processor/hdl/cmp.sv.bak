@@ -1,0 +1,39 @@
+import rv32i_types::*;
+
+module cmp
+(
+	input rv32i_word cmp1,
+	input rv32i_word cmp2,
+	input branch_funct3_t cmpop,
+	output logic br_en
+);
+
+always_comb begin
+		unique case (cmpop)
+				rv32i_types::beq: br_en = (cmp1 == cmp2);
+				rv32i_types::bne: br_en = (cmp1 != cmp2);
+				rv32i_types::blt: begin
+					if (cmp1[31] == 1'b1 && cmp2[31] == 1'b0) begin
+							br_en = 1'b1;
+					end else if (cmp1[31] == 1'b0 && cmp2[31] == 1'b1)begin
+							br_en = 1'b0;
+					end else begin
+							br_en = cmp1 < cmp2;
+					end
+				end
+				rv32i_types::bge: begin
+						if (cmp1[31] == 1'b1 && cmp2[31] == 1'b0) begin
+							br_en = 1'b0;
+					end else if (cmp1[31] == 1'b0 && cmp2[31] == 1'b1)begin
+							br_en = 1'b1;
+					end else begin
+							br_en = cmp1 >= cmp2;
+					end
+				end
+				rv32i_types::bltu: br_en = (cmp1 < cmp2);
+				rv32i_types::bgeu: br_en = (cmp1 >= cmp2);
+				default: br_en = 1'b0;
+		endcase
+end
+
+endmodule : cmp
