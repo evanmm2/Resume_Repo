@@ -1,0 +1,30 @@
+Quartus Prime Archive log --	C:/Users/BEN/Desktop/Quartus/8-bit gay/8bitprocessor_tmp_archive.qarlog
+
+Archive:	C:/Users/BEN/Desktop/Quartus/8-bit gay/8bitprocessor_tmp_archive.qar
+Date:		Tue Feb 05 12:27:03 2019
+Quartus Prime		18.0.0 Build 614 04/24/2018 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/Users/BEN/Desktop/Quartus/8-bit gay/8bitprocessor.qpf
+C:/Users/BEN/Desktop/Quartus/8-bit gay/8bitprocessor.qsf
+C:/Users/BEN/Desktop/Quartus/8-bit gay/Control.sv
+C:/Users/BEN/Desktop/Quartus/8-bit gay/HexDriver.sv
+C:/Users/BEN/Desktop/Quartus/8-bit gay/Processor.sv
+C:/Users/BEN/Desktop/Quartus/8-bit gay/Reg_4.sv
+C:/Users/BEN/Desktop/Quartus/8-bit gay/Register_unit.sv
+C:/Users/BEN/Desktop/Quartus/8-bit gay/Router.sv
+C:/Users/BEN/Desktop/Quartus/8-bit gay/Synchronizers.sv
+C:/Users/BEN/Desktop/Quartus/8-bit gay/compute.sv
+C:/Users/BEN/Desktop/Quartus/8-bit gay/output_files/Chain6.cdf
+C:/Users/BEN/Desktop/Quartus/8-bit gay/testbench_8.sv
+d:/fpga/quartus/bin64/assignment_defaults.qdf
+	======= Total: 13 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
+
+
+******* Archived project restoration attempt on Tue Feb 05 12:27:05 2019
+Source archive file:	C:/Users/BEN/Desktop/Quartus/8-bit gay/8bitprocessor_tmp_archive.qar
+Archive was extracted into	F:/sc21_evanmm2/processors/
+		 - successfully.
