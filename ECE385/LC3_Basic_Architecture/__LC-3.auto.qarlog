@@ -1,0 +1,31 @@
+Quartus Prime Archive log --	C:/Users/BEN/Desktop/Quartus/LC-3/__LC-3.auto.qarlog
+
+Archive:	C:/Users/BEN/Desktop/Quartus/LC-3/__LC-3.auto.qar
+Date:		Mon Feb 18 18:48:53 2019
+Quartus Prime		18.0.0 Build 614 04/24/2018 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/Users/BEN/Desktop/Quartus/LC-3/db/LC-3.qpf
+C:/Users/BEN/Desktop/Quartus/LC-3/output_files/LC-3.done
+C:/Users/BEN/Desktop/Quartus/LC-3/output_files/LC-3.flow.rpt
+C:/Users/BEN/Desktop/Quartus/LC-3/output_files/LC-3.map.rpt
+C:/Users/BEN/Desktop/Quartus/LC-3/output_files/LC-3.map.summary
+Flipflop.sv
+ISDU.sv
+LC-3.qsf
+LC-3_tmp_archive.qarlog
+MUX.sv
+Mem2IO.sv
+SLC3_2.sv
+__LC-3.auto.qarlog
+d:/fpga/quartus/bin64/assignment_defaults.qdf
+data-path.sv
+lab6_toplevel.sv
+memory_contents.sv
+slc3.sv
+test_memory.sv
+tristate.sv
+	======= Total: 20 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

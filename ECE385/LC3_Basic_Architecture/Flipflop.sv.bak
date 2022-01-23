@@ -1,0 +1,15 @@
+module flipflop (input logic [15:0]data, Clk, Reset, Load,
+					output logic [15:0]outdata);
+					
+			always_ff @ (posedge Clk)
+			begin
+			if (Reset)
+			q <=16'h0000;
+			else if (Load)
+			outdata[15:0] <= data[15:0];
+			else 
+			outdata[15:0] <= outdata[15:0];
+			end
+			
+			
+endmodule 

@@ -1,0 +1,24 @@
+module NZP_IN_LOGIC (input logic [15:0] BUS,
+							output logic Nin, Zin, Pin)
+			always_comb
+			begin
+			if(BUS[15] == 1)
+				begin
+					Nin = 1;
+					Zin = 0;
+					Pin = 0;
+			end
+			else if(BUS == 4'h0000)
+				begin
+					Nin = 0;
+					Zin = 1;
+					Pin = 0;
+			end
+				else
+					begin
+						Nin = 0;
+						Zin = 0;
+						Pin = 1;
+				end
+			end	
+endmodule
