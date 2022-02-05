@@ -1,0 +1,103 @@
+# Map File for Cadence SOC Encounter 5.2
+# VTVT Lab (VIRGINIA TECH VLSI FOR TELECOMMUNICATIONS)
+# Author: Jeannette Djigbenou (jddjig01@vt.edu)
+# Created: Tuesday, November 7, 2006
+# 
+# The labels are set to be in text ("126")
+
+# layer/object name   layer/object type   layer GD2 number   GDS2 data type
+
+cc                      net                     25              0
+cc                      spnet                   25              0
+cc                      via                     25              0
+
+cc                      net                     47              0
+cc                      spnet                   47              0
+cc                      via                     47              0
+
+cc                      net                     48              0
+cc                      spnet                   48              0
+cc                      via                     48              0
+
+poly			net			46		0
+poly			spnet			46		0
+poly			via 			46		0
+
+metal1			net			49		0
+metal1			spnet			49		0
+metal1			via			49		0
+metal1			pin			49		0
+metal1			fill			49		0
+metal1			viafill			49		0
+name 			metal1/net		149		0
+name			metal1/spnet		149		0
+name 			metal1/pin		149		0
+
+
+via			net			50		0
+via			spnet			50		0
+via			via			50		0
+via 			viafill			50		0
+
+metal2			net			51		0
+metal2			spnet			51		0
+metal2			via			51		0
+metal2			pin			51		0
+metal2			fill			51		0
+metal2			viafill			51		0
+name 			metal2/net		151		0
+name			metal2/spnet		151		0
+name 			metal2/pin		151		0
+
+via2			net			61		0
+via2			spnet			61		0
+via2			via			61		0
+via2			viafill			61		0
+
+metal3			net			62		0
+metal3			spnet			62		0
+metal3			via			62		0
+metal3			pin			62		0
+metal3			fill			62		0
+metal3			viafill			62		0
+name 			metal3/net		162		0
+name			metal3/spnet		162		0
+name 			metal3/pin		162		0
+
+via3			net			30		0
+via3			spnet			30		0
+via3			via			30		0
+via3			viafill			30		0
+
+metal4			net			31		0
+metal4			spnet			31		0
+metal4			via			31		0
+metal4			pin			31		0
+metal4			fill			31		0
+metal4			viafill			31		0
+name 			metal4/net		131		0
+name			metal4/spnet		131		0
+name 			metal4/pin		131		0
+
+via4			net			32		0
+via4			spnet			32		0
+via4			via			32		0
+via4			viafill			32		0
+
+metal5			net			33		0
+metal5			spnet			33		0
+metal5			via			33		0
+metal5			pin			33		0
+metal5			fill			33		0
+metal5			viafill			33		0
+name 			metal5/net		133		0
+name			metal5/spnet		133		0
+name 			metal5/pin		133		0
+
+
+# COMMENTS 
+# The net names have been set here to be exported back to dfII. 
+# If one does not intend to export them back to dfII, use some meaningless 
+# numbers that do not match any other layer GDS2 number (for instance 122).
+# Here, labels have been set to be exported to dfII as a temporary text layer
+

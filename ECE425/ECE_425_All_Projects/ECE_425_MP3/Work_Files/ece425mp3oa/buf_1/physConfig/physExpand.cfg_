@@ -1,0 +1,16 @@
+//Revision 2
+//NOTE
+//VXL Configuration
+//END_NOTE
+
+config buf_1;
+design ece425mp3.buf_1:schematic;
+liblist ece425mp3;
+
+viewlist physConfig, schematic, symbol;
+
+constraintviewlist constraint;
+stoplist layout, abstract;
+
+
+endconfig

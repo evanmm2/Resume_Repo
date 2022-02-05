@@ -1,0 +1,16 @@
+//Revision 2
+//NOTE
+//VXL Configuration
+//END_NOTE
+
+config inv;
+design ece425mp1.inv:schematic;
+liblist ece425mp1;
+
+viewlist physConfig, schematic, symbol;
+
+constraintviewlist constraint;
+stoplist layout, abstract;
+
+
+endconfig

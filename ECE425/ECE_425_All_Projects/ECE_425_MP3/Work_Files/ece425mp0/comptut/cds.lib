@@ -1,0 +1,10 @@
+# File Created by Evan Miller at Thu Feb  6 06:30:52 2020
+# assisted by CdsLibEditor
+DEFINE basic /software/cadence-Feb2019/IC618/tools/dfII/etc/cdslib/basic
+DEFINE US_8ths /software/cadence-Feb2019/IC618/tools/dfII/etc/cdslib/sheets/US_8ths
+DEFINE TTL_tutor TTL_tutor
+DEFINE master master
+DEFINE user_ASIC user_ASIC
+DEFINE analogLib /software/cadence-Feb2019/IC618/tools/dfII/etc/cdslib/artist/analogLib
+DEFINE sample /software/cadence-Feb2019/IC618/tools/dfII/samples/cdslib/sample
+DEFINE tutorial tutorial

@@ -1,0 +1,16 @@
+#
+# Edit Lock-Stake file. CAUTION: Please do not change.
+#
+# Information about current Edit Lock Owner.
+#
+LockStakeVersion               1.1
+LoginName                      evanmm2
+HostName                       linux-19.ews.illinois.edu
+ProcessIdentifier              783
+ProcessCreationTime_UTC        1588869246
+ProcessCreationTime_Readable   Thu May  7 11:34:06 2020 CDT
+AppIdentifier                  OA File System Design Manager
+OSType                         unix
+ReasonForPlacingEditLock       OpenAccess edit lock
+FilePathUsedToEditLock         /home/evanmm2/ece425.work/ece425mp3oa/controller/layout/layout.oa.cdslck
+TimeEditLocked                 Thu May  7 12:16:22 2020 CDT

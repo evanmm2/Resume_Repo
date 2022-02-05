@@ -1,0 +1,72 @@
+
+-----------------------------------------------------------
+ README File: SYNOPSYS_LIBRARIES DIRECTORY FOR VTVT_TSMC250 
+
+ VTVT LAB (VIRGINIA TECH VLSI FOR TELECOMMUNICATIONS
+ 
+ December 12, 2006
+ Jeannette Djigbenou (jddjig01@vt.edu)
+
+---------------------------------------------------------
+This directory contains files and directories to run Synopsys
+Design Compiler, Library Compiler, Design Vision and VCS-MX
+
+This file contains 
+	- updates necessary to run Synopsys tools in your run directory
+	- description of files and sub-directories of Synopsys_Libraries. 
+
+
+-----------------------
+UPDATES BEFORE RUNNING
+-----------------------
+To run design compiler, update the paths to match your Synopsys 
+installation directory.
+	Updates on .synopsys_dc.setup:
+		Modify the search path to Synopsys Libraries
+
+	Updates on .synopsys_vss.setup
+		No updates necessary
+
+
+---------------
+START SYNOPSYS
+---------------
+To Run Synopsys, you must be in your Synopsys environment
+
+The following files are necessary to set up your Synopsys environment
+dot.synopsys_dc.setup:	Set the search path, target library, and symbol library
+dot.synopsys_vss.setup: Set environment for compiling libraries or running Synthesis
+
+---------------------------------------------------
+HOW TO RUN SYNOPSYS SIMULATION AND SYNTHESIS TOOLS
+---------------------------------------------------
+This document is not intended to show how to use Synopsys Tools.
+For guidelines on how to run Synopsys Synthesis or Simulation tools
+refer to the VTVT Site (www.vtvt.org)->VLSI Design->Tutorials->Synopsys at
+http://www.vtvt.ece.vt.edu/vlsidesign/tutorialSynopsys.php
+
+---------------------------------------
+INSTRUCTIONS TO RECOMPILE LIBRARIES
+---------------------------------------
+To recompile our libraries, read file README_COMPILE
+
+-------------------
+DIRECTORY CONTENT
+-------------------
+-README_COMPILE: Contains instructions to re-compile our Libraries.
+
+- libs.tar.gz: Contains all Symbol and Technology Library files
+	(.slib *sdb *db *lib files) necessary to run
+	Synopsys Synthesis and re-compile libraries. 
+
+- VTVT_TSMC250: Contains VHDL Components package
+		Simulation files for running VCS-MX
+
+- vtvt_tsmc250.lib: Technology File. All other *lib and *db files
+	are in the libs directory
+
+- vtvt_tsmc250_V*.vhd: Generated after analyzing technology files. 
+
+-  .synopsys_dc.setup & .synopsys_vss.setup: Synopsys setup files. 
+
+- WORK: Originally empty directory. To contain simulation and synthesis files

@@ -1,0 +1,16 @@
+//Revision 2
+//NOTE
+//VXL Configuration
+//END_NOTE
+
+config mux3_2;
+design ece425mp3.mux3_2:schematic;
+liblist ece425mp3;
+
+viewlist physConfig, schematic, symbol;
+
+constraintviewlist constraint;
+stoplist layout, abstract;
+
+
+endconfig

@@ -1,0 +1,53 @@
+@(#)$CDS: LVS version 6.1.8-64b 10/08/2019 19:38 (ip-172-18-22-52) $
+
+Command line: /software/cadence-Feb2019/IC618/tools.lnx86/dfII/bin/64bit/LVS -dir /home/evanmm2/ece425.work/ece425mp0/cell_design/LVS -l -s -t /home/evanmm2/ece425.work/ece425mp0/cell_design/LVS/layout /home/evanmm2/ece425.work/ece425mp0/cell_design/LVS/schematic
+Like matching is enabled.
+Net swapping is enabled.
+Using terminal names as correspondence points.
+
+    Net-list summary for /home/evanmm2/ece425.work/ece425mp0/cell_design/LVS/layout/netlist
+       count
+        12              nets
+        6               terminals
+        7               nfet
+        7               pfet
+
+    Net-list summary for /home/evanmm2/ece425.work/ece425mp0/cell_design/LVS/schematic/netlist
+       count
+        12              nets
+        6               terminals
+        7               nfet
+        7               pfet
+
+
+    Terminal correspondence points
+    N10       N6        A
+    N9        N2        B
+    N8        N9        SEL
+    N7        N5        Y
+    N6        N1        gnd!
+    N11       N0        vdd!
+
+The net-lists match.
+
+                             layout  schematic
+                                instances
+        un-matched              0       0      
+        rewired                 0       0      
+        size errors             0       0      
+        pruned                  0       0      
+        active                  14      14     
+        total                   14      14     
+
+                                  nets
+        un-matched              0       0      
+        merged                  0       0      
+        pruned                  0       0      
+        active                  12      12     
+        total                   12      12     
+
+                                terminals
+        un-matched              0       0      
+        matched but
+        different type          0       0      
+        total                   6       6      

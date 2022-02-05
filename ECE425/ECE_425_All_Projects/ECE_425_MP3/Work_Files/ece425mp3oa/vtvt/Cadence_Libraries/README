@@ -1,0 +1,82 @@
+
+-----------------------------------------------------------
+ README File: CADENCE LIBRARIES DIRECTORY FOR VTVT_TSMC250
+
+ VTVT LAB (VIRGINIA TECH VLSI FOR TELECOMMUNICATIONS
+ 
+ December 12, 2006
+ Jeannette Djigbenou (jddjig01@vt.edu)
+
+---------------------------------------------------------
+This directory contains Cadence layout, symbols, and schematic views
+for vtvt_tsmc250
+
+
+-----------------------------------------
+HOW TO RUN CADENCE VIRTUOSO AND COMPOSER
+-----------------------------------------
+This document is not intended to show how to run Cadence Tools.
+For guidelines on how to run Cadence Tools (Virtuoso and Composer)
+refer to the VTVT Site (www.vtvt.org) ->VLSI Design->Tutorials->Cadence at
+http://www.vtvt.ece.vt.edu/vlsidesign/tutorialCadence.php
+
+
+---------------------------------------------
+SETUP VTVT_TSMC250 LIBRARIES IN CADENCE ICFB
+---------------------------------------------
+The dfII libraries in this directory are *.tar.gz files. Gunzip and untar the files
+in order to acess their content. 
+Follow these steps to install the libraries in your Cadence Library Manager
+	1. Start ICFB with the NCSU Cadence Design Kit
+
+	2. Copy any of the library directories into your Cadence run directory
+		If you have the .tar files, untar them then move the directories to 
+		the Cadence run directory.
+		
+	3. Add library to your Cadence Library Manager by adding this line to the cds.lib file
+		DEFINE <LIBRARY_NAME>	<PATH_TO_LIBRARY_DIRECTORY>/<LIBRARY_NAME>
+		i.e.: DEFINE vtvt_tsmc250 ./vtvt_tsmc250
+
+	4. Attach library to TSMC_CMOS025_DEEP techfile
+		If you are using the NCSU Kit, attach the library to NCSU_TechLib_tsmc03d
+		In the CIW->Tools->Technology File Manager->Attach: 
+			Design Library <LIBRARY_NAME>
+			Technology Library: NCSU_TechLib_tsmc03d
+
+	5. The standard cells views are now available in your Library Manager. 
+
+
+-------------------
+DIRECTORY CONTENT
+-------------------
+- vtvt_tsmc250.tar.gz: Layout, schematic and symbols of the standard cell library
+- vtvt_tsmc250_dummymosispad.tar.gz: Dummy geometries for Tanner Research, Inc. I/O and corner pads
+	The complete layouts of the Tanner I/O pads could be obtained from MOSIS website,
+	specifically http://www.mosis.org/Technical/Designsupport/pad-library-scmos.html
+
+- vtvt_tsmc250_nolabel.tar.gz: Contains:
+	The same layout views from vtvt_tsmc250
+	The same dummy pads
+without the labels.
+
+- vtvt_tsmc250_dummymosispad.gds: Dummy geometries for Tanner Research, Inc.
+	I/O and corner pads, in GDSII format
+	These dummy pads are not intended for use with actual designs. They are created
+	only for the convenience of creating LEF files. Since the actual pad cells themselves,
+	particularly the corner pad, are too large to be used easily in LEF file generation using
+	abstract (the LEF file generation tool in the Cadence suite). Here the dummy pad cells
+	are shown to allow for appropriate modifications by the user if needed. It must be noted,
+	however, that these are not the actual layouts of the pads themselves, which have to be
+	downloaded from MOSIS website.
+	Additionally, all names (cells, pins) here use lowercase letters, since it is assumed that
+	when the user imports the padsN" layout, the names are converted to lowercase first.
+	
+- Various GDS2 map files: 
+	vtvt_nolabel.map: Importing GDSII file to obtain layout without
+		text labels (converting text labels into cap_id)
+	vtvt_SocE2df2.map: Exporting GDSII files from SOC Encounter. 
+		Note that the labelling layers use imaginary numbers
+	vtvt_tsmc250_StreamIn.map: Importing the provided GDSII files to dfII;
+		Importing layouts from the PNR tool to the layout tool. Note that
+		the labeling layers (text, res_id, cap_id, (metalX label)) have
+		imaginary numbers.

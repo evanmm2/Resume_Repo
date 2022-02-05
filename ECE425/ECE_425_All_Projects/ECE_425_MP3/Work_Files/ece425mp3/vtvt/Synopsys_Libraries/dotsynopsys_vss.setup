@@ -1,0 +1,39 @@
+-- Design Compiler Settings
+-- Simulation, Synthesis, and compiling Libraries
+-- VTVT Lab
+-- Jeannette Djigbenou (jddjig01@vt.edu)
+-- 
+-- Use this file to:
+--  1) re-compile vtvt_tsmc250 standard
+-- 	cells libraries.
+--  2) run Synopsys simulation and synthesis tools
+--
+-- To define your setting, comment the section
+-- you do not wish to use to set up your design
+-- environment. 
+--
+-- Design Settings for General applications
+-- 	These settings allow you to connect your 
+-- 	designs to the compiled library directory
+-- 	for simulation and/or synthesis. It contains
+-- 	links to the COMPONENTS package and simulation files
+--
+-- Desing Settings for Compiling Libraries
+-- 	These settings allow you to re-compile the simulation
+--	and synthesis libraries and packages for the standard cell
+--	library.
+--
+--
+
+--Design settings for general applications
+WORK > DEFAULT
+DEFAULT : ./WORK
+CELLSLIB > VTVT_TSMC250LOC
+VTVT_TSMC250LOC : ./VTVT_TSMC250
+
+
+--Design Settings for Compiling Libraries
+--WORK > vtvt_tsmc250
+--vtvt_tsmc250 :  ./VTVT_TSMC250
+
+TIMEBASE = ps

@@ -1,0 +1,2099 @@
+VERSION 5.7 ;
+DIVIDERCHAR "/" ;
+BUSBITCHARS "[]" ;
+
+DESIGN datapath ;
+
+UNITS DISTANCE MICRONS 1000 ;
+PROPERTYDEFINITIONS
+  DESIGN connectivityLastUpdated INTEGER 383165 ;
+  DESIGN drcSignature INTEGER 146088326 ;
+END PROPERTYDEFINITIONS
+
+DIEAREA ( 240 76199 ) ( 254960 121559 ) ;
+
+COMPONENTS 52 ;
+- I4 M3_M2 ;
+- I1 bitslice_new ;
+- I37 bitslice_new ;
+- I2 bitslice_new ;
+- I42 M3_M2 ;
+- I41 M3_M2 ;
+- I40 M3_M2 ;
+- I39 M3_M2 ;
+- I38 M3_M2 ;
+- I36 M3_M2 ;
+- I35 M3_M2 ;
+- I34 M3_M2 ;
+- I33 M3_M2 ;
+- I145 M2_M1 ;
+- I144 M2_M1 ;
+- I143 M2_M1 ;
+- I142 M2_M1 ;
+- I32 M2_M1 ;
+- I31 M2_M1 ;
+- I30 M3_M2 ;
+- I29 M3_M2 ;
+- I28 M3_M2 ;
+- I27 M3_M2 ;
+- I26 M2_M1 ;
+- I25 M2_M1 ;
+- I24 M3_M2 ;
+- I23 M3_M2 ;
+- I22 M2_M1 ;
+- I21 M2_M1 ;
+- I20 M3_M2 ;
+- I141 M3_M2 ;
+- I19 M3_M2 ;
+- I18 M3_M2 ;
+- I17 M3_M2 ;
+- I16 M2_M1 ;
+- I15 M2_M1 ;
+- I14 M2_M1 ;
+- I13 M3_M2 ;
+- I12 M3_M2 ;
+- I140 M2_M1 ;
+- I11 M3_M2 ;
+- I10 M2_M1 ;
+- I9 M2_M1 ;
+- I8 M3_M2 ;
+- I7 M3_M2 ;
+- I6 M3_M2 ;
+- I139 M3_M2 ;
+- I138 M3_M2 ;
+- I137 M3_M2 ;
+- I136 M3_M2 ;
+- I5 M3_M2 ;
+- I3 bitslice_new ;
+END COMPONENTS
+
+PINS 126 ;
+- select_b_hi[2] + NET select_b_hi[2]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 2340 )
+    + PLACED ( 41220 73860 ) N ;
+- select_b_low[2] + NET select_b_low[2]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 2400 )
+    + PLACED ( 40380 73800 ) N ;
+- select_b_low[5] + NET select_b_low[5]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 2400 )
+    + PLACED ( 54780 73800 ) N ;
+- select_b_low[8] + NET select_b_low[8]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 2400 )
+    + PLACED ( 69180 73800 ) N ;
+- select_b_low[14] + NET select_b_low[14]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 2400 )
+    + PLACED ( 97980 73800 ) N ;
+- select_b_hi[4] + NET select_b_hi[4]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 2340 )
+    + PLACED ( 50820 73860 ) N ;
+- select_a_hi[15] + NET select_a_hi[15]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 2340 )
+    + PLACED ( 101940 73860 ) N ;
+- select_a_hi[13] + NET select_a_hi[13]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 2340 )
+    + PLACED ( 92340 73860 ) N ;
+- select_a_hi[12] + NET select_a_hi[12]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 2340 )
+    + PLACED ( 87540 73860 ) N ;
+- select_b_low[0] + NET select_b_low[0]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 2400 )
+    + PLACED ( 30780 73800 ) N ;
+- select_b_hi[1] + NET select_b_hi[1]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 2340 )
+    + PLACED ( 36420 73860 ) N ;
+- select_b_low[15] + NET select_b_low[15]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 2400 )
+    + PLACED ( 102780 73800 ) N ;
+- select_b_low[12] + NET select_b_low[12]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 2400 )
+    + PLACED ( 88380 73800 ) N ;
+- select_b_low[9] + NET select_b_low[9]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 2400 )
+    + PLACED ( 73980 73800 ) N ;
+- select_b_low[11] + NET select_b_low[11]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 2400 )
+    + PLACED ( 83580 73800 ) N ;
+- select_b_hi[7] + NET select_b_hi[7]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 2340 )
+    + PLACED ( 65220 73860 ) N ;
+- select_b_hi[5] + NET select_b_hi[5]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 2340 )
+    + PLACED ( 55620 73860 ) N ;
+- select_a_hi[10] + NET select_a_hi[10]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 2340 )
+    + PLACED ( 77940 73860 ) N ;
+- select_a_hi[1] + NET select_a_hi[1]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 2340 )
+    + PLACED ( 34740 73860 ) N ;
+- select_a_hi[8] + NET select_a_hi[8]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 2340 )
+    + PLACED ( 68340 73860 ) N ;
+- select_b_hi[6] + NET select_b_hi[6]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 2340 )
+    + PLACED ( 60420 73860 ) N ;
+- select_a_low[7] + NET select_a_low[7]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 2100 )
+    + PLACED ( 62100 74100 ) N ;
+- select_b_hi[3] + NET select_b_hi[3]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 2340 )
+    + PLACED ( 46020 73860 ) N ;
+- select_a_low[6] + NET select_a_low[6]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 2100 )
+    + PLACED ( 57300 74100 ) N ;
+- select_a_hi[6] + NET select_a_hi[6]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 2340 )
+    + PLACED ( 58740 73860 ) N ;
+- select_b_hi[0] + NET select_b_hi[0]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 2340 )
+    + PLACED ( 31620 73860 ) N ;
+- select_a_hi[9] + NET select_a_hi[9]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 2340 )
+    + PLACED ( 73140 73860 ) N ;
+- select_a_hi[3] + NET select_a_hi[3]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 2340 )
+    + PLACED ( 44340 73860 ) N ;
+- select_b_low[13] + NET select_b_low[13]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 2400 )
+    + PLACED ( 93180 73800 ) N ;
+- select_a_low[1] + NET select_a_low[1]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 2100 )
+    + PLACED ( 33300 74100 ) N ;
+- select_a_hi[7] + NET select_a_hi[7]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 2340 )
+    + PLACED ( 63540 73860 ) N ;
+- select_a_hi[2] + NET select_a_hi[2]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 2340 )
+    + PLACED ( 39540 73860 ) N ;
+- select_b_low[10] + NET select_b_low[10]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 2400 )
+    + PLACED ( 78780 73800 ) N ;
+- select_a_low[2] + NET select_a_low[2]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 2100 )
+    + PLACED ( 38100 74100 ) N ;
+- select_a_hi[0] + NET select_a_hi[0]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 2340 )
+    + PLACED ( 29940 73860 ) N ;
+- select_b_hi[13] + NET select_b_hi[13]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 2340 )
+    + PLACED ( 94020 73860 ) N ;
+- select_b_low[7] + NET select_b_low[7]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 2400 )
+    + PLACED ( 64380 73800 ) N ;
+- select_a_low[3] + NET select_a_low[3]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 2100 )
+    + PLACED ( 42900 74100 ) N ;
+- select_b_hi[14] + NET select_b_hi[14]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 2340 )
+    + PLACED ( 98820 73860 ) N ;
+- select_a_hi[5] + NET select_a_hi[5]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 2340 )
+    + PLACED ( 53940 73860 ) N ;
+- select_b_low[4] + NET select_b_low[4]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 2400 )
+    + PLACED ( 49980 73800 ) N ;
+- select_a_low[4] + NET select_a_low[4]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 2100 )
+    + PLACED ( 47700 74100 ) N ;
+- select_b_hi[12] + NET select_b_hi[12]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 2340 )
+    + PLACED ( 89220 73860 ) N ;
+- select_a_hi[4] + NET select_a_hi[4]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 2340 )
+    + PLACED ( 49140 73860 ) N ;
+- select_b_hi[11] + NET select_b_hi[11]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 2340 )
+    + PLACED ( 84420 73860 ) N ;
+- select_b_low[1] + NET select_b_low[1]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 2400 )
+    + PLACED ( 35580 73800 ) N ;
+- select_a_low[5] + NET select_a_low[5]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 2100 )
+    + PLACED ( 52500 74100 ) N ;
+- select_b_hi[10] + NET select_b_hi[10]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 2340 )
+    + PLACED ( 79620 73860 ) N ;
+- select_a_low[0] + NET select_a_low[0]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 1020 )
+    + PLACED ( 28500 75180 ) N ;
+- select_a_low[8] + NET select_a_low[8]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 2100 )
+    + PLACED ( 66900 74100 ) N ;
+- select_b_hi[15] + NET select_b_hi[15]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 2340 )
+    + PLACED ( 103620 73860 ) N ;
+- select_a_low[9] + NET select_a_low[9]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 2100 )
+    + PLACED ( 71700 74100 ) N ;
+- select_a_low[10] + NET select_a_low[10]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 2100 )
+    + PLACED ( 76500 74100 ) N ;
+- select_a_low[11] + NET select_a_low[11]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 2100 )
+    + PLACED ( 81300 74100 ) N ;
+- select_a_low[12] + NET select_a_low[12]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 2100 )
+    + PLACED ( 86100 74100 ) N ;
+- select_a_low[13] + NET select_a_low[13]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 2100 )
+    + PLACED ( 90900 74100 ) N ;
+- select_a_low[14] + NET select_a_low[14]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 2100 )
+    + PLACED ( 95700 74100 ) N ;
+- select_b_hi[9] + NET select_b_hi[9]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 2340 )
+    + PLACED ( 74820 73860 ) N ;
+- select_a_low[15] + NET select_a_low[15]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 2100 )
+    + PLACED ( 100500 74100 ) N ;
+- select_a_hi[11] + NET select_a_hi[11]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 2340 )
+    + PLACED ( 82740 73860 ) N ;
+- select_a_hi[14] + NET select_a_hi[14]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 2340 )
+    + PLACED ( 97140 73860 ) N ;
+- select_b_low[3] + NET select_b_low[3]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 2400 )
+    + PLACED ( 45180 73800 ) N ;
+- select_b_low[6] + NET select_b_low[6]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 2400 )
+    + PLACED ( 59580 73800 ) N ;
+- select_b_hi[8] + NET select_b_hi[8]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 2340 )
+    + PLACED ( 70020 73860 ) N ;
+- regfile_selecter[1] + NET regfile_selecter[1]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 840 )
+    + PLACED ( 9900 75360 ) N ;
+- regfile_selecter[0] + NET regfile_selecter[0]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 1020 )
+    + PLACED ( 4140 75180 ) N ;
+- regfile_select[0] + NET regfile_select[0]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 1020 )
+    + PLACED ( 6120 75180 ) N ;
+- regfile_select[1] + NET regfile_select[1]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 960 )
+    + PLACED ( 11940 75240 ) N ;
+- f_right + NET f_right
+  + DIRECTION INPUT ;
+- f_left + NET f_left
+  + DIRECTION INPUT ;
+- write_en_inv + NET write_en_inv
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 1080 )
+    + PLACED ( 21600 75120 ) N ;
+- reg_wr + NET reg_wr
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 900 )
+    + PLACED ( 23040 75300 ) N ;
+- clock_inv + NET clock_inv
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 1860 )
+    + PLACED ( 140100 74340 ) N ;
+- cp + NET cp
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 840 )
+    + PLACED ( 25320 75360 ) N ;
+- Q_mux_select_bar[1] + NET Q_mux_select_bar[1]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 1500 )
+    + PLACED ( 127200 74700 ) N ;
+- Q_mux_select_bar[0] + NET Q_mux_select_bar[0]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 1560 )
+    + PLACED ( 121380 74640 ) N ;
+- Q_mux_select[0] + NET Q_mux_select[0]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 1620 )
+    + PLACED ( 123780 74580 ) N ;
+- Q_mux_select[1] + NET Q_mux_select[1]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 300 1380 )
+    + PLACED ( 129480 74820 ) N ;
+- q + NET q
+  + DIRECTION OUTPUT ;
+- Q_en_inv + NET Q_en_inv
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 1560 )
+    + PLACED ( 137820 74640 ) N ;
+- Q_en + NET Q_en
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 1620 )
+    + PLACED ( 138840 74580 ) N ;
+- s_select_bar[1] + NET s_select_bar[1]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 2580 )
+    + PLACED ( 159420 73620 ) N ;
+- s_select_bar[0] + NET s_select_bar[0]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 1560 )
+    + PLACED ( 148020 74640 ) N ;
+- s_select[1] + NET s_select[1]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 1740 )
+    + PLACED ( 162060 74460 ) N ;
+- s_select[0] + NET s_select[0]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 1800 )
+    + PLACED ( 150600 74400 ) N ;
+- y_select_bar + NET y_select_bar
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 2040 )
+    + PLACED ( 246480 74160 ) N ;
+- inv_s + NET inv_s
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 4620 )
+    + PLACED ( 190380 71580 ) N ;
+- r_select_bar[0] + NET r_select_bar[0]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 2940 )
+    + PLACED ( 165000 73260 ) N ;
+- r_select[0] + NET r_select[0]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 2880 )
+    + PLACED ( 166920 73320 ) N ;
+- r_select_bar[1] + NET r_select_bar[1]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 2700 )
+    + PLACED ( 170820 73500 ) N ;
+- mux_input[1] + NET mux_input[1]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 1920 )
+    + PLACED ( 242640 74280 ) N ;
+- r_select[1] + NET r_select[1]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 3660 )
+    + PLACED ( 173100 72540 ) N ;
+- inv_r + NET inv_r
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 3000 )
+    + PLACED ( 178140 73200 ) N ;
+- y_select + NET y_select
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 2940 )
+    + PLACED ( 248880 73260 ) N ;
+- mux_input_bar[0] + NET mux_input_bar[0]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 2880 )
+    + PLACED ( 229740 73320 ) N ;
+- mux_input[0] + NET mux_input[0]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 5580 )
+    + PLACED ( 231180 70620 ) N ;
+- mux_input_bar[1] + NET mux_input_bar[1]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 1800 )
+    + PLACED ( 240660 74400 ) N ;
+- q3_out + NET q3_out
+  + DIRECTION OUTPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 1500 )
+    + PLACED ( 145380 74700 ) N ;
+- q3_in + NET q3_in
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 1680 )
+    + PLACED ( 122940 74520 ) N ;
+- q0_in + NET q0_in
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 1500 )
+    + PLACED ( 115500 74700 ) N ;
+- q0_out + NET q0_out
+  + DIRECTION OUTPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 1680 )
+    + PLACED ( 146580 74520 ) N ;
+- c[3] + NET c[3]
+  + DIRECTION OUTPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 2220 )
+    + PLACED ( 228300 73980 ) N ;
+- c[2] + NET c[2]
+  + DIRECTION OUTPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 3060 )
+    + PLACED ( 216600 73140 ) N ;
+- c[1] + NET c[1]
+  + DIRECTION OUTPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 1860 )
+    + PLACED ( 215460 74340 ) N ;
+- c[0] + NET c[0]
+  + DIRECTION OUTPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 1680 )
+    + PLACED ( 214380 74520 ) N ;
+- p[0] + NET p[0]
+  + DIRECTION OUTPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 1860 )
+    + PLACED ( 203820 74340 ) N ;
+- p[1] + NET p[1]
+  + DIRECTION OUTPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 1980 )
+    + PLACED ( 204720 74220 ) N ;
+- p[2] + NET p[2]
+  + DIRECTION OUTPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 1920 )
+    + PLACED ( 205740 74280 ) N ;
+- p[3] + NET p[3]
+  + DIRECTION OUTPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 2760 )
+    + PLACED ( 206640 73440 ) N ;
+- y[3] + NET y[3]
+  + DIRECTION OUTPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 3120 )
+    + PLACED ( 252780 73080 ) N ;
+- y[2] + NET y[2]
+  + DIRECTION OUTPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 3000 )
+    + PLACED ( 251880 73200 ) N ;
+- y[1] + NET y[1]
+  + DIRECTION OUTPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 3000 )
+    + PLACED ( 250860 73200 ) N ;
+- y[0] + NET y[0]
+  + DIRECTION OUTPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 3000 )
+    + PLACED ( 249900 73200 ) N ;
+- cin + NET cin
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 2100 )
+    + PLACED ( 213120 74100 ) N ;
+- f0_in + NET f0_in
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 360 )
+    + PLACED ( 240 75840 ) N ;
+- f[3] + NET f[3]
+  + DIRECTION OUTPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 2280 )
+    + PLACED ( 245640 73920 ) N ;
+- f[2] + NET f[2]
+  + DIRECTION OUTPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 2580 )
+    + PLACED ( 244380 73620 ) N ;
+- f[1] + NET f[1]
+  + DIRECTION OUTPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 1860 )
+    + PLACED ( 239280 74340 ) N ;
+- f[0] + NET f[0]
+  + DIRECTION OUTPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 1920 )
+    + PLACED ( 237720 74280 ) N ;
+- f3_in + NET f3_in
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 1020 )
+    + PLACED ( 5280 75180 ) N ;
+- d[0] + NET d[0]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 2760 )
+    + PLACED ( 169560 73440 ) N ;
+- d[1] + NET d[1]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 1680 )
+    + PLACED ( 163080 74520 ) N ;
+- d[2] + NET d[2]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 3060 )
+    + PLACED ( 163920 73140 ) N ;
+- d[3] + NET d[3]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 2580 )
+    + PLACED ( 165960 73620 ) N ;
+- vdd! + NET vdd!
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal2 ( 0 0 ) ( 1860 1080 )
+    + PLACED ( 121320 68760 ) N ;
+- gnd! + NET gnd!
+  + DIRECTION INOUT
+  + PORT
+    + LAYER metal2 ( 0 0 ) ( 1380 660 )
+    + PLACED ( 7140 38760 ) N ;
+END PINS
+
+SPECIALNETS 123 ;
+- select_b_hi[2]
+  + ROUTED metal3 360 ( 41340 38280 ) ( 41340 37800 )
+  NEW metal3 360 ( 40860 57900 ) ( 40860 56640 180 ) ( 41760 56640 180 ) ( 41760 47100 180 ) ( 41340 47100 180 ) ( 41340 38220 )
+  NEW metal3 360 ( 40860 38220 ) ( 40860 37620 180 ) ( 41940 37620 180 ) ( 41940 31080 180 ) ( 41460 31080 180 ) ( 41460 27900 )
+  NEW metal3 360 ( 41400 58500 ) ( 41400 76200 )
+  NEW metal3 360 ( 41100 37800 ) ( 41100 38340 )
+  NEW metal3 360 ( 41400 57900 ) ( 41400 62340 )
+  NEW metal3 360 ( 41460 27960 ) ( 41460 20520 180 ) ( 41340 20520 180 ) ( 41340 18840 180 ) ( 42000 18840 180 ) ( 42000 11880 180 ) ( 41520 11880 180 ) ( 41520 1140 180 ) ( 41340 1140 180 ) ( 41340 180 ) ;
+- select_b_low[2]
+  + ROUTED metal3 360 ( 40080 42300 ) ( 40080 39540 180 ) ( 39960 39540 180 ) ( 39960 38040 )
+  NEW metal3 360 ( 40140 23880 ) ( 40140 20880 180 ) ( 39960 20880 180 ) ( 39960 19260 )
+  NEW metal3 360 ( 40560 68340 ) ( 40560 76200 )
+  NEW metal3 360 ( 40080 41700 ) ( 40080 43320 )
+  NEW metal3 360 ( 39900 62460 ) ( 39900 61440 )
+  NEW metal3 360 ( 39900 61500 ) ( 39900 55500 180 ) ( 40740 55500 180 ) ( 40740 51180 180 ) ( 40560 51180 180 ) ( 40560 48000 180 ) ( 40140 48000 180 ) ( 40140 42180 )
+  NEW metal3 360 ( 39960 19440 ) ( 39960 17640 180 ) ( 40920 17640 180 ) ( 40920 12840 180 ) ( 40500 12840 180 ) ( 40500 4740 )
+  NEW metal3 360 ( 40560 62460 ) ( 40560 68580 )
+  NEW metal3 360 ( 39960 38160 ) ( 39960 36660 180 ) ( 40980 36660 180 ) ( 40980 32040 180 ) ( 40440 32040 180 ) ( 40440 23880 )
+  NEW metal3 360 ( 40560 62520 ) ( 40560 61860 ) ;
+- select_b_low[5]
+  + ROUTED metal3 360 ( 54480 42300 ) ( 54480 39540 180 ) ( 54360 39540 180 ) ( 54360 38040 )
+  NEW metal3 360 ( 54540 23880 ) ( 54540 20880 180 ) ( 54360 20880 180 ) ( 54360 19260 )
+  NEW metal3 360 ( 54960 68340 ) ( 54960 76200 )
+  NEW metal3 360 ( 54480 41700 ) ( 54480 43320 )
+  NEW metal3 360 ( 54300 62460 ) ( 54300 61440 )
+  NEW metal3 360 ( 54300 61500 ) ( 54300 55500 180 ) ( 55140 55500 180 ) ( 55140 51180 180 ) ( 54960 51180 180 ) ( 54960 48000 180 ) ( 54540 48000 180 ) ( 54540 42180 )
+  NEW metal3 360 ( 54360 19440 ) ( 54360 17640 180 ) ( 55320 17640 180 ) ( 55320 12840 180 ) ( 54900 12840 180 ) ( 54900 4740 )
+  NEW metal3 360 ( 54960 62460 ) ( 54960 68580 )
+  NEW metal3 360 ( 54360 38160 ) ( 54360 36660 180 ) ( 55380 36660 180 ) ( 55380 32040 180 ) ( 54840 32040 180 ) ( 54840 23880 )
+  NEW metal3 360 ( 54960 62520 ) ( 54960 61860 ) ;
+- select_b_low[8]
+  + ROUTED metal3 360 ( 68880 42300 ) ( 68880 39540 180 ) ( 68760 39540 180 ) ( 68760 38040 )
+  NEW metal3 360 ( 68940 23880 ) ( 68940 20880 180 ) ( 68760 20880 180 ) ( 68760 19260 )
+  NEW metal3 360 ( 69360 68340 ) ( 69360 76200 )
+  NEW metal3 360 ( 68880 41700 ) ( 68880 43320 )
+  NEW metal3 360 ( 68700 62460 ) ( 68700 61440 )
+  NEW metal3 360 ( 68700 61500 ) ( 68700 55500 180 ) ( 69540 55500 180 ) ( 69540 51180 180 ) ( 69360 51180 180 ) ( 69360 48000 180 ) ( 68940 48000 180 ) ( 68940 42180 )
+  NEW metal3 360 ( 68760 19440 ) ( 68760 17640 180 ) ( 69720 17640 180 ) ( 69720 12840 180 ) ( 69300 12840 180 ) ( 69300 4740 )
+  NEW metal3 360 ( 69360 62460 ) ( 69360 68580 )
+  NEW metal3 360 ( 69360 62520 ) ( 69360 61860 )
+  NEW metal3 360 ( 68760 38160 ) ( 68760 36660 180 ) ( 69780 36660 180 ) ( 69780 32040 180 ) ( 69240 32040 180 ) ( 69240 23880 ) ;
+- select_b_low[14]
+  + ROUTED metal3 360 ( 97560 38160 ) ( 97560 36660 180 ) ( 98580 36660 180 ) ( 98580 32040 180 ) ( 98040 32040 180 ) ( 98040 23880 )
+  NEW metal3 360 ( 97560 19440 ) ( 97560 17640 180 ) ( 98520 17640 180 ) ( 98520 12840 180 ) ( 98100 12840 180 ) ( 98100 4740 )
+  NEW metal3 360 ( 97740 23880 ) ( 97740 20880 180 ) ( 97560 20880 180 ) ( 97560 19260 )
+  NEW metal3 360 ( 97680 41700 ) ( 97680 43320 )
+  NEW metal3 360 ( 97500 61500 ) ( 97500 55500 180 ) ( 98340 55500 180 ) ( 98340 51180 180 ) ( 98160 51180 180 ) ( 98160 48000 180 ) ( 97740 48000 180 ) ( 97740 42180 )
+  NEW metal3 360 ( 97680 42300 ) ( 97680 39540 180 ) ( 97560 39540 180 ) ( 97560 38040 )
+  NEW metal3 360 ( 98160 62520 ) ( 98160 61860 )
+  NEW metal3 360 ( 98160 62460 ) ( 98160 68580 )
+  NEW metal3 360 ( 97500 62460 ) ( 97500 61440 )
+  NEW metal3 360 ( 98160 68340 ) ( 98160 76200 ) ;
+- select_b_hi[4]
+  + ROUTED metal3 360 ( 50940 38280 ) ( 50940 37800 )
+  NEW metal3 360 ( 50460 57900 ) ( 50460 56640 180 ) ( 51360 56640 180 ) ( 51360 47100 180 ) ( 50940 47100 180 ) ( 50940 38220 )
+  NEW metal3 360 ( 50460 38220 ) ( 50460 37620 180 ) ( 51540 37620 180 ) ( 51540 31080 180 ) ( 51060 31080 180 ) ( 51060 27900 )
+  NEW metal3 360 ( 51000 58500 ) ( 51000 76200 )
+  NEW metal3 360 ( 50700 37800 ) ( 50700 38340 )
+  NEW metal3 360 ( 51000 57900 ) ( 51000 62340 )
+  NEW metal3 360 ( 51060 27960 ) ( 51060 20520 180 ) ( 50940 20520 180 ) ( 50940 18840 180 ) ( 51600 18840 180 ) ( 51600 11880 180 ) ( 51120 11880 180 ) ( 51120 1140 180 ) ( 50940 1140 180 ) ( 50940 180 ) ;
+- select_a_hi[15]
+  + ROUTED metal3 360 ( 102120 68700 ) ( 102120 73260 )
+  NEW metal3 360 ( 102120 73140 ) ( 102120 76200 )
+  NEW metal3 360 ( 102300 14640 ) ( 102300 13860 180 ) ( 101520 13860 )
+  NEW metal3 360 ( 101760 14040 ) ( 101760 11580 )
+  NEW metal3 360 ( 101460 62220 ) ( 101460 54360 180 ) ( 102120 54360 180 ) ( 102120 52320 180 ) ( 101700 52320 180 ) ( 101700 49620 )
+  NEW metal3 360 ( 101520 30720 ) ( 101520 16620 180 ) ( 102300 16620 180 ) ( 102300 14520 )
+  NEW metal3 360 ( 101520 49620 ) ( 101520 35700 180 ) ( 102480 35700 180 ) ( 102480 33180 180 ) ( 101700 33180 180 ) ( 101700 30720 )
+  NEW metal3 360 ( 101400 69300 ) ( 101400 61980 ) ;
+- select_a_hi[13]
+  + ROUTED metal3 360 ( 92520 68700 ) ( 92520 73260 )
+  NEW metal3 360 ( 92160 14040 ) ( 92160 11580 )
+  NEW metal3 360 ( 91920 30720 ) ( 91920 16620 180 ) ( 92700 16620 180 ) ( 92700 14520 )
+  NEW metal3 360 ( 91800 69300 ) ( 91800 61980 )
+  NEW metal3 360 ( 92700 14640 ) ( 92700 13860 180 ) ( 91920 13860 )
+  NEW metal3 360 ( 91860 62220 ) ( 91860 54360 180 ) ( 92520 54360 180 ) ( 92520 52320 180 ) ( 92100 52320 180 ) ( 92100 49620 )
+  NEW metal3 360 ( 92520 73140 ) ( 92520 76200 )
+  NEW metal3 360 ( 91920 49620 ) ( 91920 35700 180 ) ( 92880 35700 180 ) ( 92880 33180 180 ) ( 92100 33180 180 ) ( 92100 30720 ) ;
+- select_a_hi[12]
+  + ROUTED metal3 360 ( 87720 68700 ) ( 87720 73260 )
+  NEW metal3 360 ( 87900 14640 ) ( 87900 13860 180 ) ( 87120 13860 )
+  NEW metal3 360 ( 87360 14040 ) ( 87360 11580 )
+  NEW metal3 360 ( 87720 73140 ) ( 87720 76200 )
+  NEW metal3 360 ( 87120 30720 ) ( 87120 16620 180 ) ( 87900 16620 180 ) ( 87900 14520 )
+  NEW metal3 360 ( 87060 62220 ) ( 87060 54360 180 ) ( 87720 54360 180 ) ( 87720 52320 180 ) ( 87300 52320 180 ) ( 87300 49620 )
+  NEW metal3 360 ( 87120 49620 ) ( 87120 35700 180 ) ( 88080 35700 180 ) ( 88080 33180 180 ) ( 87300 33180 180 ) ( 87300 30720 )
+  NEW metal3 360 ( 87000 69300 ) ( 87000 61980 ) ;
+- select_b_low[0]
+  + ROUTED metal3 360 ( 30960 68340 ) ( 30960 76200 )
+  NEW metal3 360 ( 30960 62520 ) ( 30960 61860 )
+  NEW metal3 360 ( 30960 62460 ) ( 30960 68580 )
+  NEW metal3 360 ( 30480 42300 ) ( 30480 39540 180 ) ( 30360 39540 180 ) ( 30360 38040 )
+  NEW metal3 360 ( 30360 19440 ) ( 30360 17640 180 ) ( 31320 17640 180 ) ( 31320 12840 180 ) ( 30900 12840 180 ) ( 30900 4740 )
+  NEW metal3 360 ( 30300 62460 ) ( 30300 61440 )
+  NEW metal3 360 ( 30360 38160 ) ( 30360 36660 180 ) ( 31380 36660 180 ) ( 31380 32040 180 ) ( 30840 32040 180 ) ( 30840 23880 )
+  NEW metal3 360 ( 30540 23880 ) ( 30540 20880 180 ) ( 30360 20880 180 ) ( 30360 19260 )
+  NEW metal3 360 ( 30480 41700 ) ( 30480 43320 )
+  NEW metal3 360 ( 30300 61500 ) ( 30300 55500 180 ) ( 31140 55500 180 ) ( 31140 51180 180 ) ( 30960 51180 180 ) ( 30960 48000 180 ) ( 30540 48000 180 ) ( 30540 42180 ) ;
+- select_b_hi[1]
+  + ROUTED metal3 360 ( 36600 58500 ) ( 36600 76200 )
+  NEW metal3 360 ( 36540 38280 ) ( 36540 37800 )
+  NEW metal3 360 ( 36300 37800 ) ( 36300 38340 )
+  NEW metal3 360 ( 36060 38220 ) ( 36060 37620 180 ) ( 37140 37620 180 ) ( 37140 31080 180 ) ( 36660 31080 180 ) ( 36660 27900 )
+  NEW metal3 360 ( 36060 57900 ) ( 36060 56640 180 ) ( 36960 56640 180 ) ( 36960 47100 180 ) ( 36540 47100 180 ) ( 36540 38220 )
+  NEW metal3 360 ( 36600 57900 ) ( 36600 62340 )
+  NEW metal3 360 ( 36660 27960 ) ( 36660 20520 180 ) ( 36540 20520 180 ) ( 36540 18840 180 ) ( 37200 18840 180 ) ( 37200 11880 180 ) ( 36720 11880 180 ) ( 36720 1140 180 ) ( 36540 1140 180 ) ( 36540 180 ) ;
+- select_b_low[15]
+  + ROUTED metal3 360 ( 102960 68340 ) ( 102960 76200 )
+  NEW metal3 360 ( 102360 38160 ) ( 102360 36660 180 ) ( 103380 36660 180 ) ( 103380 32040 180 ) ( 102840 32040 180 ) ( 102840 23880 )
+  NEW metal3 360 ( 102360 19440 ) ( 102360 17640 180 ) ( 103320 17640 180 ) ( 103320 12840 180 ) ( 102900 12840 180 ) ( 102900 4740 )
+  NEW metal3 360 ( 102540 23880 ) ( 102540 20880 180 ) ( 102360 20880 180 ) ( 102360 19260 )
+  NEW metal3 360 ( 102480 41700 ) ( 102480 43320 )
+  NEW metal3 360 ( 102300 61500 ) ( 102300 55500 180 ) ( 103140 55500 180 ) ( 103140 51180 180 ) ( 102960 51180 180 ) ( 102960 48000 180 ) ( 102540 48000 180 ) ( 102540 42180 )
+  NEW metal3 360 ( 102480 42300 ) ( 102480 39540 180 ) ( 102360 39540 180 ) ( 102360 38040 )
+  NEW metal3 360 ( 102960 62520 ) ( 102960 61860 )
+  NEW metal3 360 ( 102960 62460 ) ( 102960 68580 )
+  NEW metal3 360 ( 102300 62460 ) ( 102300 61440 ) ;
+- select_b_low[12]
+  + ROUTED metal3 360 ( 88560 68340 ) ( 88560 76200 )
+  NEW metal3 360 ( 88140 23880 ) ( 88140 20880 180 ) ( 87960 20880 180 ) ( 87960 19260 )
+  NEW metal3 360 ( 88080 42300 ) ( 88080 39540 180 ) ( 87960 39540 180 ) ( 87960 38040 )
+  NEW metal3 360 ( 88080 41700 ) ( 88080 43320 )
+  NEW metal3 360 ( 87960 38160 ) ( 87960 36660 180 ) ( 88980 36660 180 ) ( 88980 32040 180 ) ( 88440 32040 180 ) ( 88440 23880 )
+  NEW metal3 360 ( 87960 19440 ) ( 87960 17640 180 ) ( 88920 17640 180 ) ( 88920 12840 180 ) ( 88500 12840 180 ) ( 88500 4740 )
+  NEW metal3 360 ( 87900 61500 ) ( 87900 55500 180 ) ( 88740 55500 180 ) ( 88740 51180 180 ) ( 88560 51180 180 ) ( 88560 48000 180 ) ( 88140 48000 180 ) ( 88140 42180 )
+  NEW metal3 360 ( 87900 62460 ) ( 87900 61440 )
+  NEW metal3 360 ( 88560 62460 ) ( 88560 68580 )
+  NEW metal3 360 ( 88560 62520 ) ( 88560 61860 ) ;
+- select_b_low[9]
+  + ROUTED metal3 360 ( 73680 42300 ) ( 73680 39540 180 ) ( 73560 39540 180 ) ( 73560 38040 )
+  NEW metal3 360 ( 73740 23880 ) ( 73740 20880 180 ) ( 73560 20880 180 ) ( 73560 19260 )
+  NEW metal3 360 ( 74160 68340 ) ( 74160 76200 )
+  NEW metal3 360 ( 73560 19440 ) ( 73560 17640 180 ) ( 74520 17640 180 ) ( 74520 12840 180 ) ( 74100 12840 180 ) ( 74100 4740 )
+  NEW metal3 360 ( 73500 61500 ) ( 73500 55500 180 ) ( 74340 55500 180 ) ( 74340 51180 180 ) ( 74160 51180 180 ) ( 74160 48000 180 ) ( 73740 48000 180 ) ( 73740 42180 )
+  NEW metal3 360 ( 73500 62460 ) ( 73500 61440 )
+  NEW metal3 360 ( 73680 41700 ) ( 73680 43320 )
+  NEW metal3 360 ( 74160 62520 ) ( 74160 61860 )
+  NEW metal3 360 ( 74160 62460 ) ( 74160 68580 )
+  NEW metal3 360 ( 73560 38160 ) ( 73560 36660 180 ) ( 74580 36660 180 ) ( 74580 32040 180 ) ( 74040 32040 180 ) ( 74040 23880 ) ;
+- select_b_low[11]
+  + ROUTED metal3 360 ( 83760 68340 ) ( 83760 76200 )
+  NEW metal3 360 ( 83160 19440 ) ( 83160 17640 180 ) ( 84120 17640 180 ) ( 84120 12840 180 ) ( 83700 12840 180 ) ( 83700 4740 )
+  NEW metal3 360 ( 83160 38160 ) ( 83160 36660 180 ) ( 84180 36660 180 ) ( 84180 32040 180 ) ( 83640 32040 180 ) ( 83640 23880 )
+  NEW metal3 360 ( 83340 23880 ) ( 83340 20880 180 ) ( 83160 20880 180 ) ( 83160 19260 )
+  NEW metal3 360 ( 83280 42300 ) ( 83280 39540 180 ) ( 83160 39540 180 ) ( 83160 38040 )
+  NEW metal3 360 ( 83100 61500 ) ( 83100 55500 180 ) ( 83940 55500 180 ) ( 83940 51180 180 ) ( 83760 51180 180 ) ( 83760 48000 180 ) ( 83340 48000 180 ) ( 83340 42180 )
+  NEW metal3 360 ( 83280 41700 ) ( 83280 43320 )
+  NEW metal3 360 ( 83100 62460 ) ( 83100 61440 )
+  NEW metal3 360 ( 83760 62520 ) ( 83760 61860 )
+  NEW metal3 360 ( 83760 62460 ) ( 83760 68580 ) ;
+- select_b_hi[7]
+  + ROUTED metal3 360 ( 65340 38280 ) ( 65340 37800 )
+  NEW metal3 360 ( 64860 57900 ) ( 64860 56640 180 ) ( 65760 56640 180 ) ( 65760 47100 180 ) ( 65340 47100 180 ) ( 65340 38220 )
+  NEW metal3 360 ( 64860 38220 ) ( 64860 37620 180 ) ( 65940 37620 180 ) ( 65940 31080 180 ) ( 65460 31080 180 ) ( 65460 27900 )
+  NEW metal3 360 ( 65400 58500 ) ( 65400 76200 )
+  NEW metal3 360 ( 65100 37800 ) ( 65100 38340 )
+  NEW metal3 360 ( 65400 57900 ) ( 65400 62340 )
+  NEW metal3 360 ( 65460 27960 ) ( 65460 20520 180 ) ( 65340 20520 180 ) ( 65340 18840 180 ) ( 66000 18840 180 ) ( 66000 11880 180 ) ( 65520 11880 180 ) ( 65520 1140 180 ) ( 65340 1140 180 ) ( 65340 180 ) ;
+- select_b_hi[5]
+  + ROUTED metal3 360 ( 55740 38280 ) ( 55740 37800 )
+  NEW metal3 360 ( 55260 57900 ) ( 55260 56640 180 ) ( 56160 56640 180 ) ( 56160 47100 180 ) ( 55740 47100 180 ) ( 55740 38220 )
+  NEW metal3 360 ( 55260 38220 ) ( 55260 37620 180 ) ( 56340 37620 180 ) ( 56340 31080 180 ) ( 55860 31080 180 ) ( 55860 27900 )
+  NEW metal3 360 ( 55800 58500 ) ( 55800 76200 )
+  NEW metal3 360 ( 55500 37800 ) ( 55500 38340 )
+  NEW metal3 360 ( 55800 57900 ) ( 55800 62340 )
+  NEW metal3 360 ( 55860 27960 ) ( 55860 20520 180 ) ( 55740 20520 180 ) ( 55740 18840 180 ) ( 56400 18840 180 ) ( 56400 11880 180 ) ( 55920 11880 180 ) ( 55920 1140 180 ) ( 55740 1140 180 ) ( 55740 180 ) ;
+- select_a_hi[10]
+  + ROUTED metal3 360 ( 78120 73140 ) ( 78120 76200 )
+  NEW metal3 360 ( 78120 68700 ) ( 78120 73260 )
+  NEW metal3 360 ( 77520 30720 ) ( 77520 16620 180 ) ( 78300 16620 180 ) ( 78300 14520 )
+  NEW metal3 360 ( 77460 62220 ) ( 77460 54360 180 ) ( 78120 54360 180 ) ( 78120 52320 180 ) ( 77700 52320 180 ) ( 77700 49620 )
+  NEW metal3 360 ( 78300 14640 ) ( 78300 13860 180 ) ( 77520 13860 )
+  NEW metal3 360 ( 77760 14040 ) ( 77760 11580 )
+  NEW metal3 360 ( 77520 49620 ) ( 77520 35700 180 ) ( 78480 35700 180 ) ( 78480 33180 180 ) ( 77700 33180 180 ) ( 77700 30720 )
+  NEW metal3 360 ( 77400 69300 ) ( 77400 61980 ) ;
+- select_a_hi[1]
+  + ROUTED metal3 360 ( 34920 73140 ) ( 34920 76200 )
+  NEW metal3 360 ( 34920 68700 ) ( 34920 73260 )
+  NEW metal3 360 ( 34320 30720 ) ( 34320 16620 180 ) ( 35100 16620 180 ) ( 35100 14520 )
+  NEW metal3 360 ( 34560 14040 ) ( 34560 11580 )
+  NEW metal3 360 ( 35100 14640 ) ( 35100 13860 180 ) ( 34320 13860 )
+  NEW metal3 360 ( 34260 62220 ) ( 34260 54360 180 ) ( 34920 54360 180 ) ( 34920 52320 180 ) ( 34500 52320 180 ) ( 34500 49620 )
+  NEW metal3 360 ( 34320 49620 ) ( 34320 35700 180 ) ( 35280 35700 180 ) ( 35280 33180 180 ) ( 34500 33180 180 ) ( 34500 30720 )
+  NEW metal3 360 ( 34200 69300 ) ( 34200 61980 ) ;
+- select_a_hi[8]
+  + ROUTED metal3 360 ( 68520 68700 ) ( 68520 73260 )
+  NEW metal3 360 ( 68520 73140 ) ( 68520 76200 )
+  NEW metal3 360 ( 68700 14640 ) ( 68700 13860 180 ) ( 67920 13860 )
+  NEW metal3 360 ( 67800 69300 ) ( 67800 61980 )
+  NEW metal3 360 ( 68160 14040 ) ( 68160 11580 )
+  NEW metal3 360 ( 67920 49620 ) ( 67920 35700 180 ) ( 68880 35700 180 ) ( 68880 33180 180 ) ( 68100 33180 180 ) ( 68100 30720 )
+  NEW metal3 360 ( 67860 62220 ) ( 67860 54360 180 ) ( 68520 54360 180 ) ( 68520 52320 180 ) ( 68100 52320 180 ) ( 68100 49620 )
+  NEW metal3 360 ( 67920 30720 ) ( 67920 16620 180 ) ( 68700 16620 180 ) ( 68700 14520 ) ;
+- select_b_hi[6]
+  + ROUTED metal3 360 ( 60540 38280 ) ( 60540 37800 )
+  NEW metal3 360 ( 60060 57900 ) ( 60060 56640 180 ) ( 60960 56640 180 ) ( 60960 47100 180 ) ( 60540 47100 180 ) ( 60540 38220 )
+  NEW metal3 360 ( 60060 38220 ) ( 60060 37620 180 ) ( 61140 37620 180 ) ( 61140 31080 180 ) ( 60660 31080 180 ) ( 60660 27900 )
+  NEW metal3 360 ( 60600 58500 ) ( 60600 76200 )
+  NEW metal3 360 ( 60300 37800 ) ( 60300 38340 )
+  NEW metal3 360 ( 60600 57900 ) ( 60600 62340 )
+  NEW metal3 360 ( 60660 27960 ) ( 60660 20520 180 ) ( 60540 20520 180 ) ( 60540 18840 180 ) ( 61200 18840 180 ) ( 61200 11880 180 ) ( 60720 11880 180 ) ( 60720 1140 180 ) ( 60540 1140 180 ) ( 60540 180 ) ;
+- select_a_low[7]
+  + ROUTED metal3 360 ( 62160 15360 ) ( 62460 15360 )
+  NEW metal3 360 ( 62280 72840 ) ( 62280 76200 )
+  NEW metal3 360 ( 61980 15120 ) ( 62820 15120 180 ) ( 62820 15360 180 ) ( 62640 15360 )
+  NEW metal3 360 ( 62400 34680 ) ( 62400 34080 )
+  NEW metal3 360 ( 62580 72840 ) ( 62160 72840 180 ) ( 62160 59160 )
+  NEW metal3 360 ( 62400 53580 ) ( 62400 52980 )
+  NEW metal3 360 ( 62160 59400 ) ( 62160 14940 ) ;
+- select_b_hi[3]
+  + ROUTED metal3 360 ( 46140 38280 ) ( 46140 37800 )
+  NEW metal3 360 ( 45660 57900 ) ( 45660 56640 180 ) ( 46560 56640 180 ) ( 46560 47100 180 ) ( 46140 47100 180 ) ( 46140 38220 )
+  NEW metal3 360 ( 45660 38220 ) ( 45660 37620 180 ) ( 46740 37620 180 ) ( 46740 31080 180 ) ( 46260 31080 180 ) ( 46260 27900 )
+  NEW metal3 360 ( 46200 58500 ) ( 46200 76200 )
+  NEW metal3 360 ( 45900 37800 ) ( 45900 38340 )
+  NEW metal3 360 ( 46200 57900 ) ( 46200 62340 )
+  NEW metal3 360 ( 46260 27960 ) ( 46260 20520 180 ) ( 46140 20520 180 ) ( 46140 18840 180 ) ( 46800 18840 180 ) ( 46800 11880 180 ) ( 46320 11880 180 ) ( 46320 1140 180 ) ( 46140 1140 180 ) ( 46140 180 ) ;
+- select_a_low[6]
+  + ROUTED metal3 360 ( 57360 15360 ) ( 57660 15360 )
+  NEW metal3 360 ( 57480 72840 ) ( 57480 76200 )
+  NEW metal3 360 ( 57180 15120 ) ( 58020 15120 180 ) ( 58020 15360 180 ) ( 57840 15360 )
+  NEW metal3 360 ( 57600 34680 ) ( 57600 34080 )
+  NEW metal3 360 ( 57780 72840 ) ( 57360 72840 180 ) ( 57360 59160 )
+  NEW metal3 360 ( 57600 53580 ) ( 57600 52980 )
+  NEW metal3 360 ( 57360 59400 ) ( 57360 14940 ) ;
+- select_a_hi[6]
+  + ROUTED metal3 360 ( 58920 68700 ) ( 58920 73260 )
+  NEW metal3 360 ( 58920 73140 ) ( 58920 76200 )
+  NEW metal3 360 ( 59100 14640 ) ( 59100 13860 180 ) ( 58320 13860 )
+  NEW metal3 360 ( 58200 69300 ) ( 58200 61980 )
+  NEW metal3 360 ( 58560 14040 ) ( 58560 11580 )
+  NEW metal3 360 ( 58320 49620 ) ( 58320 35700 180 ) ( 59280 35700 180 ) ( 59280 33180 180 ) ( 58500 33180 180 ) ( 58500 30720 )
+  NEW metal3 360 ( 58320 30720 ) ( 58320 16620 180 ) ( 59100 16620 180 ) ( 59100 14520 )
+  NEW metal3 360 ( 58260 62220 ) ( 58260 54360 180 ) ( 58920 54360 180 ) ( 58920 52320 180 ) ( 58500 52320 180 ) ( 58500 49620 ) ;
+- select_b_hi[0]
+  + ROUTED metal3 360 ( 31800 58500 ) ( 31800 76200 )
+  NEW metal3 360 ( 31800 57900 ) ( 31800 62340 )
+  NEW metal3 360 ( 31500 37800 ) ( 31500 38340 )
+  NEW metal3 360 ( 31260 38220 ) ( 31260 37620 180 ) ( 32340 37620 180 ) ( 32340 31080 180 ) ( 31860 31080 180 ) ( 31860 27900 )
+  NEW metal3 360 ( 31860 27960 ) ( 31860 20520 180 ) ( 31740 20520 180 ) ( 31740 18840 180 ) ( 32400 18840 180 ) ( 32400 11880 180 ) ( 31920 11880 180 ) ( 31920 1140 180 ) ( 31740 1140 180 ) ( 31740 180 )
+  NEW metal3 360 ( 31740 38280 ) ( 31740 37800 )
+  NEW metal3 360 ( 31260 57900 ) ( 31260 56640 180 ) ( 32160 56640 180 ) ( 32160 47100 180 ) ( 31740 47100 180 ) ( 31740 38220 ) ;
+- select_a_hi[9]
+  + ROUTED metal3 360 ( 73320 68700 ) ( 73320 73260 )
+  NEW metal3 360 ( 73320 73140 ) ( 73320 76200 )
+  NEW metal3 360 ( 73500 14640 ) ( 73500 13860 180 ) ( 72720 13860 )
+  NEW metal3 360 ( 72960 14040 ) ( 72960 11580 )
+  NEW metal3 360 ( 72720 49620 ) ( 72720 35700 180 ) ( 73680 35700 180 ) ( 73680 33180 180 ) ( 72900 33180 180 ) ( 72900 30720 )
+  NEW metal3 360 ( 72600 69300 ) ( 72600 61980 )
+  NEW metal3 360 ( 72720 30720 ) ( 72720 16620 180 ) ( 73500 16620 180 ) ( 73500 14520 )
+  NEW metal3 360 ( 72660 62220 ) ( 72660 54360 180 ) ( 73320 54360 180 ) ( 73320 52320 180 ) ( 72900 52320 180 ) ( 72900 49620 ) ;
+- select_a_hi[3]
+  + ROUTED metal3 360 ( 44520 68700 ) ( 44520 73260 )
+  NEW metal3 360 ( 44520 73140 ) ( 44520 76200 )
+  NEW metal3 360 ( 44700 14640 ) ( 44700 13860 180 ) ( 43920 13860 )
+  NEW metal3 360 ( 43800 69300 ) ( 43800 61980 )
+  NEW metal3 360 ( 44160 14040 ) ( 44160 11580 )
+  NEW metal3 360 ( 43920 49620 ) ( 43920 35700 180 ) ( 44880 35700 180 ) ( 44880 33180 180 ) ( 44100 33180 180 ) ( 44100 30720 )
+  NEW metal3 360 ( 43920 30720 ) ( 43920 16620 180 ) ( 44700 16620 180 ) ( 44700 14520 )
+  NEW metal3 360 ( 43860 62220 ) ( 43860 54360 180 ) ( 44520 54360 180 ) ( 44520 52320 180 ) ( 44100 52320 180 ) ( 44100 49620 ) ;
+- select_b_low[13]
+  + ROUTED metal3 360 ( 93360 68340 ) ( 93360 76200 )
+  NEW metal3 360 ( 92700 62460 ) ( 92700 61440 )
+  NEW metal3 360 ( 92700 61500 ) ( 92700 55500 180 ) ( 93540 55500 180 ) ( 93540 51180 180 ) ( 93360 51180 180 ) ( 93360 48000 180 ) ( 92940 48000 180 ) ( 92940 42180 )
+  NEW metal3 360 ( 93360 62460 ) ( 93360 68580 )
+  NEW metal3 360 ( 92760 19440 ) ( 92760 17640 180 ) ( 93720 17640 180 ) ( 93720 12840 180 ) ( 93300 12840 180 ) ( 93300 4740 )
+  NEW metal3 360 ( 92760 38160 ) ( 92760 36660 180 ) ( 93780 36660 180 ) ( 93780 32040 180 ) ( 93240 32040 180 ) ( 93240 23880 )
+  NEW metal3 360 ( 92880 42300 ) ( 92880 39540 180 ) ( 92760 39540 180 ) ( 92760 38040 )
+  NEW metal3 360 ( 92940 23880 ) ( 92940 20880 180 ) ( 92760 20880 180 ) ( 92760 19260 )
+  NEW metal3 360 ( 92880 41700 ) ( 92880 43320 )
+  NEW metal3 360 ( 93360 62520 ) ( 93360 61860 ) ;
+- select_a_low[1]
+  + ROUTED metal3 360 ( 33480 72840 ) ( 33480 76200 )
+  NEW metal3 360 ( 33180 15120 ) ( 34020 15120 180 ) ( 34020 15360 180 ) ( 33840 15360 )
+  NEW metal3 360 ( 33360 15360 ) ( 33660 15360 )
+  NEW metal3 360 ( 33600 34680 ) ( 33600 34080 )
+  NEW metal3 360 ( 33600 53580 ) ( 33600 52980 )
+  NEW metal3 360 ( 33780 72840 ) ( 33360 72840 180 ) ( 33360 59160 )
+  NEW metal3 360 ( 33360 59400 ) ( 33360 14940 ) ;
+- select_a_hi[7]
+  + ROUTED metal3 360 ( 63720 68700 ) ( 63720 73260 )
+  NEW metal3 360 ( 63720 73140 ) ( 63720 76200 )
+  NEW metal3 360 ( 63900 14640 ) ( 63900 13860 180 ) ( 63120 13860 )
+  NEW metal3 360 ( 63000 69300 ) ( 63000 61980 )
+  NEW metal3 360 ( 63360 14040 ) ( 63360 11580 )
+  NEW metal3 360 ( 63120 49620 ) ( 63120 35700 180 ) ( 64080 35700 180 ) ( 64080 33180 180 ) ( 63300 33180 180 ) ( 63300 30720 )
+  NEW metal3 360 ( 63120 30720 ) ( 63120 16620 180 ) ( 63900 16620 180 ) ( 63900 14520 )
+  NEW metal3 360 ( 63060 62220 ) ( 63060 54360 180 ) ( 63720 54360 180 ) ( 63720 52320 180 ) ( 63300 52320 180 ) ( 63300 49620 ) ;
+- select_a_hi[2]
+  + ROUTED metal3 360 ( 39720 68700 ) ( 39720 73260 )
+  NEW metal3 360 ( 39720 73140 ) ( 39720 76200 )
+  NEW metal3 360 ( 39900 14640 ) ( 39900 13860 180 ) ( 39120 13860 )
+  NEW metal3 360 ( 39000 69300 ) ( 39000 61980 )
+  NEW metal3 360 ( 39360 14040 ) ( 39360 11580 )
+  NEW metal3 360 ( 39120 49620 ) ( 39120 35700 180 ) ( 40080 35700 180 ) ( 40080 33180 180 ) ( 39300 33180 180 ) ( 39300 30720 )
+  NEW metal3 360 ( 39120 30720 ) ( 39120 16620 180 ) ( 39900 16620 180 ) ( 39900 14520 )
+  NEW metal3 360 ( 39060 62220 ) ( 39060 54360 180 ) ( 39720 54360 180 ) ( 39720 52320 180 ) ( 39300 52320 180 ) ( 39300 49620 ) ;
+- select_b_low[10]
+  + ROUTED metal3 360 ( 78960 68340 ) ( 78960 76200 )
+  NEW metal3 360 ( 78540 23880 ) ( 78540 20880 180 ) ( 78360 20880 180 ) ( 78360 19260 )
+  NEW metal3 360 ( 78360 19440 ) ( 78360 17640 180 ) ( 79320 17640 180 ) ( 79320 12840 180 ) ( 78900 12840 180 ) ( 78900 4740 )
+  NEW metal3 360 ( 78360 38160 ) ( 78360 36660 180 ) ( 79380 36660 180 ) ( 79380 32040 180 ) ( 78840 32040 180 ) ( 78840 23880 )
+  NEW metal3 360 ( 78300 61500 ) ( 78300 55500 180 ) ( 79140 55500 180 ) ( 79140 51180 180 ) ( 78960 51180 180 ) ( 78960 48000 180 ) ( 78540 48000 180 ) ( 78540 42180 )
+  NEW metal3 360 ( 78480 42300 ) ( 78480 39540 180 ) ( 78360 39540 180 ) ( 78360 38040 )
+  NEW metal3 360 ( 78480 41700 ) ( 78480 43320 )
+  NEW metal3 360 ( 78960 62520 ) ( 78960 61860 )
+  NEW metal3 360 ( 78300 62460 ) ( 78300 61440 )
+  NEW metal3 360 ( 78960 62460 ) ( 78960 68580 ) ;
+- select_a_low[2]
+  + ROUTED metal3 360 ( 38160 15360 ) ( 38460 15360 )
+  NEW metal3 360 ( 37980 15120 ) ( 38820 15120 180 ) ( 38820 15360 180 ) ( 38640 15360 )
+  NEW metal3 360 ( 38400 34680 ) ( 38400 34080 )
+  NEW metal3 360 ( 38580 72840 ) ( 38160 72840 180 ) ( 38160 59160 )
+  NEW metal3 360 ( 38400 53580 ) ( 38400 52980 )
+  NEW metal3 360 ( 38160 59400 ) ( 38160 14940 )
+  NEW metal3 360 ( 38280 72840 ) ( 38280 76200 ) ;
+- select_a_hi[0]
+  + ROUTED metal3 360 ( 30120 68700 ) ( 30120 73260 )
+  NEW metal3 360 ( 30120 73140 ) ( 30120 76200 )
+  NEW metal3 360 ( 30300 14640 ) ( 30300 13860 180 ) ( 29520 13860 )
+  NEW metal3 360 ( 29760 14040 ) ( 29760 11580 )
+  NEW metal3 360 ( 29460 62220 ) ( 29460 54360 180 ) ( 30120 54360 180 ) ( 30120 52320 180 ) ( 29700 52320 180 ) ( 29700 49620 )
+  NEW metal3 360 ( 29520 30720 ) ( 29520 16620 180 ) ( 30300 16620 180 ) ( 30300 14520 )
+  NEW metal3 360 ( 29400 69300 ) ( 29400 61980 )
+  NEW metal3 360 ( 29520 49620 ) ( 29520 35700 180 ) ( 30480 35700 180 ) ( 30480 33180 180 ) ( 29700 33180 180 ) ( 29700 30720 ) ;
+- select_b_hi[13]
+  + ROUTED metal3 360 ( 93660 57900 ) ( 93660 56640 180 ) ( 94560 56640 180 ) ( 94560 47100 180 ) ( 94140 47100 180 ) ( 94140 38220 )
+  NEW metal3 360 ( 94200 57900 ) ( 94200 62340 )
+  NEW metal3 360 ( 93900 37800 ) ( 93900 38340 )
+  NEW metal3 360 ( 94140 38280 ) ( 94140 37800 )
+  NEW metal3 360 ( 94260 27960 ) ( 94260 20520 180 ) ( 94140 20520 180 ) ( 94140 18840 180 ) ( 94800 18840 180 ) ( 94800 11880 180 ) ( 94320 11880 180 ) ( 94320 1140 180 ) ( 94140 1140 180 ) ( 94140 180 )
+  NEW metal3 360 ( 94200 58500 ) ( 94200 76200 )
+  NEW metal3 360 ( 93660 38220 ) ( 93660 37620 180 ) ( 94740 37620 180 ) ( 94740 31080 180 ) ( 94260 31080 180 ) ( 94260 27900 ) ;
+- select_b_low[7]
+  + ROUTED metal3 360 ( 64080 42300 ) ( 64080 39540 180 ) ( 63960 39540 180 ) ( 63960 38040 )
+  NEW metal3 360 ( 64140 23880 ) ( 64140 20880 180 ) ( 63960 20880 180 ) ( 63960 19260 )
+  NEW metal3 360 ( 64560 68340 ) ( 64560 76200 )
+  NEW metal3 360 ( 64080 41700 ) ( 64080 43320 )
+  NEW metal3 360 ( 63900 62460 ) ( 63900 61440 )
+  NEW metal3 360 ( 63900 61500 ) ( 63900 55500 180 ) ( 64740 55500 180 ) ( 64740 51180 180 ) ( 64560 51180 180 ) ( 64560 48000 180 ) ( 64140 48000 180 ) ( 64140 42180 )
+  NEW metal3 360 ( 63960 19440 ) ( 63960 17640 180 ) ( 64920 17640 180 ) ( 64920 12840 180 ) ( 64500 12840 180 ) ( 64500 4740 )
+  NEW metal3 360 ( 64560 62460 ) ( 64560 68580 )
+  NEW metal3 360 ( 63960 38160 ) ( 63960 36660 180 ) ( 64980 36660 180 ) ( 64980 32040 180 ) ( 64440 32040 180 ) ( 64440 23880 )
+  NEW metal3 360 ( 64560 62520 ) ( 64560 61860 ) ;
+- select_a_low[3]
+  + ROUTED metal3 360 ( 42960 15360 ) ( 43260 15360 )
+  NEW metal3 360 ( 43080 72840 ) ( 43080 76200 )
+  NEW metal3 360 ( 42780 15120 ) ( 43620 15120 180 ) ( 43620 15360 180 ) ( 43440 15360 )
+  NEW metal3 360 ( 43200 34680 ) ( 43200 34080 )
+  NEW metal3 360 ( 43380 72840 ) ( 42960 72840 180 ) ( 42960 59160 )
+  NEW metal3 360 ( 43200 53580 ) ( 43200 52980 )
+  NEW metal3 360 ( 42960 59400 ) ( 42960 14940 ) ;
+- select_b_hi[14]
+  + ROUTED metal3 360 ( 98940 38280 ) ( 98940 37800 )
+  NEW metal3 360 ( 98700 37800 ) ( 98700 38340 )
+  NEW metal3 360 ( 98460 57900 ) ( 98460 56640 180 ) ( 99360 56640 180 ) ( 99360 47100 180 ) ( 98940 47100 180 ) ( 98940 38220 )
+  NEW metal3 360 ( 98460 38220 ) ( 98460 37620 180 ) ( 99540 37620 180 ) ( 99540 31080 180 ) ( 99060 31080 180 ) ( 99060 27900 )
+  NEW metal3 360 ( 99000 57900 ) ( 99000 62340 )
+  NEW metal3 360 ( 99060 27960 ) ( 99060 20520 180 ) ( 98940 20520 180 ) ( 98940 18840 180 ) ( 99600 18840 180 ) ( 99600 11880 180 ) ( 99120 11880 180 ) ( 99120 1140 180 ) ( 98940 1140 180 ) ( 98940 180 )
+  NEW metal3 360 ( 99000 58500 ) ( 99000 76200 ) ;
+- select_a_hi[5]
+  + ROUTED metal3 360 ( 54120 68700 ) ( 54120 73260 )
+  NEW metal3 360 ( 54120 73140 ) ( 54120 76200 )
+  NEW metal3 360 ( 54300 14640 ) ( 54300 13860 180 ) ( 53520 13860 )
+  NEW metal3 360 ( 53400 69300 ) ( 53400 61980 )
+  NEW metal3 360 ( 53760 14040 ) ( 53760 11580 )
+  NEW metal3 360 ( 53520 49620 ) ( 53520 35700 180 ) ( 54480 35700 180 ) ( 54480 33180 180 ) ( 53700 33180 180 ) ( 53700 30720 )
+  NEW metal3 360 ( 53520 30720 ) ( 53520 16620 180 ) ( 54300 16620 180 ) ( 54300 14520 )
+  NEW metal3 360 ( 53460 62220 ) ( 53460 54360 180 ) ( 54120 54360 180 ) ( 54120 52320 180 ) ( 53700 52320 180 ) ( 53700 49620 ) ;
+- select_b_low[4]
+  + ROUTED metal3 360 ( 49680 42300 ) ( 49680 39540 180 ) ( 49560 39540 180 ) ( 49560 38040 )
+  NEW metal3 360 ( 49740 23880 ) ( 49740 20880 180 ) ( 49560 20880 180 ) ( 49560 19260 )
+  NEW metal3 360 ( 50160 68340 ) ( 50160 76200 )
+  NEW metal3 360 ( 49680 41700 ) ( 49680 43320 )
+  NEW metal3 360 ( 49500 62460 ) ( 49500 61440 )
+  NEW metal3 360 ( 49500 61500 ) ( 49500 55500 180 ) ( 50340 55500 180 ) ( 50340 51180 180 ) ( 50160 51180 180 ) ( 50160 48000 180 ) ( 49740 48000 180 ) ( 49740 42180 )
+  NEW metal3 360 ( 49560 19440 ) ( 49560 17640 180 ) ( 50520 17640 180 ) ( 50520 12840 180 ) ( 50100 12840 180 ) ( 50100 4740 )
+  NEW metal3 360 ( 50160 62460 ) ( 50160 68580 )
+  NEW metal3 360 ( 49560 38160 ) ( 49560 36660 180 ) ( 50580 36660 180 ) ( 50580 32040 180 ) ( 50040 32040 180 ) ( 50040 23880 )
+  NEW metal3 360 ( 50160 62520 ) ( 50160 61860 ) ;
+- select_a_low[4]
+  + ROUTED metal3 360 ( 47760 15360 ) ( 48060 15360 )
+  NEW metal3 360 ( 47880 72840 ) ( 47880 76200 )
+  NEW metal3 360 ( 47580 15120 ) ( 48420 15120 180 ) ( 48420 15360 180 ) ( 48240 15360 )
+  NEW metal3 360 ( 48000 34680 ) ( 48000 34080 )
+  NEW metal3 360 ( 48180 72840 ) ( 47760 72840 180 ) ( 47760 59160 )
+  NEW metal3 360 ( 48000 53580 ) ( 48000 52980 )
+  NEW metal3 360 ( 47760 59400 ) ( 47760 14940 ) ;
+- select_b_hi[12]
+  + ROUTED metal3 360 ( 89400 58500 ) ( 89400 76200 )
+  NEW metal3 360 ( 89100 37800 ) ( 89100 38340 )
+  NEW metal3 360 ( 89340 38280 ) ( 89340 37800 )
+  NEW metal3 360 ( 89400 57900 ) ( 89400 62340 )
+  NEW metal3 360 ( 88860 38220 ) ( 88860 37620 180 ) ( 89940 37620 180 ) ( 89940 31080 180 ) ( 89460 31080 180 ) ( 89460 27900 )
+  NEW metal3 360 ( 88860 57900 ) ( 88860 56640 180 ) ( 89760 56640 180 ) ( 89760 47100 180 ) ( 89340 47100 180 ) ( 89340 38220 )
+  NEW metal3 360 ( 89460 27960 ) ( 89460 20520 180 ) ( 89340 20520 180 ) ( 89340 18840 180 ) ( 90000 18840 180 ) ( 90000 11880 180 ) ( 89520 11880 180 ) ( 89520 1140 180 ) ( 89340 1140 180 ) ( 89340 180 ) ;
+- select_a_hi[4]
+  + ROUTED metal3 360 ( 49320 68700 ) ( 49320 73260 )
+  NEW metal3 360 ( 49320 73140 ) ( 49320 76200 )
+  NEW metal3 360 ( 49500 14640 ) ( 49500 13860 180 ) ( 48720 13860 )
+  NEW metal3 360 ( 48600 69300 ) ( 48600 61980 )
+  NEW metal3 360 ( 48960 14040 ) ( 48960 11580 )
+  NEW metal3 360 ( 48720 49620 ) ( 48720 35700 180 ) ( 49680 35700 180 ) ( 49680 33180 180 ) ( 48900 33180 180 ) ( 48900 30720 )
+  NEW metal3 360 ( 48720 30720 ) ( 48720 16620 180 ) ( 49500 16620 180 ) ( 49500 14520 )
+  NEW metal3 360 ( 48660 62220 ) ( 48660 54360 180 ) ( 49320 54360 180 ) ( 49320 52320 180 ) ( 48900 52320 180 ) ( 48900 49620 ) ;
+- select_b_hi[11]
+  + ROUTED metal3 360 ( 84600 58500 ) ( 84600 76200 )
+  NEW metal3 360 ( 84060 57900 ) ( 84060 56640 180 ) ( 84960 56640 180 ) ( 84960 47100 180 ) ( 84540 47100 180 ) ( 84540 38220 )
+  NEW metal3 360 ( 84300 37800 ) ( 84300 38340 )
+  NEW metal3 360 ( 84060 38220 ) ( 84060 37620 180 ) ( 85140 37620 180 ) ( 85140 31080 180 ) ( 84660 31080 180 ) ( 84660 27900 )
+  NEW metal3 360 ( 84540 38280 ) ( 84540 37800 )
+  NEW metal3 360 ( 84660 27960 ) ( 84660 20520 180 ) ( 84540 20520 180 ) ( 84540 18840 180 ) ( 85200 18840 180 ) ( 85200 11880 180 ) ( 84720 11880 180 ) ( 84720 1140 180 ) ( 84540 1140 180 ) ( 84540 180 )
+  NEW metal3 360 ( 84600 57900 ) ( 84600 62340 ) ;
+- select_b_low[1]
+  + ROUTED metal3 360 ( 35760 68340 ) ( 35760 76200 )
+  NEW metal3 360 ( 35340 23880 ) ( 35340 20880 180 ) ( 35160 20880 180 ) ( 35160 19260 )
+  NEW metal3 360 ( 35160 38160 ) ( 35160 36660 180 ) ( 36180 36660 180 ) ( 36180 32040 180 ) ( 35640 32040 180 ) ( 35640 23880 )
+  NEW metal3 360 ( 35160 19440 ) ( 35160 17640 180 ) ( 36120 17640 180 ) ( 36120 12840 180 ) ( 35700 12840 180 ) ( 35700 4740 )
+  NEW metal3 360 ( 35280 42300 ) ( 35280 39540 180 ) ( 35160 39540 180 ) ( 35160 38040 )
+  NEW metal3 360 ( 35100 61500 ) ( 35100 55500 180 ) ( 35940 55500 180 ) ( 35940 51180 180 ) ( 35760 51180 180 ) ( 35760 48000 180 ) ( 35340 48000 180 ) ( 35340 42180 )
+  NEW metal3 360 ( 35280 41700 ) ( 35280 43320 )
+  NEW metal3 360 ( 35100 62460 ) ( 35100 61440 )
+  NEW metal3 360 ( 35760 62520 ) ( 35760 61860 )
+  NEW metal3 360 ( 35760 62460 ) ( 35760 68580 ) ;
+- select_a_low[5]
+  + ROUTED metal3 360 ( 52560 15360 ) ( 52860 15360 )
+  NEW metal3 360 ( 52680 72840 ) ( 52680 76200 )
+  NEW metal3 360 ( 52380 15120 ) ( 53220 15120 180 ) ( 53220 15360 180 ) ( 53040 15360 )
+  NEW metal3 360 ( 52800 34680 ) ( 52800 34080 )
+  NEW metal3 360 ( 52980 72840 ) ( 52560 72840 180 ) ( 52560 59160 )
+  NEW metal3 360 ( 52800 53580 ) ( 52800 52980 )
+  NEW metal3 360 ( 52560 59400 ) ( 52560 14940 ) ;
+- select_b_hi[10]
+  + ROUTED metal3 360 ( 79800 58500 ) ( 79800 76200 )
+  NEW metal3 360 ( 79740 38280 ) ( 79740 37800 )
+  NEW metal3 360 ( 79260 57900 ) ( 79260 56640 180 ) ( 80160 56640 180 ) ( 80160 47100 180 ) ( 79740 47100 180 ) ( 79740 38220 )
+  NEW metal3 360 ( 79260 38220 ) ( 79260 37620 180 ) ( 80340 37620 180 ) ( 80340 31080 180 ) ( 79860 31080 180 ) ( 79860 27900 )
+  NEW metal3 360 ( 79500 37800 ) ( 79500 38340 )
+  NEW metal3 360 ( 79860 27960 ) ( 79860 20520 180 ) ( 79740 20520 180 ) ( 79740 18840 180 ) ( 80400 18840 180 ) ( 80400 11880 180 ) ( 79920 11880 180 ) ( 79920 1140 180 ) ( 79740 1140 180 ) ( 79740 180 )
+  NEW metal3 360 ( 79800 57900 ) ( 79800 62340 ) ;
+- select_a_low[0]
+  + ROUTED metal3 360 ( 28680 72840 ) ( 28680 76200 )
+  NEW metal3 360 ( 28560 59400 ) ( 28560 14940 )
+  NEW metal3 360 ( 28800 53580 ) ( 28800 52980 )
+  NEW metal3 360 ( 28380 15120 ) ( 29220 15120 180 ) ( 29220 15360 180 ) ( 29040 15360 )
+  NEW metal3 360 ( 28980 72840 ) ( 28560 72840 180 ) ( 28560 59160 )
+  NEW metal3 360 ( 28800 34680 ) ( 28800 34080 )
+  NEW metal3 360 ( 28560 15360 ) ( 28860 15360 ) ;
+- select_a_low[8]
+  + ROUTED metal3 360 ( 66960 15360 ) ( 67260 15360 )
+  NEW metal3 360 ( 67080 72840 ) ( 67080 76200 )
+  NEW metal3 360 ( 66780 15120 ) ( 67620 15120 180 ) ( 67620 15360 180 ) ( 67440 15360 )
+  NEW metal3 360 ( 67200 34680 ) ( 67200 34080 )
+  NEW metal3 360 ( 67380 72840 ) ( 66960 72840 180 ) ( 66960 59160 )
+  NEW metal3 360 ( 67200 53580 ) ( 67200 52980 )
+  NEW metal3 360 ( 66960 59400 ) ( 66960 14940 ) ;
+- select_b_hi[15]
+  + ROUTED metal3 360 ( 103800 58500 ) ( 103800 76200 )
+  NEW metal3 360 ( 103740 38280 ) ( 103740 37800 )
+  NEW metal3 360 ( 103500 37800 ) ( 103500 38340 )
+  NEW metal3 360 ( 103260 57900 ) ( 103260 56640 180 ) ( 104160 56640 180 ) ( 104160 47100 180 ) ( 103740 47100 180 ) ( 103740 38220 )
+  NEW metal3 360 ( 103260 38220 ) ( 103260 37620 180 ) ( 104340 37620 180 ) ( 104340 31080 180 ) ( 103860 31080 180 ) ( 103860 27900 )
+  NEW metal3 360 ( 103800 57900 ) ( 103800 62340 )
+  NEW metal3 360 ( 103860 27960 ) ( 103860 20520 180 ) ( 103740 20520 180 ) ( 103740 18840 180 ) ( 104400 18840 180 ) ( 104400 11880 180 ) ( 103920 11880 180 ) ( 103920 1140 180 ) ( 103740 1140 180 ) ( 103740 180 ) ;
+- select_a_low[9]
+  + ROUTED metal3 360 ( 71880 72840 ) ( 71880 76200 )
+  NEW metal3 360 ( 71760 15360 ) ( 72060 15360 )
+  NEW metal3 360 ( 71580 15120 ) ( 72420 15120 180 ) ( 72420 15360 180 ) ( 72240 15360 )
+  NEW metal3 360 ( 72180 72840 ) ( 71760 72840 180 ) ( 71760 59160 )
+  NEW metal3 360 ( 72000 53580 ) ( 72000 52980 )
+  NEW metal3 360 ( 71760 59400 ) ( 71760 14940 )
+  NEW metal3 360 ( 72000 34680 ) ( 72000 34080 ) ;
+- select_a_low[10]
+  + ROUTED metal3 360 ( 76680 72840 ) ( 76680 76200 )
+  NEW metal3 360 ( 76800 34680 ) ( 76800 34080 )
+  NEW metal3 360 ( 76380 15120 ) ( 77220 15120 180 ) ( 77220 15360 180 ) ( 77040 15360 )
+  NEW metal3 360 ( 76560 15360 ) ( 76860 15360 )
+  NEW metal3 360 ( 76980 72840 ) ( 76560 72840 180 ) ( 76560 59160 )
+  NEW metal3 360 ( 76800 53580 ) ( 76800 52980 )
+  NEW metal3 360 ( 76560 59400 ) ( 76560 14940 ) ;
+- select_a_low[11]
+  + ROUTED metal3 360 ( 81480 72840 ) ( 81480 76200 )
+  NEW metal3 360 ( 81180 15120 ) ( 82020 15120 180 ) ( 82020 15360 180 ) ( 81840 15360 )
+  NEW metal3 360 ( 81360 15360 ) ( 81660 15360 )
+  NEW metal3 360 ( 81600 34680 ) ( 81600 34080 )
+  NEW metal3 360 ( 81600 53580 ) ( 81600 52980 )
+  NEW metal3 360 ( 81780 72840 ) ( 81360 72840 180 ) ( 81360 59160 )
+  NEW metal3 360 ( 81360 59400 ) ( 81360 14940 ) ;
+- select_a_low[12]
+  + ROUTED metal3 360 ( 86280 72840 ) ( 86280 76200 )
+  NEW metal3 360 ( 85980 15120 ) ( 86820 15120 180 ) ( 86820 15360 180 ) ( 86640 15360 )
+  NEW metal3 360 ( 86160 15360 ) ( 86460 15360 )
+  NEW metal3 360 ( 86400 34680 ) ( 86400 34080 )
+  NEW metal3 360 ( 86400 53580 ) ( 86400 52980 )
+  NEW metal3 360 ( 86160 59400 ) ( 86160 14940 )
+  NEW metal3 360 ( 86580 72840 ) ( 86160 72840 180 ) ( 86160 59160 ) ;
+- select_a_low[13]
+  + ROUTED metal3 360 ( 90960 15360 ) ( 91260 15360 )
+  NEW metal3 360 ( 91080 72840 ) ( 91080 76200 )
+  NEW metal3 360 ( 91380 72840 ) ( 90960 72840 180 ) ( 90960 59160 )
+  NEW metal3 360 ( 91200 53580 ) ( 91200 52980 )
+  NEW metal3 360 ( 91200 34680 ) ( 91200 34080 )
+  NEW metal3 360 ( 90780 15120 ) ( 91620 15120 180 ) ( 91620 15360 180 ) ( 91440 15360 )
+  NEW metal3 360 ( 90960 59400 ) ( 90960 14940 ) ;
+- select_a_low[14]
+  + ROUTED metal3 360 ( 96000 34680 ) ( 96000 34080 )
+  NEW metal3 360 ( 96180 72840 ) ( 95760 72840 180 ) ( 95760 59160 )
+  NEW metal3 360 ( 95760 59400 ) ( 95760 14940 )
+  NEW metal3 360 ( 96000 53580 ) ( 96000 52980 )
+  NEW metal3 360 ( 95880 72840 ) ( 95880 76200 )
+  NEW metal3 360 ( 95760 15360 ) ( 96060 15360 )
+  NEW metal3 360 ( 95580 15120 ) ( 96420 15120 180 ) ( 96420 15360 180 ) ( 96240 15360 ) ;
+- select_b_hi[9]
+  + ROUTED metal3 360 ( 75000 58500 ) ( 75000 76200 )
+  NEW metal3 360 ( 74940 38280 ) ( 74940 37800 )
+  NEW metal3 360 ( 74460 38220 ) ( 74460 37620 180 ) ( 75540 37620 180 ) ( 75540 31080 180 ) ( 75060 31080 180 ) ( 75060 27900 )
+  NEW metal3 360 ( 74460 57900 ) ( 74460 56640 180 ) ( 75360 56640 180 ) ( 75360 47100 180 ) ( 74940 47100 180 ) ( 74940 38220 )
+  NEW metal3 360 ( 74700 37800 ) ( 74700 38340 )
+  NEW metal3 360 ( 75060 27960 ) ( 75060 20520 180 ) ( 74940 20520 180 ) ( 74940 18840 180 ) ( 75600 18840 180 ) ( 75600 11880 180 ) ( 75120 11880 180 ) ( 75120 1140 180 ) ( 74940 1140 180 ) ( 74940 180 )
+  NEW metal3 360 ( 75000 57900 ) ( 75000 62340 ) ;
+- select_a_low[15]
+  + ROUTED metal3 360 ( 100560 15360 ) ( 100860 15360 )
+  NEW metal3 360 ( 100380 15120 ) ( 101220 15120 180 ) ( 101220 15360 180 ) ( 101040 15360 )
+  NEW metal3 360 ( 100680 72840 ) ( 100680 76200 )
+  NEW metal3 360 ( 100800 34680 ) ( 100800 34080 )
+  NEW metal3 360 ( 100980 72840 ) ( 100560 72840 180 ) ( 100560 59160 )
+  NEW metal3 360 ( 100560 59400 ) ( 100560 14940 )
+  NEW metal3 360 ( 100800 53580 ) ( 100800 52980 ) ;
+- select_a_hi[11]
+  + ROUTED metal3 360 ( 82920 73140 ) ( 82920 76200 )
+  NEW metal3 360 ( 82320 30720 ) ( 82320 16620 180 ) ( 83100 16620 180 ) ( 83100 14520 )
+  NEW metal3 360 ( 83100 14640 ) ( 83100 13860 180 ) ( 82320 13860 )
+  NEW metal3 360 ( 82920 68700 ) ( 82920 73260 )
+  NEW metal3 360 ( 82560 14040 ) ( 82560 11580 )
+  NEW metal3 360 ( 82260 62220 ) ( 82260 54360 180 ) ( 82920 54360 180 ) ( 82920 52320 180 ) ( 82500 52320 180 ) ( 82500 49620 )
+  NEW metal3 360 ( 82320 49620 ) ( 82320 35700 180 ) ( 83280 35700 180 ) ( 83280 33180 180 ) ( 82500 33180 180 ) ( 82500 30720 )
+  NEW metal3 360 ( 82200 69300 ) ( 82200 61980 ) ;
+- select_a_hi[14]
+  + ROUTED metal3 360 ( 97500 14640 ) ( 97500 13860 180 ) ( 96720 13860 )
+  NEW metal3 360 ( 96960 14040 ) ( 96960 11580 )
+  NEW metal3 360 ( 96660 62220 ) ( 96660 54360 180 ) ( 97320 54360 180 ) ( 97320 52320 180 ) ( 96900 52320 180 ) ( 96900 49620 )
+  NEW metal3 360 ( 96720 30720 ) ( 96720 16620 180 ) ( 97500 16620 180 ) ( 97500 14520 )
+  NEW metal3 360 ( 96720 49620 ) ( 96720 35700 180 ) ( 97680 35700 180 ) ( 97680 33180 180 ) ( 96900 33180 180 ) ( 96900 30720 )
+  NEW metal3 360 ( 96600 69300 ) ( 96600 61980 )
+  NEW metal3 360 ( 97320 73140 ) ( 97320 76200 )
+  NEW metal3 360 ( 97320 68700 ) ( 97320 73260 ) ;
+- select_b_low[3]
+  + ROUTED metal3 360 ( 44880 42300 ) ( 44880 39540 180 ) ( 44760 39540 180 ) ( 44760 38040 )
+  NEW metal3 360 ( 44940 23880 ) ( 44940 20880 180 ) ( 44760 20880 180 ) ( 44760 19260 )
+  NEW metal3 360 ( 45360 68340 ) ( 45360 76200 )
+  NEW metal3 360 ( 44880 41700 ) ( 44880 43320 )
+  NEW metal3 360 ( 44700 62460 ) ( 44700 61440 )
+  NEW metal3 360 ( 44700 61500 ) ( 44700 55500 180 ) ( 45540 55500 180 ) ( 45540 51180 180 ) ( 45360 51180 180 ) ( 45360 48000 180 ) ( 44940 48000 180 ) ( 44940 42180 )
+  NEW metal3 360 ( 44760 19440 ) ( 44760 17640 180 ) ( 45720 17640 180 ) ( 45720 12840 180 ) ( 45300 12840 180 ) ( 45300 4740 )
+  NEW metal3 360 ( 45360 62460 ) ( 45360 68580 )
+  NEW metal3 360 ( 44760 38160 ) ( 44760 36660 180 ) ( 45780 36660 180 ) ( 45780 32040 180 ) ( 45240 32040 180 ) ( 45240 23880 )
+  NEW metal3 360 ( 45360 62520 ) ( 45360 61860 ) ;
+- select_b_low[6]
+  + ROUTED metal3 360 ( 59280 42300 ) ( 59280 39540 180 ) ( 59160 39540 180 ) ( 59160 38040 )
+  NEW metal3 360 ( 59340 23880 ) ( 59340 20880 180 ) ( 59160 20880 180 ) ( 59160 19260 )
+  NEW metal3 360 ( 59760 68340 ) ( 59760 76200 )
+  NEW metal3 360 ( 59280 41700 ) ( 59280 43320 )
+  NEW metal3 360 ( 59100 62460 ) ( 59100 61440 )
+  NEW metal3 360 ( 59100 61500 ) ( 59100 55500 180 ) ( 59940 55500 180 ) ( 59940 51180 180 ) ( 59760 51180 180 ) ( 59760 48000 180 ) ( 59340 48000 180 ) ( 59340 42180 )
+  NEW metal3 360 ( 59160 19440 ) ( 59160 17640 180 ) ( 60120 17640 180 ) ( 60120 12840 180 ) ( 59700 12840 180 ) ( 59700 4740 )
+  NEW metal3 360 ( 59760 62460 ) ( 59760 68580 )
+  NEW metal3 360 ( 59160 38160 ) ( 59160 36660 180 ) ( 60180 36660 180 ) ( 60180 32040 180 ) ( 59640 32040 180 ) ( 59640 23880 )
+  NEW metal3 360 ( 59760 62520 ) ( 59760 61860 ) ;
+- select_b_hi[8]
+  + ROUTED metal3 360 ( 70260 27960 ) ( 70260 20520 180 ) ( 70140 20520 180 ) ( 70140 18840 180 ) ( 70800 18840 180 ) ( 70800 11880 180 ) ( 70320 11880 180 ) ( 70320 1140 180 ) ( 70140 1140 180 ) ( 70140 180 )
+  NEW metal3 360 ( 70140 38280 ) ( 70140 37800 )
+  NEW metal3 360 ( 69660 57900 ) ( 69660 56640 180 ) ( 70560 56640 180 ) ( 70560 47100 180 ) ( 70140 47100 180 ) ( 70140 38220 )
+  NEW metal3 360 ( 69660 38220 ) ( 69660 37620 180 ) ( 70740 37620 180 ) ( 70740 31080 180 ) ( 70260 31080 180 ) ( 70260 27900 )
+  NEW metal3 360 ( 70200 58500 ) ( 70200 76200 )
+  NEW metal3 360 ( 69900 37800 ) ( 69900 38340 )
+  NEW metal3 360 ( 70200 57900 ) ( 70200 62340 ) ;
+- regfile_selecter[1]
+  + ROUTED metal3 360 ( 10080 64680 ) ( 10080 76200 )
+  NEW metal3 360 ( 10080 64800 ) ( 10080 6480 ) ;
+- regfile_selecter[0]
+  + ROUTED metal3 360 ( 4320 64080 ) ( 4320 76200 )
+  NEW metal3 360 ( 4320 64320 ) ( 4320 6600 ) ;
+- regfile_select[0]
+  + ROUTED metal3 360 ( 6300 62760 ) ( 6300 76200 )
+  NEW metal3 360 ( 6300 44280 ) ( 6300 5160 )
+  + RECT metal3 ( 6120 43200 ) ( 6480 62880 ) ;
+- regfile_select[1]
+  + ROUTED metal3 360 ( 12120 62760 ) ( 12120 76200 )
+  NEW metal3 360 ( 12120 4560 ) ( 12120 62880 ) ;
+- write_en_inv
+  + ROUTED metal3 360 ( 21780 66360 ) ( 21780 76200 )
+  NEW metal3 360 ( 21780 60900 ) ( 21780 8100 )
+  NEW metal3 360 ( 21780 66420 ) ( 21780 60360 ) ;
+- reg_wr
+  + ROUTED metal3 360 ( 23220 62340 ) ( 23220 76200 )
+  NEW metal3 360 ( 23220 8880 ) ( 23220 62400 )
+  NEW metal3 360 ( 23220 4080 ) ( 23220 8940 ) ;
+- clock_inv
+  + ROUTED metal3 360 ( 140280 73800 ) ( 140280 76200 )
+  NEW metal3 360 ( 26580 55860 ) ( 26580 62340 ) ;
+- cp
+  + ROUTED metal3 360 ( 25500 66420 ) ( 25500 76200 ) ;
+- Q_mux_select_bar[1]
+  + ROUTED metal3 360 ( 127380 64980 ) ( 127380 76200 )
+  NEW metal3 360 ( 127380 65160 ) ( 127380 6840 ) ;
+- Q_mux_select_bar[0]
+  + ROUTED metal3 360 ( 121560 64680 ) ( 121560 76200 )
+  NEW metal3 360 ( 121560 65220 ) ( 121560 6900 ) ;
+- Q_mux_select[0]
+  + ROUTED metal3 360 ( 123960 63060 ) ( 123960 76200 )
+  NEW metal3 360 ( 123960 6900 ) ( 123960 63240 )
+  NEW metal3 360 ( 123960 5460 ) ( 123960 7200 ) ;
+- Q_mux_select[1]
+  + ROUTED metal3 360 ( 129660 63060 ) ( 129660 76200 )
+  NEW metal3 360 ( 129660 5520 ) ( 129660 63240 ) ;
+- Q_en_inv
+  + ROUTED metal3 360 ( 138000 66600 ) ( 138000 76200 )
+  NEW metal3 360 ( 138120 47460 ) ( 138120 46740 )
+  NEW metal3 360 ( 138000 66060 ) ( 138000 65040 180 ) ( 137340 65040 180 ) ( 137340 60060 180 ) ( 138120 60060 180 ) ( 138120 47460 180 ) ( 137940 47460 180 ) ( 137940 43140 180 ) ( 137460 43140 180 ) ( 137460 40680 180 ) ( 138060 40680 180 ) ( 138060 24540 180 ) ( 137400 24540 180 ) ( 137400 21660 180 ) ( 138000 21660 180 ) ( 138000 8940 ) ;
+- Q_en
+  + ROUTED metal3 360 ( 139020 61800 ) ( 139020 76200 )
+  NEW metal3 360 ( 139020 3600 ) ( 139020 61920 ) ;
+- s_select_bar[1]
+  + ROUTED metal3 360 ( 159600 64680 ) ( 159600 76200 )
+  NEW metal3 360 ( 159600 64860 ) ( 159600 6540 ) ;
+- s_select_bar[0]
+  + ROUTED metal3 360 ( 148200 64380 ) ( 148200 76200 )
+  NEW metal3 360 ( 148140 64800 ) ( 148140 6480 ) ;
+- s_select[1]
+  + ROUTED metal3 360 ( 162240 75840 ) ( 162240 76200 )
+  NEW metal3 360 ( 162240 62640 ) ( 162240 76140 )
+  NEW metal3 360 ( 162240 5040 ) ( 162240 62880 ) ;
+- s_select[0]
+  + ROUTED metal3 360 ( 150780 62820 ) ( 150780 76200 )
+  NEW metal3 360 ( 150780 5160 ) ( 150780 62880 ) ;
+- y_select_bar
+  + ROUTED metal3 360 ( 246660 65460 ) ( 246660 76200 )
+  NEW metal3 360 ( 246660 65520 ) ( 246660 7200 ) ;
+- inv_s
+  + ROUTED metal3 360 ( 190560 64620 ) ( 190560 76200 )
+  NEW metal3 360 ( 190560 6900 ) ( 190560 64680 ) ;
+- r_select_bar[0]
+  + ROUTED metal3 360 ( 165180 64680 ) ( 165180 76200 )
+  NEW metal3 360 ( 165180 64920 ) ( 165180 6600 ) ;
+- r_select[0]
+  + ROUTED metal3 360 ( 167580 64020 ) ( 167580 71040 180 ) ( 167100 71040 180 ) ( 167100 76200 )
+  NEW metal3 360 ( 167580 62880 ) ( 167580 64200 )
+  NEW metal3 360 ( 167340 13080 ) ( 167220 13080 180 ) ( 167220 21360 180 ) ( 167580 21360 180 ) ( 167580 24060 180 ) ( 167700 24060 180 ) ( 167700 32700 180 ) ( 167280 32700 180 ) ( 167280 34920 180 ) ( 167940 34920 180 ) ( 167940 40560 180 ) ( 167520 40560 180 ) ( 167520 43140 )
+  NEW metal3 360 ( 167700 5160 ) ( 167700 13080 180 ) ( 167280 13080 )
+  NEW metal3 360 ( 167700 43020 ) ( 167700 51180 180 ) ( 167100 51180 180 ) ( 167100 54060 180 ) ( 168120 54060 180 ) ( 168120 60360 180 ) ( 167580 60360 180 ) ( 167580 62400 ) ;
+- r_select_bar[1]
+  + ROUTED metal3 360 ( 171000 64740 ) ( 171000 76200 )
+  NEW metal3 360 ( 171000 64860 ) ( 171000 6540 ) ;
+- mux_input[1]
+  + ROUTED metal3 360 ( 242820 63060 ) ( 242820 76200 )
+  NEW metal3 360 ( 242820 5220 ) ( 242820 63540 ) ;
+- r_select[1]
+  + ROUTED metal3 360 ( 173280 62880 ) ( 173280 76200 )
+  NEW metal3 360 ( 173280 5220 ) ( 173280 62940 ) ;
+- inv_r
+  + ROUTED metal3 360 ( 178320 64680 ) ( 178320 76200 )
+  NEW metal3 360 ( 178320 64800 ) ( 178320 6480 ) ;
+- y_select
+  + ROUTED metal3 360 ( 249060 63600 ) ( 249060 64440 )
+  NEW metal3 360 ( 249060 64200 ) ( 249060 76200 )
+  NEW metal3 360 ( 249060 23880 ) ( 249060 63540 )
+  NEW metal3 360 ( 249060 5880 ) ( 249060 25020 ) ;
+- mux_input_bar[0]
+  + ROUTED metal3 360 ( 229920 65460 ) ( 229920 76200 )
+  NEW metal3 360 ( 229440 65460 ) ( 229440 61440 )
+  NEW metal3 360 ( 229620 63600 ) ( 229620 7140 ) ;
+- mux_input[0]
+  + ROUTED metal3 360 ( 231360 63240 ) ( 231360 76200 )
+  NEW metal3 360 ( 231360 5220 ) ( 231360 63540 ) ;
+- mux_input_bar[1]
+  + ROUTED metal3 360 ( 240840 65280 ) ( 240840 76200 )
+  NEW metal3 360 ( 240840 65520 ) ( 240840 7200 ) ;
+- q3_out
+  + ROUTED metal3 360 ( 145560 74700 ) ( 145560 68760 )
+  NEW metal3 360 ( 145560 73740 ) ( 145560 76200 )
+  NEW metal3 360 ( 145320 57600 ) ( 145320 69060 ) ;
+- q3_in
+  + ROUTED metal3 360 ( 123120 64200 ) ( 123120 76200 ) ;
+- q0_in
+  + ROUTED metal3 360 ( 115680 18960 ) ( 115680 76200 )
+  NEW metal3 360 ( 115680 19920 ) ( 115680 7680 180 ) ( 119280 7680 ) ;
+- q0_out
+  + ROUTED metal3 360 ( 145740 15840 ) ( 146760 15840 180 ) ( 146760 76200 ) ;
+- c[3]
+  + ROUTED metal3 360 ( 228480 76020 ) ( 228480 76200 )
+  NEW metal3 360 ( 228480 67020 ) ( 228480 76140 ) ;
+- c[2]
+  + ROUTED metal3 360 ( 216780 64560 ) ( 216780 76200 )
+  NEW metal3 360 ( 228480 47220 ) ( 228480 62520 180 ) ( 216840 62520 180 ) ( 216840 64260 ) ;
+- c[1]
+  + ROUTED metal3 360 ( 215640 63480 ) ( 215640 76200 )
+  NEW metal3 360 ( 215640 64560 ) ( 215640 44760 180 ) ( 216660 44760 )
+  NEW metal3 360 ( 228480 28440 ) ( 228480 42960 180 ) ( 216780 42960 180 ) ( 216780 44580 ) ;
+- c[0]
+  + ROUTED metal3 360 ( 214560 44820 ) ( 214560 76200 )
+  NEW metal3 360 ( 216660 25860 ) ( 214380 25860 )
+  NEW metal3 360 ( 214560 45540 ) ( 214560 25920 )
+  NEW metal3 360 ( 228480 9300 ) ( 228480 23460 180 ) ( 216960 23460 180 ) ( 216960 25560 ) ;
+- p[0]
+  + ROUTED metal3 360 ( 204000 75900 ) ( 204000 6660 180 ) ( 206640 6660 )
+  NEW metal3 360 ( 204000 76200 ) ( 204000 75600 ) ;
+- p[1]
+  + ROUTED metal3 360 ( 204900 45120 ) ( 204900 76200 )
+  NEW metal3 360 ( 204900 45120 ) ( 204900 25800 180 ) ( 206640 25800 ) ;
+- p[2]
+  + ROUTED metal3 360 ( 206640 44700 ) ( 205920 44700 180 ) ( 205920 76200 ) ;
+- p[3]
+  + ROUTED metal3 360 ( 206820 64500 ) ( 206820 76200 ) ;
+- y[3]
+  + ROUTED metal3 360 ( 253620 65100 ) ( 252960 65100 180 ) ( 252960 76200 ) ;
+- y[2]
+  + ROUTED metal3 360 ( 253560 45180 ) ( 252060 45180 180 ) ( 252060 76200 ) ;
+- y[1]
+  + ROUTED metal3 360 ( 253560 26280 ) ( 251040 26280 180 ) ( 251040 27120 )
+  NEW metal3 360 ( 251040 26940 ) ( 251040 76200 ) ;
+- y[0]
+  + ROUTED metal3 360 ( 250080 24960 ) ( 250080 76200 )
+  NEW metal3 360 ( 250080 7800 ) ( 250080 25020 )
+  NEW metal3 360 ( 253620 7140 ) ( 250080 7140 180 ) ( 250080 7860 ) ;
+- cin
+  + ROUTED metal3 360 ( 213300 25860 ) ( 213300 76200 )
+  NEW metal3 360 ( 213300 26100 ) ( 213300 6720 180 ) ( 216600 6720 ) ;
+- f0_in
+  + ROUTED metal3 360 ( 420 16440 ) ( 420 76200 )
+  NEW metal3 360 ( 1260 6180 ) ( 240 6180 )
+  NEW metal3 360 ( 420 17460 ) ( 420 13740 )
+  NEW metal3 360 ( 420 13920 ) ( 420 6240 ) ;
+- f[3]
+  + ROUTED metal3 360 ( 245820 66720 ) ( 245820 76200 )
+  NEW metal3 360 ( 245820 65640 ) ( 245820 66960 ) ;
+- f[2]
+  + ROUTED metal3 360 ( 244560 66060 ) ( 244560 76200 )
+  NEW metal3 360 ( 244560 66120 ) ( 244560 64140 )
+  NEW metal3 360 ( 244560 64380 ) ( 244560 46380 180 ) ( 245040 46380 ) ;
+- f[1]
+  + ROUTED metal3 360 ( 239460 36900 ) ( 239460 76200 ) ;
+- f[0]
+  + ROUTED metal3 360 ( 237900 17100 ) ( 237900 76200 ) ;
+- f3_in
+  + ROUTED metal3 360 ( 5460 63840 ) ( 5460 76200 ) ;
+- d[0]
+  + ROUTED metal3 360 ( 169740 6240 ) ( 169740 76200 )
+  NEW metal2 360 ( 166920 6060 ) ( 169560 6060 ) ;
+- d[1]
+  + ROUTED metal2 360 ( 163740 24960 ) ( 163620 24960 )
+  NEW metal3 360 ( 163260 43860 ) ( 163260 76200 )
+  + RECT metal3 ( 163080 25320 ) ( 163440 43200 )
+  + ROUTED metal2 360 ( 166320 24960 ) ( 163740 24960 )
+  NEW metal3 360 ( 163260 44160 ) ( 163260 43140 ) ;
+- d[2]
+  + ROUTED metal3 360 ( 164100 44220 ) ( 164100 76200 ) ;
+- d[3]
+  + ROUTED metal3 360 ( 166140 71220 ) ( 166140 76200 )
+  NEW metal3 360 ( 166140 70380 ) ( 166140 66060 180 ) ( 166740 66060 180 ) ( 166740 63840 )
+  NEW metal3 360 ( 166140 71400 ) ( 166140 70380 ) ;
+- vdd!
+  + ROUTED metal3 360 ( 16800 67560 ) ( 16800 76200 ) ;
+- gnd!
+  + ROUTED metal3 360 ( 18060 61920 ) ( 18060 76200 ) ;
+END SPECIALNETS
+
+NETS 126 ;
+- select_b_hi[2]
+  ( PIN select_b_hi[2] )
+  ( I37 select_b_hi[2] )
+  ( I3 select_b_hi[2] )
+  ( I2 select_b_hi[2] )
+  ( I1 select_b_hi[2] ) ;
+- select_b_low[2]
+  ( PIN select_b_low[2] )
+  ( I37 select_b_low[2] )
+  ( I3 select_b_low[2] )
+  ( I2 select_b_low[2] )
+  ( I1 select_b_low[2] ) ;
+- select_b_low[5]
+  ( PIN select_b_low[5] )
+  ( I37 select_b_low[5] )
+  ( I3 select_b_low[5] )
+  ( I2 select_b_low[5] )
+  ( I1 select_b_low[5] ) ;
+- select_b_low[8]
+  ( PIN select_b_low[8] )
+  ( I37 select_b_low[8] )
+  ( I3 select_b_low[8] )
+  ( I2 select_b_low[8] )
+  ( I1 select_b_low[8] ) ;
+- select_b_low[14]
+  ( PIN select_b_low[14] )
+  ( I37 select_b_low[14] )
+  ( I3 select_b_low[14] )
+  ( I2 select_b_low[14] )
+  ( I1 select_b_low[14] ) ;
+- select_b_hi[4]
+  ( PIN select_b_hi[4] )
+  ( I37 select_b_hi[4] )
+  ( I3 select_b_hi[4] )
+  ( I2 select_b_hi[4] )
+  ( I1 select_b_hi[4] ) ;
+- select_a_hi[15]
+  ( PIN select_a_hi[15] )
+  ( I37 select_a_hi[15] )
+  ( I3 select_a_hi[15] )
+  ( I2 select_a_hi[15] )
+  ( I1 select_a_hi[15] ) ;
+- select_a_hi[13]
+  ( PIN select_a_hi[13] )
+  ( I37 select_a_hi[13] )
+  ( I3 select_a_hi[13] )
+  ( I2 select_a_hi[13] )
+  ( I1 select_a_hi[13] ) ;
+- select_a_hi[12]
+  ( PIN select_a_hi[12] )
+  ( I37 select_a_hi[12] )
+  ( I3 select_a_hi[12] )
+  ( I2 select_a_hi[12] )
+  ( I1 select_a_hi[12] ) ;
+- select_b_low[0]
+  ( PIN select_b_low[0] )
+  ( I37 select_b_low[0] )
+  ( I3 select_b_low[0] )
+  ( I2 select_b_low[0] )
+  ( I1 select_b_low[0] ) ;
+- select_b_hi[1]
+  ( PIN select_b_hi[1] )
+  ( I37 select_b_hi[1] )
+  ( I3 select_b_hi[1] )
+  ( I2 select_b_hi[1] )
+  ( I1 select_b_hi[1] ) ;
+- select_b_low[15]
+  ( PIN select_b_low[15] )
+  ( I37 select_b_low[15] )
+  ( I3 select_b_low[15] )
+  ( I2 select_b_low[15] )
+  ( I1 select_b_low[15] ) ;
+- select_b_low[12]
+  ( PIN select_b_low[12] )
+  ( I37 select_b_low[12] )
+  ( I3 select_b_low[12] )
+  ( I2 select_b_low[12] )
+  ( I1 select_b_low[12] ) ;
+- select_b_low[9]
+  ( PIN select_b_low[9] )
+  ( I37 select_b_low[9] )
+  ( I3 select_b_low[9] )
+  ( I2 select_b_low[9] )
+  ( I1 select_b_low[9] ) ;
+- select_b_low[11]
+  ( PIN select_b_low[11] )
+  ( I37 select_b_low[11] )
+  ( I3 select_b_low[11] )
+  ( I2 select_b_low[11] )
+  ( I1 select_b_low[11] ) ;
+- select_b_hi[7]
+  ( PIN select_b_hi[7] )
+  ( I37 select_b_hi[7] )
+  ( I3 select_b_hi[7] )
+  ( I2 select_b_hi[7] )
+  ( I1 select_b_hi[7] ) ;
+- select_b_hi[5]
+  ( PIN select_b_hi[5] )
+  ( I37 select_b_hi[5] )
+  ( I3 select_b_hi[5] )
+  ( I2 select_b_hi[5] )
+  ( I1 select_b_hi[5] ) ;
+- select_a_hi[10]
+  ( PIN select_a_hi[10] )
+  ( I37 select_a_hi[10] )
+  ( I3 select_a_hi[10] )
+  ( I2 select_a_hi[10] )
+  ( I1 select_a_hi[10] ) ;
+- select_a_hi[1]
+  ( PIN select_a_hi[1] )
+  ( I37 select_a_hi[1] )
+  ( I3 select_a_hi[1] )
+  ( I2 select_a_hi[1] )
+  ( I1 select_a_hi[1] ) ;
+- select_a_hi[8]
+  ( PIN select_a_hi[8] )
+  ( I37 select_a_hi[8] )
+  ( I3 select_a_hi[8] )
+  ( I2 select_a_hi[8] )
+  ( I1 select_a_hi[8] ) ;
+- select_b_hi[6]
+  ( PIN select_b_hi[6] )
+  ( I37 select_b_hi[6] )
+  ( I3 select_b_hi[6] )
+  ( I2 select_b_hi[6] )
+  ( I1 select_b_hi[6] ) ;
+- select_a_low[7]
+  ( PIN select_a_low[7] )
+  ( I37 select_a_low[7] )
+  ( I2 select_a_low[7] )
+  ( I3 select_a_low[7] )
+  ( I1 select_a_low[7] ) ;
+- select_b_hi[3]
+  ( PIN select_b_hi[3] )
+  ( I37 select_b_hi[3] )
+  ( I3 select_b_hi[3] )
+  ( I2 select_b_hi[3] )
+  ( I1 select_b_hi[3] ) ;
+- select_a_low[6]
+  ( PIN select_a_low[6] )
+  ( I37 select_a_low[6] )
+  ( I2 select_a_low[6] )
+  ( I3 select_a_low[6] )
+  ( I1 select_a_low[6] ) ;
+- select_a_hi[6]
+  ( PIN select_a_hi[6] )
+  ( I37 select_a_hi[6] )
+  ( I3 select_a_hi[6] )
+  ( I2 select_a_hi[6] )
+  ( I1 select_a_hi[6] ) ;
+- select_b_hi[0]
+  ( PIN select_b_hi[0] )
+  ( I37 select_b_hi[0] )
+  ( I3 select_b_hi[0] )
+  ( I2 select_b_hi[0] )
+  ( I1 select_b_hi[0] ) ;
+- select_a_hi[9]
+  ( PIN select_a_hi[9] )
+  ( I37 select_a_hi[9] )
+  ( I3 select_a_hi[9] )
+  ( I2 select_a_hi[9] )
+  ( I1 select_a_hi[9] ) ;
+- select_a_hi[3]
+  ( PIN select_a_hi[3] )
+  ( I37 select_a_hi[3] )
+  ( I3 select_a_hi[3] )
+  ( I2 select_a_hi[3] )
+  ( I1 select_a_hi[3] ) ;
+- select_b_low[13]
+  ( PIN select_b_low[13] )
+  ( I37 select_b_low[13] )
+  ( I3 select_b_low[13] )
+  ( I2 select_b_low[13] )
+  ( I1 select_b_low[13] ) ;
+- select_a_low[1]
+  ( PIN select_a_low[1] )
+  ( I37 select_a_low[1] )
+  ( I1 select_a_low[1] )
+  ( I2 select_a_low[1] )
+  ( I3 select_a_low[1] ) ;
+- select_a_hi[7]
+  ( PIN select_a_hi[7] )
+  ( I37 select_a_hi[7] )
+  ( I3 select_a_hi[7] )
+  ( I2 select_a_hi[7] )
+  ( I1 select_a_hi[7] ) ;
+- select_a_hi[2]
+  ( PIN select_a_hi[2] )
+  ( I37 select_a_hi[2] )
+  ( I3 select_a_hi[2] )
+  ( I2 select_a_hi[2] )
+  ( I1 select_a_hi[2] ) ;
+- select_b_low[10]
+  ( PIN select_b_low[10] )
+  ( I37 select_b_low[10] )
+  ( I3 select_b_low[10] )
+  ( I2 select_b_low[10] )
+  ( I1 select_b_low[10] ) ;
+- select_a_low[2]
+  ( PIN select_a_low[2] )
+  ( I37 select_a_low[2] )
+  ( I1 select_a_low[2] )
+  ( I3 select_a_low[2] )
+  ( I2 select_a_low[2] ) ;
+- select_a_hi[0]
+  ( PIN select_a_hi[0] )
+  ( I37 select_a_hi[0] )
+  ( I3 select_a_hi[0] )
+  ( I2 select_a_hi[0] )
+  ( I1 select_a_hi[0] ) ;
+- select_b_hi[13]
+  ( PIN select_b_hi[13] )
+  ( I37 select_b_hi[13] )
+  ( I3 select_b_hi[13] )
+  ( I2 select_b_hi[13] )
+  ( I1 select_b_hi[13] ) ;
+- select_b_low[7]
+  ( PIN select_b_low[7] )
+  ( I37 select_b_low[7] )
+  ( I3 select_b_low[7] )
+  ( I2 select_b_low[7] )
+  ( I1 select_b_low[7] ) ;
+- select_a_low[3]
+  ( PIN select_a_low[3] )
+  ( I37 select_a_low[3] )
+  ( I1 select_a_low[3] )
+  ( I2 select_a_low[3] )
+  ( I3 select_a_low[3] ) ;
+- select_b_hi[14]
+  ( PIN select_b_hi[14] )
+  ( I37 select_b_hi[14] )
+  ( I3 select_b_hi[14] )
+  ( I2 select_b_hi[14] )
+  ( I1 select_b_hi[14] ) ;
+- select_a_hi[5]
+  ( PIN select_a_hi[5] )
+  ( I37 select_a_hi[5] )
+  ( I3 select_a_hi[5] )
+  ( I2 select_a_hi[5] )
+  ( I1 select_a_hi[5] ) ;
+- select_b_low[4]
+  ( PIN select_b_low[4] )
+  ( I37 select_b_low[4] )
+  ( I3 select_b_low[4] )
+  ( I2 select_b_low[4] )
+  ( I1 select_b_low[4] ) ;
+- select_a_low[4]
+  ( PIN select_a_low[4] )
+  ( I37 select_a_low[4] )
+  ( I2 select_a_low[4] )
+  ( I3 select_a_low[4] )
+  ( I1 select_a_low[4] ) ;
+- select_b_hi[12]
+  ( PIN select_b_hi[12] )
+  ( I37 select_b_hi[12] )
+  ( I3 select_b_hi[12] )
+  ( I2 select_b_hi[12] )
+  ( I1 select_b_hi[12] ) ;
+- select_a_hi[4]
+  ( PIN select_a_hi[4] )
+  ( I37 select_a_hi[4] )
+  ( I3 select_a_hi[4] )
+  ( I2 select_a_hi[4] )
+  ( I1 select_a_hi[4] ) ;
+- select_b_hi[11]
+  ( PIN select_b_hi[11] )
+  ( I37 select_b_hi[11] )
+  ( I3 select_b_hi[11] )
+  ( I2 select_b_hi[11] )
+  ( I1 select_b_hi[11] ) ;
+- select_b_low[1]
+  ( PIN select_b_low[1] )
+  ( I37 select_b_low[1] )
+  ( I3 select_b_low[1] )
+  ( I2 select_b_low[1] )
+  ( I1 select_b_low[1] ) ;
+- select_a_low[5]
+  ( PIN select_a_low[5] )
+  ( I37 select_a_low[5] )
+  ( I2 select_a_low[5] )
+  ( I3 select_a_low[5] )
+  ( I1 select_a_low[5] ) ;
+- select_b_hi[10]
+  ( PIN select_b_hi[10] )
+  ( I37 select_b_hi[10] )
+  ( I3 select_b_hi[10] )
+  ( I2 select_b_hi[10] )
+  ( I1 select_b_hi[10] ) ;
+- select_a_low[0]
+  ( PIN select_a_low[0] )
+  ( I37 select_a_low[0] )
+  ( I1 select_a_low[0] )
+  ( I2 select_a_low[0] )
+  ( I3 select_a_low[0] ) ;
+- select_a_low[8]
+  ( PIN select_a_low[8] )
+  ( I37 select_a_low[8] )
+  ( I2 select_a_low[8] )
+  ( I3 select_a_low[8] )
+  ( I1 select_a_low[8] ) ;
+- select_b_hi[15]
+  ( PIN select_b_hi[15] )
+  ( I37 select_b_hi[15] )
+  ( I3 select_b_hi[15] )
+  ( I2 select_b_hi[15] )
+  ( I1 select_b_hi[15] ) ;
+- select_a_low[9]
+  ( PIN select_a_low[9] )
+  ( I37 select_a_low[9] )
+  ( I2 select_a_low[9] )
+  ( I3 select_a_low[9] )
+  ( I1 select_a_low[9] ) ;
+- select_a_low[10]
+  ( PIN select_a_low[10] )
+  ( I37 select_a_low[10] )
+  ( I2 select_a_low[10] )
+  ( I3 select_a_low[10] )
+  ( I1 select_a_low[10] ) ;
+- select_a_low[11]
+  ( PIN select_a_low[11] )
+  ( I37 select_a_low[11] )
+  ( I2 select_a_low[11] )
+  ( I3 select_a_low[11] )
+  ( I1 select_a_low[11] ) ;
+- select_a_low[12]
+  ( PIN select_a_low[12] )
+  ( I37 select_a_low[12] )
+  ( I2 select_a_low[12] )
+  ( I3 select_a_low[12] )
+  ( I1 select_a_low[12] ) ;
+- select_a_low[13]
+  ( PIN select_a_low[13] )
+  ( I37 select_a_low[13] )
+  ( I2 select_a_low[13] )
+  ( I3 select_a_low[13] )
+  ( I1 select_a_low[13] ) ;
+- select_a_low[14]
+  ( PIN select_a_low[14] )
+  ( I37 select_a_low[14] )
+  ( I2 select_a_low[14] )
+  ( I3 select_a_low[14] )
+  ( I1 select_a_low[14] ) ;
+- select_b_hi[9]
+  ( PIN select_b_hi[9] )
+  ( I37 select_b_hi[9] )
+  ( I3 select_b_hi[9] )
+  ( I2 select_b_hi[9] )
+  ( I1 select_b_hi[9] ) ;
+- select_a_low[15]
+  ( PIN select_a_low[15] )
+  ( I37 select_a_low[15] )
+  ( I2 select_a_low[15] )
+  ( I3 select_a_low[15] )
+  ( I1 select_a_low[15] ) ;
+- select_a_hi[11]
+  ( PIN select_a_hi[11] )
+  ( I37 select_a_hi[11] )
+  ( I3 select_a_hi[11] )
+  ( I2 select_a_hi[11] )
+  ( I1 select_a_hi[11] ) ;
+- select_a_hi[14]
+  ( PIN select_a_hi[14] )
+  ( I37 select_a_hi[14] )
+  ( I3 select_a_hi[14] )
+  ( I2 select_a_hi[14] )
+  ( I1 select_a_hi[14] ) ;
+- select_b_low[3]
+  ( PIN select_b_low[3] )
+  ( I37 select_b_low[3] )
+  ( I3 select_b_low[3] )
+  ( I2 select_b_low[3] )
+  ( I1 select_b_low[3] ) ;
+- select_b_low[6]
+  ( PIN select_b_low[6] )
+  ( I37 select_b_low[6] )
+  ( I3 select_b_low[6] )
+  ( I2 select_b_low[6] )
+  ( I1 select_b_low[6] ) ;
+- select_b_hi[8]
+  ( PIN select_b_hi[8] )
+  ( I37 select_b_hi[8] )
+  ( I3 select_b_hi[8] )
+  ( I2 select_b_hi[8] )
+  ( I1 select_b_hi[8] ) ;
+- regfile_selecter[1]
+  ( PIN regfile_selecter[1] )
+  ( I37 regfile_selecter[1] )
+  ( I3 regfile_selecter[1] )
+  ( I2 regfile_selecter[1] )
+  ( I1 regfile_selecter[1] ) ;
+- regfile_selecter[0]
+  ( PIN regfile_selecter[0] )
+  ( I37 regfile_selecter[0] )
+  ( I3 regfile_selecter[0] )
+  ( I2 regfile_selecter[0] )
+  ( I1 regfile_selecter[0] ) ;
+- regfile_select[0]
+  ( PIN regfile_select[0] )
+  ( I37 regfile_select[0] )
+  ( I2 regfile_select[0] )
+  ( I1 regfile_select[0] ) ;
+- regfile_select[1]
+  ( PIN regfile_select[1] )
+  ( I37 regfile_select[1] )
+  ( I3 regfile_select[1] )
+  ( I2 regfile_select[1] )
+  ( I1 regfile_select[1] ) ;
+- f_right
+  ( PIN f_right ) ;
+- f_left
+  ( PIN f_left ) ;
+- write_en_inv
+  ( PIN write_en_inv )
+  ( I37 write_en_inv )
+  ( I3 write_en_inv )
+  ( I2 write_en_inv )
+  ( I1 write_en_inv ) ;
+- reg_wr
+  ( PIN reg_wr )
+  ( I37 reg_wr )
+  ( I3 reg_wr )
+  ( I2 reg_wr )
+  ( I1 reg_wr ) ;
+- clock_inv
+  ( PIN clock_inv )
+  ( I37 clock_inv ) ;
+- cp
+  ( PIN cp )
+  ( I37 cp ) ;
+- Q_mux_select_bar[1]
+  ( PIN Q_mux_select_bar[1] )
+  ( I37 Q_mux_select_bar[1] )
+  ( I1 Q_mux_select_bar[1] )
+  ( I2 Q_mux_select_bar[1] )
+  ( I3 Q_mux_select_bar[1] ) ;
+- Q_mux_select_bar[0]
+  ( PIN Q_mux_select_bar[0] )
+  ( I37 Q_mux_select_bar[0] )
+  ( I1 Q_mux_select_bar[0] )
+  ( I2 Q_mux_select_bar[0] )
+  ( I3 Q_mux_select_bar[0] ) ;
+- Q_mux_select[0]
+  ( PIN Q_mux_select[0] )
+  ( I37 Q_mux_select[0] )
+  ( I3 Q_mux_select[0] )
+  ( I1 Q_mux_select[0] )
+  ( I2 Q_mux_select[0] ) ;
+- Q_mux_select[1]
+  ( PIN Q_mux_select[1] )
+  ( I37 Q_mux_select[1] )
+  ( I1 Q_mux_select[1] )
+  ( I2 Q_mux_select[1] )
+  ( I3 Q_mux_select[1] ) ;
+- q
+  ( PIN q ) ;
+- Q_en_inv
+  ( PIN Q_en_inv )
+  ( I37 Q_en_inv )
+  ( I1 Q_en_inv )
+  ( I2 Q_en_inv ) ;
+- Q_en
+  ( PIN Q_en )
+  ( I37 Q_en )
+  ( I1 Q_en )
+  ( I2 Q_en )
+  ( I3 Q_en ) ;
+- s_select_bar[1]
+  ( PIN s_select_bar[1] )
+  ( I37 s_select_bar[1] )
+  ( I1 s_select_bar[1] )
+  ( I2 s_select_bar[1] )
+  ( I3 s_select_bar[1] ) ;
+- s_select_bar[0]
+  ( PIN s_select_bar[0] )
+  ( I37 s_select_bar[0] ) ;
+- s_select[1]
+  ( PIN s_select[1] )
+  ( I37 s_select[1] )
+  ( I1 s_select[1] )
+  ( I2 s_select[1] )
+  ( I3 s_select[1] ) ;
+- s_select[0]
+  ( PIN s_select[0] )
+  ( I37 s_select[0] )
+  ( I1 s_select[0] )
+  ( I2 s_select[0] )
+  ( I3 s_select[0] ) ;
+- y_select_bar
+  ( PIN y_select_bar )
+  ( I37 y_select_bar )
+  ( I1 y_select_bar )
+  ( I2 y_select_bar )
+  ( I3 y_select_bar ) ;
+- inv_s
+  ( PIN inv_s )
+  ( I37 inv_s )
+  ( I1 inv_s )
+  ( I2 inv_s )
+  ( I3 inv_s ) ;
+- r_select_bar[0]
+  ( PIN r_select_bar[0] )
+  ( I37 r_select_bar[0] )
+  ( I1 r_select_bar[0] )
+  ( I2 r_select_bar[0] )
+  ( I3 r_select_bar[0] ) ;
+- r_select[0]
+  ( PIN r_select[0] )
+  ( I37 r_select[0] )
+  ( I3 r_select[0] )
+  ( I2 r_select[0] )
+  ( I1 r_select[0] ) ;
+- r_select_bar[1]
+  ( PIN r_select_bar[1] )
+  ( I37 r_select_bar[1] )
+  ( I1 r_select_bar[1] )
+  ( I2 r_select_bar[1] )
+  ( I3 r_select_bar[1] ) ;
+- mux_input[1]
+  ( PIN mux_input[1] )
+  ( I37 mux_input[1] ) ;
+- r_select[1]
+  ( PIN r_select[1] )
+  ( I37 r_select[1] )
+  ( I1 r_select[1] )
+  ( I2 r_select[1] )
+  ( I3 r_select[1] ) ;
+- inv_r
+  ( PIN inv_r )
+  ( I37 inv_r )
+  ( I1 inv_r )
+  ( I2 inv_r )
+  ( I3 inv_r ) ;
+- y_select
+  ( PIN y_select )
+  ( I37 y_select )
+  ( I3 y_select )
+  ( I1 y_select )
+  ( I2 y_select ) ;
+- mux_input_bar[0]
+  ( PIN mux_input_bar[0] )
+  ( I37 mux_input_bar[0] )
+  ( I1 mux_input_bar[0] )
+  ( I2 mux_input_bar[0] )
+  ( I3 mux_input_bar[0] ) ;
+- mux_input[0]
+  ( PIN mux_input[0] )
+  ( I37 mux_input[0] )
+  ( I1 mux_input[0] )
+  ( I2 mux_input[0] )
+  ( I3 mux_input[0] ) ;
+- mux_input_bar[1]
+  ( PIN mux_input_bar[1] )
+  ( I37 mux_input_bar[1] ) ;
+- q3_out
+  ( PIN q3_out ) ;
+- q3_in
+  ( PIN q3_in )
+  ( I37 q_right ) ;
+- q0_in
+  ( PIN q0_in )
+  ( I3 q_left ) ;
+- q0_out
+  ( PIN q0_out ) ;
+- c[3]
+  ( PIN c[3] )
+  ( I37 cout ) ;
+- c[2]
+  ( PIN c[2] )
+  ( I37 cin )
+  ( I1 cout ) ;
+- c[1]
+  ( PIN c[1] )
+  ( I1 cin )
+  ( I2 cout ) ;
+- c[0]
+  ( PIN c[0] )
+  ( I2 cin )
+  ( I3 cout ) ;
+- p[0]
+  ( PIN p[0] )
+  ( I3 p ) ;
+- p[1]
+  ( PIN p[1] )
+  ( I2 p ) ;
+- p[2]
+  ( PIN p[2] )
+  ( I1 p ) ;
+- p[3]
+  ( PIN p[3] )
+  ( I37 p ) ;
+- y[3]
+  ( PIN y[3] )
+  ( I37 y ) ;
+- y[2]
+  ( PIN y[2] )
+  ( I1 y ) ;
+- y[1]
+  ( PIN y[1] )
+  ( I2 y ) ;
+- y[0]
+  ( PIN y[0] )
+  ( I3 y ) ;
+- cin
+  ( PIN cin )
+  ( I3 cin ) ;
+- f0_in
+  ( PIN f0_in )
+  ( I3 f_left ) ;
+- f[3]
+  ( PIN f[3] ) ;
+- f[2]
+  ( PIN f[2] ) ;
+- f[1]
+  ( PIN f[1] ) ;
+- f[0]
+  ( PIN f[0] ) ;
+- f3_in
+  ( PIN f3_in )
+  ( I37 f_right ) ;
+- d[0]
+  ( PIN d[0] )
+  ( I3 d ) ;
+- d[1]
+  ( PIN d[1] )
+  ( I2 d ) ;
+- d[2]
+  ( PIN d[2] )
+  ( I1 d ) ;
+- d[3]
+  ( PIN d[3] )
+  ( I37 d ) ;
+- vdd!
+  ( PIN vdd! ) ;
+- gnd!
+  ( PIN gnd! ) ;
+END NETS
+
+END DESIGN

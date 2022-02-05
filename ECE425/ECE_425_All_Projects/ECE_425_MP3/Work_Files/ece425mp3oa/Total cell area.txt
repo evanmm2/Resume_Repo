@@ -1,0 +1,29 @@
+****************************************
+Report : area
+Design : controller
+Version: P-2019.03-SP1-1
+Date   : Mon Apr 20 23:03:35 2020
+****************************************
+
+Information: Updating design information... (UID-85)
+Library(s) Used:
+
+    vtvt_tsmc250 (File: /home/zhengh4/ece425.work/vtvt/Synopsys_Libraries/libs/vtvt_tsmc250.db)
+
+Number of ports:                          106
+Number of nets:                           171
+Number of cells:                          137
+Number of combinational cells:            129
+Number of sequential cells:                 8
+Number of macros/black boxes:               0
+Number of buf/inv:                         59
+Number of references:                      12
+
+Combinational area:               8622.028732
+Buf/Inv area:                     2890.339203
+Noncombinational area:             653.184021
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                  9275.212753
+Total area:                 undefined

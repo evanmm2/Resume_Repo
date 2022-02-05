@@ -1,0 +1,12 @@
+\o Program:		@(#)$CDS: cdsLibEditor version 6.1.8 - CAT37 09/03/2019 21:38 (ip-172-18-22-89) $
+\o Sub version:		sub-version  s061 
+\o Arguments:		-display :102 -mpssession virtuoso15837 -mpshost linux-12.ews.illinois.edu -namespace CDBA -cdslib /home/evanmm2/ece425.work/ece425mp0/comptut/cds.lib 
+\o Working Directory:	linux-12.ews.illinois.edu:/home/evanmm2/ece425.work/ece425mp0/comptut
+\o 64-bit offsets
+\a nrSetWindowVisibility(cdsLibEditor "show")
+\o Qt version: 		5.9.1
+\a nrSetCurrentWindow(cdsLibEditor)
+\a nrListItemAction(cdsLibEditor->mainTable 0 0)
+\o Active cell: 0 0 "basic"
+\a nrResizeWindow(cdsLibEditor list(0 53 500 400))
+\a exit(0)

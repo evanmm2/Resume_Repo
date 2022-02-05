@@ -1,0 +1,48 @@
+n 0 /12
+n 1 /11
+n 2 /10
+n 3 /9
+n 4 /8
+n 5 /7
+n 6 /gnd!
+n 7 /Y
+n 8 /SEL
+n 9 /B
+n 10 /A
+n 11 /vdd!
+d nfet D G S B (p S D)
+; nfet(0) = /+6
+i 0 nfet 7 4 0 6 "l 1 w 11"
+; nfet(1) = /+5
+i 1 nfet 0 5 6 6 "l 1 w 11"
+; nfet(2) = /+4
+i 2 nfet 6 8 3 6 "l 1 w 11"
+; nfet(3) = /+3
+i 3 nfet 4 9 1 6 "l 1 w 11"
+; nfet(4) = /+2
+i 4 nfet 1 8 6 6 "l 1 w 11"
+; nfet(5) = /+1
+i 5 nfet 5 3 2 6 "l 1 w 11"
+; nfet(6) = /+0
+i 6 nfet 2 10 6 6 "l 1 w 11"
+d pfet D G S B (p S D)
+; pfet(7) = /+13
+i 7 pfet 11 4 7 11 "l 1 w 11"
+; pfet(8) = /+12
+i 8 pfet 7 5 11 11 "l 1 w 11"
+; pfet(9) = /+11
+i 9 pfet 11 8 3 11 "l 1 w 11"
+; pfet(10) = /+10
+i 10 pfet 11 9 4 11 "l 1 w 11"
+; pfet(11) = /+9
+i 11 pfet 4 8 11 11 "l 1 w 11"
+; pfet(12) = /+8
+i 12 pfet 11 3 5 11 "l 1 w 11"
+; pfet(13) = /+7
+i 13 pfet 5 10 11 11 "l 1 w 11"
+t	10	"A"	input
+t	9	"B"	input
+t	8	"SEL"	input
+t	7	"Y"	output
+t	6	"gnd!"	inputOutput
+t	11	"vdd!"	inputOutput

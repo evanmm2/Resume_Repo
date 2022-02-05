@@ -1,0 +1,16 @@
+//Revision 2
+//NOTE
+//VXL Configuration
+//END_NOTE
+
+config or2_4;
+design ece425mp3.or2_4:schematic;
+liblist ece425mp3;
+
+viewlist physConfig, schematic, symbol;
+
+constraintviewlist constraint;
+stoplist layout, abstract;
+
+
+endconfig

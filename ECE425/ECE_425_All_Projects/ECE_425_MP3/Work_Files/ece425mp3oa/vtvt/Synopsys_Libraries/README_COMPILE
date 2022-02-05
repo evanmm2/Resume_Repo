@@ -1,0 +1,109 @@
+
+-----------------------------------------------------------
+ README_COMPILE File
+
+ VTVT LAB (VIRGINIA TECH VLSI FOR TELECOMMUNICATIONS
+ 
+ December 12, 2006
+ Jeannette Djigbenou (jddjig01@vt.edu)
+
+---------------------------------------------------------
+Use this File for instructions to Compile: 
+	A) TECHNOLOGY FILE: vtvt_tsmc250.lib
+	B) SYMBOL LIBRARY FILE: vtvt_tsmc250.slib
+
+
+	**************************************************
+
+	A)  COMPILE TECHNOLOGY FILE: VTVT_TSMC250.LIB
+
+	**************************************************
+
+Update .synopsys_vss.setup file to Library compiling setting
+ Make sure that followings are included in .synopsys_vss.setup:
+WORK > vtvt_tsmc250
+vtvt_tsmc250 :  ./VTVT_TSMC250
+
+1. making synthesis db file:
+$ lc_shell
+> read_lib vtvt_tsmc250.lib
+> write_lib vtvt_tsmc250 -o vtvt_tsmc250.db
+>quit
+
+2. Move db file to directory libs
+mv vtvt_tsmc250.db libs/.
+
+3. making simulation and synthesis files from synthesis db:
+3.1 Start dc_shell then read the library and get the vhdl models
+$ dc_shell-xg-t
+> read_lib vtvt_tsmc250.lib
+> write_lib -f vhdl -o vtvt_tsmc250.vhd vtvt_tsmc250
+> quit
+
+3.2 Update the *Vcomponents file
+Open the *_Vcomponents file and replace string VCOMPONENTS by COMPONENT
+
+3.3 Analyze (vhdlan) the resulting vhdl files for simulation purposes
+>mkdir VTVT_TSMC250
+Analyze the files in this order:
+>vhdlan *_Vtables.vhd *_Vcomponents.vhd *_VITAL.vhd
+
+3.4 Generate Standard cells Components packages.
+Start dc_shell
+$ dc_shell-xg-t 
+analyze -library vtvt_tsmc250 -format vhdl {vtvt_tsmc250_Vcomponents.vhd}
+quit
+
+There should be no errors.
+
+4. Setup for Synthesis and Simulation
+4.1 When VTVT_TSMC250 directory is used as library for synthesis and simulation
+update .synopsys_vss.setup as follow:
+    WORK            > DEFAULT
+    DEFAULT         : WORK
+    CELLSLIB        > VTVT_TSMC250LOC
+    VTVT_TSMC250LOC       : <path_to_this_dir>/Synopsys_Libraries/VTVT_TSMC250
+
+4.2 Add libs directory to search path
+set search_path {. ./libs /software/Synopsys/Y-2006.06-SP2/libraries/syn}
+
+4.3 Include technology libraries
+set link_library {"vtvt_tsmc250.db"}
+set target_library {"vtvt_tsmc250.db"}
+
+	**************************************************
+
+	B) COMPILE SYMBOLS LIBRARY FILE: VTVT_TSCM250.SLIB
+
+	**************************************************
+
+1 . Read the *.slib file within lc_shell
+$lc_shell
+>read_lib vtvt_tsmc250.slib
+
+Disregard the WARNING messages about SCALE and ROUTE_GRID redefinitions.
+This should not be an issue if you verify that the value is the same.
+The statements to check for are:
+A few symbol libraries are read successfully:
+	Symbol library 'NCSU_Analog_Parts' read successfully
+	Symbol library 'basic' read successfully
+	Symbol library 'vtvt_tsmc250' read successfully
+
+2. Generate the *.sdb
+For each of the of the symbol libraries read do the following
+	write_lib NCSU_Analog_Parts -o NCSU_Analog_Parts.sdb
+	write_lib basic -o basic.sdb
+	write_lib vtvt_tsmc250 -o vtvt_tsmc250.sdb
+
+3. Move all files to libs directory
+mv  basic.s* libs/.
+mv  NCSU_Analog_Parts.sdb libs/.
+mv  US.8ths.s* libs/.
+mv vtvt_tsmc250.s* libs/.
+
+4. Update file dotsynopsys_dc.setup to include these libraries:
+4.1 Add libs directory to search path:
+set search_path {. ./libs <path_to_Synopsys_installation_dir>/Y-2006.06-SP2/libraries/syn}
+4.2 Include symbols libraries
+set symbol_library {"vtvt_tsmc250.sdb" "basic.sdb" "NCSU_Analog_Parts.sdb" "US.8ths.sdb"}
+

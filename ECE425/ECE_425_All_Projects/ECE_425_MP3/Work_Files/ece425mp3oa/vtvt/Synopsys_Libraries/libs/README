@@ -1,0 +1,45 @@
+######################################################
+# README File: LIBRARIES FILES FOR VTVT_TSMC250 
+# VTVT LAB (VIRGINIA TECH VLSI FOR TELECOMMUNICATIONS
+# 
+# November 17, 2006
+# Jeannette Djigbenou (jddjig01@vt.edu)
+#
+#####################################################
+
+This directory contains Synopsys Design/Library Compiler's
+technology and symbol libraries for vtvt_tsmc250.
+
+** TECHNOLOGY LIBRARY **
+Contains timing information and characterization of standard cells
+Both ASCII and .DB files are provided
+vtvt_tsmc250.lib and vtvt_tsmc250.db
+
+** SYMBOL LIBRARY **
+Contains symbol library files.
+The libraries must be assigned to the "symbol_library" variable in 
+the .synopsys_dc.setup file.
+
+List of symbol libraries: 
+	-basic.slib, basic.sdb, US.8ths.slib, US.8ths.sdb
+		Cadence default basic library 
+		Copied from $SYNOPSYS/doc/syn/interfaces/cadence/libraries/
+		This symbol library package does not include Template Sheets. 
+		US.8ths has been added for your convenience. 
+
+	-NCSU_Analog_Parts.sdb: This file does not contain all of the original
+		NCSU_Analog_Parts library cells. If one wish to add more symbols, this file
+		needs to recompiled. Its data are located in the vtvt_tsmc250.slib file.
+
+	-vtvt_tsmc250.slib and vtvt_tsmc250.sdb: Contains all the symbols information.
+		Design Compiler does not read the 
+
+** USAGE **
+The files must all be included in the .synopsys_dc.setup file
+in the Synopsys_Libraries directory in order to work with Synthesis.
+
+** NOTE ** 
+The ripper library is not included in this design.
+
+
+

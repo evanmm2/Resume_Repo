@@ -1,0 +1,56 @@
+
+---------------------------------------------------------
+ README File: LEF DIRECTORY FOR VTVT_TSMC250 
+
+ VTVT LAB (VIRGINIA TECH VLSI FOR TELECOMMUNICATIONS
+ 
+ November 17, 2006
+ Jeannette Djigbenou (jddjig01@vt.edu)
+
+---------------------------------------------------------
+
+This directory contains map files and lef files for running PNR
+using Cadence SOC Encounter "First Encounter v05.20-p002_1"
+This release does not support Silicon Ensemble. 
+
+--------------------------------------
+HOW TO RUN PNR WITH SOC ENCOUNTER
+--------------------------------------
+This document is not intended to show how to do PNR.
+For guidelines on how to run PNR using Cadence SOC Encounter,
+refer to the VTVT Site (www.vtvt.org)->VLSI Design->Tutorials->Cadence at:
+http://www.vtvt.ece.vt.edu/vlsidesign/tutorialCadence_socEncounter.php
+
+--------------------------------------
+GUIDELINES FOR GENERATING LEF FILES
+--------------------------------------
+For guidelines on how to generate LEF files, refer to the
+Guidelines sections on the VTVT site at:
+http://www.vtvt.ece.vt.edu/vlsidesign/guidelines.php
+
+-------------------
+DIRECTORY CONTENT
+-------------------
+
+MAP FILES
+- vtvt_SocE2df2.map: Use to export GDS file when using SOC Encounter
+
+- vtvt_tsmc250_StreamIn.map: Use to import GDS file from SOC encounter
+	into Cadence.(When Streaming in GDS file from PNR tools to Cadence)
+
+- vtvt_nolabel.map: For no label design. Use to convert dfII <--> GDSII format
+	Does not contain TEXT label - cap_id only
+
+LEF FILES
+- vtvt_tsmc250.lef: LEF file for vtvt_tsmc250 library for
+	 technology TSMC_CMOS025_DEEP
+DEF FILES
+- vtvt_tsmc250_mosiscorner.def: Defines corner pads.
+
+TECHNOLOGY FILE
+- vtvt_tsmc250.tf: This file includes all the changes made to the NCSU
+	CDK to run PNR. See Guidelines for generating LEF files on our site
+	for instructions on how to use this file to generate LEF files. 
+
+LIBRARIES
+- vtvt_tsmc250_nolabel.tar.gz: "label-less" layout views of vtvt_tsmc250 and dummy_mosis_pads.

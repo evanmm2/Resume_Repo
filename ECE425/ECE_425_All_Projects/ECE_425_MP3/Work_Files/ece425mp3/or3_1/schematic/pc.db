@@ -1,0 +1,28 @@
+#
+NCSU_Analog_Parts pmos4 symbol
+P1
+P0
+P2
+P3
+#
+NCSU_Analog_Parts nmos4 symbol
+N3
+N2
+N1
+N0
+#
+basic vdd symbol
+I1
+I8
+#
+basic gnd symbol
+6
+I0
+#ISCELL
+basic opin symbol
+I5
+#ISCELL
+basic ipin symbol
+I11
+I12
+I10

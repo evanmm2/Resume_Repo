@@ -1,0 +1,48 @@
+n 1 gnd!
+n 0 vdd!
+n 2 /B
+n 3 /net7
+n 4 /net6
+n 5 /Y
+n 6 /A
+n 9 /SEL
+n 10 /net4
+d pfet D G S B (p S D)
+; pfet(0) = /I6/1
+i 0 pfet 3 9 0 0 "l 1 w 11"
+d nfet D G S B (p S D)
+; nfet(1) = /I6/0
+i 1 nfet 3 9 1 1 "l 1 w 11"
+n 14 /I0/net12
+; nfet(2) = /I0/0/0
+i 2 nfet 14 4 1 1 "l 1 w 11"
+; nfet(3) = /I0/1/0
+i 3 nfet 5 10 14 1 "l 1 w 11"
+; pfet(4) = /I0/2/0
+i 4 pfet 5 10 0 0 "l 1 w 11"
+; pfet(5) = /I0/3/0
+i 5 pfet 5 4 0 0 "l 1 w 11"
+n 30 /I1/net12
+; nfet(6) = /I1/0/0
+i 6 nfet 30 9 1 1 "l 1 w 11"
+; nfet(7) = /I1/1/0
+i 7 nfet 10 2 30 1 "l 1 w 11"
+; pfet(8) = /I1/2/0
+i 8 pfet 10 2 0 0 "l 1 w 11"
+; pfet(9) = /I1/3/0
+i 9 pfet 10 9 0 0 "l 1 w 11"
+n 46 /I3/net12
+; nfet(10) = /I3/0/0
+i 10 nfet 46 6 1 1 "l 1 w 11"
+; nfet(11) = /I3/1/0
+i 11 nfet 4 3 46 1 "l 1 w 11"
+; pfet(12) = /I3/2/0
+i 12 pfet 4 3 0 0 "l 1 w 11"
+; pfet(13) = /I3/3/0
+i 13 pfet 4 6 0 0 "l 1 w 11"
+t	9	"SEL"	input
+t	5	"Y"	output
+t	2	"B"	input
+t	6	"A"	input
+t	0	"vdd!"	global
+t	1	"gnd!"	global

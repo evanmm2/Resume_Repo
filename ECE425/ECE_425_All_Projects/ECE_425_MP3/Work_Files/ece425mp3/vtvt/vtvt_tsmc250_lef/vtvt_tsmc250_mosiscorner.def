@@ -1,0 +1,25 @@
+DESIGN TOP_COUNT ;
+UNITS DISTANCE MICRONS 100 ;
+COMPONENTS 4 ;
+
+- |CORNER1 padlesscorner ;
+- |CORNER2 padlesscorner ;
+- |CORNER3 padlesscorner ;
+- |CORNER4 padlesscorner ;
+
+END COMPONENTS
+
+SPECIALNETS 2 ;
+
+- vss ( |CORNER1 vss1 ) ( |CORNER1 vss2 ) ( |CORNER1 vssm1 )
+( |CORNER2 vss1 ) ( |CORNER2 vss2 ) ( |CORNER2 vssm1 )
+( |CORNER3 vss1 ) ( |CORNER3 vss2 ) ( |CORNER3 vssm1 )
+( |CORNER4 vss1 ) ( |CORNER4 vss2 ) ( |CORNER4 vssm1 ) ;
+- vdd ( |CORNER1 vdd1 ) ( |CORNER1 vdd2 ) ( |CORNER1 vddm1 ) 
+( |CORNER2 vdd1 ) ( |CORNER2 vdd2 ) ( |CORNER2 vddm1 )
+( |CORNER3 vdd1 ) ( |CORNER3 vdd2 ) ( |CORNER3 vddm1 )
+( |CORNER4 vdd1 ) ( |CORNER4 vdd2 ) ( |CORNER4 vddm1 ) ; 
+
+END SPECIALNETS 
+END DESIGN
+
