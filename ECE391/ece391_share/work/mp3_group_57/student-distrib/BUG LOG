@@ -1,0 +1,144 @@
+BUGLOG
+
+Checkpoint 1 bugs
+
+Bug: The pic wasn't working
+Solution: Not masking the bits properly on allowing the interrupts.
+Time: 3 hours
+
+Bug: THe EOI wasn't working for the slave
+Solution: The EOI for the slave was wrong and the master port wasn't being given the right EOI
+Time: 4 hours
+
+Bug: RTC wasn't interrupting
+Solution: Wasn't sending the right initialization bits according to documentation
+Time: 30 minutes
+
+Bug: keyboard not communicating
+Solution: Signal wasn't set right, so when the interrupt happened, the trap gate wasn't set properly. Fixed the number
+Time: 2 hours
+
+Bug: Interrupts not being picked up by the table
+Solution: The IDT table wasn't being aligned properly and was set wrong at the same time. 
+Time: 3 hours
+
+Checkpoint 2 bugs
+
+Bug: Keyboard shift and caps weren't putting things in lower case
+Solution: Create a new table for when caps is on and shift is pressed 
+Time: 35 minutes 
+
+Bug: Scrolling caused the machine to crash
+Solution: The video memory was not being changed properly. The rows and column constant were switched 
+Time: 1 hour 
+
+Bug: the cursor was being allowed to go past the left end of the buffer
+Solution: 
+Time: 
+
+Bug: the characters weren't being deleted from buffer on backspace
+Solution: added in deletes when decreasing the index in decode
+Time: 40 minutes
+
+Bug: There were left over characters in buffer after delete was implemented
+Solution:Putting the character clear after the buffer index decrease due to the line index being increased after each character input
+Time: 30 minutes
+
+Bug: Directory entries weren't being accessed
+Solution: Did not address by bytes, but by ints when doing our calculations, due to it being an int pointer. Accessed smaller bytes by casting the pointer as a u8int
+Time: 2 hours
+
+Bug: Triple Faulting
+Solution: Forgot to change TSS. Did it.
+Time: 1.5 hours
+
+
+Bug: System wasn't accessing data blocks past the first
+Solution: Wasn't calculating the blocks increase right. Changed that one line and it worked
+Time: 30 minutes
+
+Bug: Struct for dentry was automatically being filled
+Solution: The compiler was using a previous dentry block because we were passing a string from that struct in. We copied the string to a new 
+          array and it worked. cReally weird
+Time: 40 minutes
+
+Bug: General Protection on system calls
+Solution: Fixed the priority level of the system gate
+Time: 2 hours
+
+Bug: Throwing general protection on iret
+Solution: Set up a system call gate to go to user code segement
+Time: 2 hours
+
+Bug: Wasn't iretting back properly
+Solution: Used a swap to put proper adresses on the right stacks 
+Time: 8 hours
+
+Bug: Page faults
+Solution: Was not flushing TLB
+Time: 3 hours
+
+Bug: Not halting on exit
+Solution: Wasn't returning back to the kernel stack properly. Called shell as a system call.
+Time: 4 hours
+
+Bug: Not able to do more than 6 executes
+Solution: Properly zeroed out file descriptors
+Time: 1 hours
+
+Bug: Triple faulting upon iret back to user
+Solution: Was setting USER_DS when it should have always remained kernel
+Time: 3 hours
+
+Bug: terminal wasn't reading anything
+Solution: number of bytes wasn't being returned
+Time: 2 hours
+
+Bug: User programs and kernel were not getting their correct arguments on task swp
+Solution: Needed to save and update the ebp for programs to accesses their variables
+Time: 1.5 hours 
+
+Bug: Programs were failing when they tried to halt after a task swap 
+Solution: Saved and updated the esp0 in tss for each process 
+Time: 1 hour
+
+Bug: Programs were printing to active screen rather than to background
+Solution: Virtualizing video memory when a background programs is running 
+Time: 1.5 hours
+
+Bug: Cursor was being updated with the background programs 
+Solution: Only update cursor if program on current screen is changing it or from the keyboard.
+Time: 2 hours 
+
+Bug: Characters were being printed to wrong screen when keyboard was pressed.
+Solution: Map video memory back to physical video memory when a keyboard interrupt occures 
+Time: 30 minutes 
+
+Bug: Cat rtc only worked the first try and not next 
+Solution: Needed to clear the rtc interrupt flag in open rtc 
+Time: 15 minutes 
+
+Bug: Sometimes agruments got passed in from system call wrong 
+Solution: Registers not being saved in the PIT 
+Time: 2 hours 
+
+Bug: RTC being stopped for some functions 
+Solution: Save RTC frequency only in the rtc write 
+Time: 45 minutes 
+
+Bug: Things would break, i.e. paging faults, general protection, etc. 
+Solution: Stopping interrupts in critical sections so PIT doesn't interrupt us when it shouldn't
+Time: 1 hour 
+
+Bug: Fish was showing up on all the terminal when running it in just one terminal
+Solution: Pass the user a pointer that points to that terminals save memory, and change the mapping if its the current terminal
+Time: 30 minutes 
+
+Bug: Task swap was sometimes crashing because some of the asm function was not executing 
+Solution: Move the function above a .long(this was clearly an alignment issue)
+            Note: This fix was found by pure and sweet luck
+Time: 1 hour 
+
+Bug: After terminal switch, screen would print to where previous x and y were
+Solution: Needed to save screen_x and screen_y and update it to terminal we were switching to
+Time: 30 minutes 

@@ -1,0 +1,7 @@
+0000000000000000000000000000000000000000 d87bec014b22368ab141e04656cc07ccd7490496 briantb2 <briantb2@illinois.edu> 1573440871 -0600	branch: Created from HEAD
+d87bec014b22368ab141e04656cc07ccd7490496 da6bd55f5b1235c6b55224328ff4db2b22a438bc briantb2 <briantb2@illinois.edu> 1573441699 -0600	commit: checkpoint 3
+da6bd55f5b1235c6b55224328ff4db2b22a438bc add1a1fbd783f1a74b10930d1ca43ee6eeeb4d95 briantb2 <briantb2@illinois.edu> 1573442101 -0600	commit: checkpoint 3
+add1a1fbd783f1a74b10930d1ca43ee6eeeb4d95 aeb1af842de3d1931b868c740ce8466e205cc4e3 briantb2 <briantb2@illinois.edu> 1573475722 -0600	commit: Most of 3 working
+aeb1af842de3d1931b868c740ce8466e205cc4e3 2a16e70cb1fcd40a729688694f9179adf9a4e5c8 briantb2 <briantb2@illinois.edu> 1573494613 -0600	commit: Fixed calling exit first time bug
+2a16e70cb1fcd40a729688694f9179adf9a4e5c8 d43076c54a6a2aeace07572c76a55bef259867dd briantb2 <briantb2@illinois.edu> 1573503188 -0600	commit: Working code!
+d43076c54a6a2aeace07572c76a55bef259867dd ed49eb49795eb3abb160a3b199ea71a811922399 briantb2 <briantb2@illinois.edu> 1573503228 -0600	commit: Working code!

@@ -1,0 +1,41 @@
+0000000000000000000000000000000000000000 158d185f8d5df08b6bc398641d32c700844c0616 Brian <Brian B@DESKTOP-0PDGBTS.(none)> 1571763274 -0500	clone: from https://gitlab.engr.illinois.edu/ece391_fa19/mp3_group_57.git
+158d185f8d5df08b6bc398641d32c700844c0616 13fea27203733db76bbe96160253ea0a9f3e32c7 briantb2 <briantb2@illinois.edu> 1571894359 -0500	commit: RTC working and keyboard working!
+13fea27203733db76bbe96160253ea0a9f3e32c7 8e6181ef822e41cb565836fc89dbebb54ca24dcd briantb2 <briantb2@illinois.edu> 1572215478 -0500	pull: Fast-forward
+8e6181ef822e41cb565836fc89dbebb54ca24dcd 422219b4df085c0bca1f555288cc906ded9027dd briantb2 <briantb2@illinois.edu> 1572239761 -0500	commit: file system working
+422219b4df085c0bca1f555288cc906ded9027dd b46919bd9722e7d58e926c02392e9d443d8bcd8a briantb2 <briantb2@illinois.edu> 1572274123 -0500	commit: RTC working
+b46919bd9722e7d58e926c02392e9d443d8bcd8a d1b4c5c668027c2a5218c7089a088a175bcbffe4 briantb2 <briantb2@illinois.edu> 1572298599 -0500	pull: Fast-forward
+d1b4c5c668027c2a5218c7089a088a175bcbffe4 05beb49070c8c7843215a95cf56c7c29827f00b4 briantb2 <briantb2@illinois.edu> 1572299012 -0500	pull: Fast-forward
+05beb49070c8c7843215a95cf56c7c29827f00b4 1ccfade8c874e7806f9e482096678d477aff10b8 briantb2 <briantb2@illinois.edu> 1572722696 -0500	commit: Started system calls
+1ccfade8c874e7806f9e482096678d477aff10b8 648c1b7f584a145f071bdb37199efbc2f8941242 briantb2 <briantb2@illinois.edu> 1572723588 -0500	merge refs/remotes/origin/master: Merge made by the 'recursive' strategy.
+648c1b7f584a145f071bdb37199efbc2f8941242 d87bec014b22368ab141e04656cc07ccd7490496 briantb2 <briantb2@illinois.edu> 1573440788 -0600	commit: checkpoint 3
+d87bec014b22368ab141e04656cc07ccd7490496 83e40b311d682d3db12387a0b91cff7fa93a91df briantb2 <briantb2@illinois.edu> 1573610880 -0600	pull origin master: Fast-forward
+83e40b311d682d3db12387a0b91cff7fa93a91df 651f731a2767ef5e879a54ee720dfd7abc9a1cc7 briantb2 <briantb2@illinois.edu> 1573678273 -0600	commit: fixed checkpoint 3 problems
+651f731a2767ef5e879a54ee720dfd7abc9a1cc7 eec9deb14e46981a0fa8556d6cbb5599f2708315 briantb2 <briantb2@illinois.edu> 1573680827 -0600	pull origin master: Fast-forward
+eec9deb14e46981a0fa8556d6cbb5599f2708315 d0a1cf81f430c534c7e33fc02ba1c51c026327a5 briantb2 <briantb2@illinois.edu> 1573998844 -0500	pull origin master: Fast-forward
+d0a1cf81f430c534c7e33fc02ba1c51c026327a5 88847db81c68a589fd81af178a0c1e930a497048 briantb2 <briantb2@illinois.edu> 1574025295 -0600	pull origin master: Fast-forward
+88847db81c68a589fd81af178a0c1e930a497048 f29c83154634b00dbbd9456b327480435da21787 briantb2 <briantb2@illinois.edu> 1574038662 -0600	commit: Fixing Aldo's mistake
+f29c83154634b00dbbd9456b327480435da21787 57afc1fc9a548a139e9a37c3028e8d09e221687b briantb2 <briantb2@illinois.edu> 1574041787 -0600	commit: CP 4 done
+57afc1fc9a548a139e9a37c3028e8d09e221687b 3b7cead5b2bb6f0bbc80f8491f04da6084871848 briantb2 <briantb2@illinois.edu> 1574042819 -0600	commit: FISHIE WORKIES SWIMMY
+3b7cead5b2bb6f0bbc80f8491f04da6084871848 8ba61977297feadd4ae085815a634b9e42dce906 briantb2 <briantb2@illinois.edu> 1574042990 -0600	commit: FISHIE NOW WORKIE SWIMMY
+8ba61977297feadd4ae085815a634b9e42dce906 e0c23666070a1bdd87c765fba37cb733215477e9 briantb2 <briantb2@illinois.edu> 1574052009 -0600	commit: Finished function headers
+e0c23666070a1bdd87c765fba37cb733215477e9 6a8651995bf93d6e42d2ecca233531f327c838d1 briantb2 <briantb2@illinois.edu> 1574089660 -0600	commit: Only allow 2 programs to run
+6a8651995bf93d6e42d2ecca233531f327c838d1 f9ea69c1ac6db64dde10564537babe14ae318d65 briantb2 <briantb2@illinois.edu> 1574783967 -0600	commit: Can run 6 programs and function keys work
+f9ea69c1ac6db64dde10564537babe14ae318d65 c5f93441612bfa49dcd8ca03ea50ed8d97d707ea briantb2 <briantb2@illinois.edu> 1574784638 -0600	commit (merge): Merge branch 'master' of https://gitlab.engr.illinois.edu/ece391_fa19/mp3_group_57
+c5f93441612bfa49dcd8ca03ea50ed8d97d707ea 124ed528d42bae8d3df1f8f94861b6477f3b77fe briantb2 <briantb2@illinois.edu> 1574785468 -0600	commit: Fixing git and bugs
+124ed528d42bae8d3df1f8f94861b6477f3b77fe 31a1b05e6017f67a52c1fcad256e6eda4f768b77 briantb2 <briantb2@illinois.edu> 1574814378 -0600	commit: Multiterminal begining to work
+31a1b05e6017f67a52c1fcad256e6eda4f768b77 8b4dee96b4be3aa51446d08b64a1fab04ccd0707 briantb2 <briantb2@illinois.edu> 1574882109 -0600	commit: Multi termianl mostly working
+8b4dee96b4be3aa51446d08b64a1fab04ccd0707 37491d5c77f45303c730280d80939b124909eb44 briantb2 <briantb2@illinois.edu> 1575215004 -0600	commit: Multi terminal 98% working
+37491d5c77f45303c730280d80939b124909eb44 4aaeb16fa01f3d35c3f966ac1433c42db0913d7b briantb2 <briantb2@illinois.edu> 1575256055 -0600	commit: Screen saving working and updated backspace
+4aaeb16fa01f3d35c3f966ac1433c42db0913d7b 5f93857a2d3265e2af1f67f852d5a57e85db0e1f briantb2 <briantb2@illinois.edu> 1575406678 -0600	commit: Multi terminal working
+5f93857a2d3265e2af1f67f852d5a57e85db0e1f 5a4a9802936b382e58aab6515ab5c0cfbcffba4e briantb2 <briantb2@illinois.edu> 1575612315 -0600	commit: Scheduling mostly working
+5a4a9802936b382e58aab6515ab5c0cfbcffba4e 6008fa5f65426a1c529d0e8c279669a1f24da6da briantb2 <briantb2@illinois.edu> 1575612338 -0600	pull: Merge made by the 'recursive' strategy.
+6008fa5f65426a1c529d0e8c279669a1f24da6da 2f0be4fc87e3bd27e2b6484275e4ccdd278966ee briantb2 <briantb2@illinois.edu> 1575612619 -0600	commit: Aldo broke it
+2f0be4fc87e3bd27e2b6484275e4ccdd278966ee c80fdde190e171204fb83ee1feca10e2b5b93618 briantb2 <briantb2@illinois.edu> 1575654675 -0600	commit: Cursor working
+c80fdde190e171204fb83ee1feca10e2b5b93618 8e1bb6b7be493bba6c82618342ab4c230bef7c4f briantb2 <briantb2@illinois.edu> 1575744643 -0600	commit: Mostly done
+8e1bb6b7be493bba6c82618342ab4c230bef7c4f f0c6770523426a0a8ea5361826e921c20b88e2a4 briantb2 <briantb2@illinois.edu> 1575744673 -0600	commit: Forgot terminal
+f0c6770523426a0a8ea5361826e921c20b88e2a4 6d5870c5214a2a7c7aa2ebf188d0950cc4ee60de briantb2 <briantb2@illinois.edu> 1575746758 -0600	commit: Fixed ctr-l for multi terminal
+6d5870c5214a2a7c7aa2ebf188d0950cc4ee60de ba8b52b676c8f9aea58dd2d8ac0e4f3067f4275b briantb2 <briantb2@illinois.edu> 1575755633 -0600	pull origin master: Fast-forward
+ba8b52b676c8f9aea58dd2d8ac0e4f3067f4275b caf1d7c33c8a094071a907138c4f2895acc88be6 briantb2 <briantb2@illinois.edu> 1575777259 -0600	pull origin master: Fast-forward
+caf1d7c33c8a094071a907138c4f2895acc88be6 6c39a900db04cf20e80453589bc5926646979cb7 briantb2 <briantb2@illinois.edu> 1575780142 -0600	commit: Added function headers
+6c39a900db04cf20e80453589bc5926646979cb7 3064a682cd5a669c703936ef1746ee765d961ec1 briantb2 <briantb2@illinois.edu> 1575838687 -0600	pull origin master: Fast-forward
+3064a682cd5a669c703936ef1746ee765d961ec1 999ba0f175adf7231862caf08485e404570be830 briantb2 <briantb2@illinois.edu> 1575840755 -0600	pull origin master: Fast-forward

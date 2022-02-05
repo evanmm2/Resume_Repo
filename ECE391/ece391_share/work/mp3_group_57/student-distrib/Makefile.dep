@@ -1,0 +1,48 @@
+boot.o: boot.S multiboot.h x86_desc.h types.h
+interrupt_calls.o: interrupt_calls.S idt.h types.h interrupt_calls.h \
+  keyboard.h x86_desc.h i8259.h lib.h RTC.h system_calls.h terminal.h \
+  file_system.h Paging_asm.h system_calls_asm.h
+Paging_asm.o: Paging_asm.S Paging_asm.h
+system_calls_asm.o: system_calls_asm.S system_calls_asm.h
+x86_desc.o: x86_desc.S x86_desc.h types.h
+directory.o: directory.c directory.h types.h lib.h keyboard.h x86_desc.h \
+  idt.h interrupt_calls.h i8259.h RTC.h system_calls.h file_system.h \
+  terminal.h system_calls_asm.h paging.h Paging_asm.h
+file_system.o: file_system.c file_system.h types.h lib.h keyboard.h \
+  x86_desc.h idt.h interrupt_calls.h i8259.h RTC.h system_calls.h \
+  system_calls_asm.h terminal.h paging.h Paging_asm.h directory.h
+i8259.o: i8259.c i8259.h types.h lib.h keyboard.h x86_desc.h idt.h \
+  interrupt_calls.h RTC.h system_calls.h file_system.h terminal.h \
+  system_calls_asm.h paging.h Paging_asm.h directory.h
+idt.o: idt.c idt.h types.h interrupt_calls.h keyboard.h x86_desc.h \
+  i8259.h lib.h RTC.h system_calls.h file_system.h terminal.h \
+  system_calls_asm.h paging.h Paging_asm.h directory.h
+kernel.o: kernel.c file_system.h types.h lib.h keyboard.h x86_desc.h \
+  idt.h interrupt_calls.h i8259.h RTC.h system_calls.h system_calls_asm.h \
+  terminal.h paging.h Paging_asm.h directory.h multiboot.h debug.h \
+  tests.h scheduling.h
+keyboard.o: keyboard.c keyboard.h types.h x86_desc.h idt.h \
+  interrupt_calls.h i8259.h lib.h RTC.h system_calls.h file_system.h \
+  terminal.h system_calls_asm.h paging.h Paging_asm.h directory.h
+lib.o: lib.c lib.h types.h keyboard.h x86_desc.h idt.h interrupt_calls.h \
+  i8259.h RTC.h system_calls.h file_system.h terminal.h \
+  system_calls_asm.h paging.h Paging_asm.h directory.h
+paging.o: paging.c paging.h lib.h types.h keyboard.h x86_desc.h idt.h \
+  interrupt_calls.h i8259.h RTC.h system_calls.h file_system.h terminal.h \
+  system_calls_asm.h directory.h Paging_asm.h
+RTC.o: RTC.c RTC.h types.h system_calls.h file_system.h lib.h keyboard.h \
+  x86_desc.h idt.h interrupt_calls.h i8259.h terminal.h Paging_asm.h \
+  system_calls_asm.h paging.h directory.h
+scheduling.o: scheduling.c scheduling.h lib.h types.h keyboard.h \
+  x86_desc.h idt.h interrupt_calls.h i8259.h RTC.h system_calls.h \
+  file_system.h terminal.h system_calls_asm.h paging.h Paging_asm.h \
+  directory.h
+system_calls.o: system_calls.c system_calls.h file_system.h types.h lib.h \
+  keyboard.h x86_desc.h idt.h interrupt_calls.h i8259.h RTC.h terminal.h \
+  Paging_asm.h system_calls_asm.h paging.h directory.h
+terminal.o: terminal.c terminal.h lib.h types.h keyboard.h x86_desc.h \
+  idt.h interrupt_calls.h i8259.h RTC.h system_calls.h file_system.h \
+  system_calls_asm.h paging.h Paging_asm.h directory.h
+tests.o: tests.c tests.h x86_desc.h types.h lib.h keyboard.h idt.h \
+  interrupt_calls.h i8259.h RTC.h system_calls.h file_system.h terminal.h \
+  system_calls_asm.h paging.h Paging_asm.h directory.h
