@@ -23,4 +23,4 @@ Emphasis on learning to operate effectively in teams.
 ECE411- Basic computer organization and design: integer and floating-point computer arithmetic; control unit design; pipelining; system interconnect; memory organization; 
 I/O design; reliability and performance evaluation. Laboratory for computer design implementation, simulation, and layout.
 
-ECE Final Project(Senior Design)- Design and implement a project over the course of a semester with a team. Made a pressure based foot controller. Folder only has EAGLE files for circuit design.
+ECE Final Project (Senior Design)- Design and implement a project over the course of a semester with a team. Made a pressure based foot controller. Folder only has EAGLE files for circuit design.
